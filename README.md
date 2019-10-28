@@ -1,7 +1,8 @@
 # Locaweb Sorteio
 
 ### Start
- A definir
+ - A definir
+ - vu-meter
  
  
 ### Sorteio
