@@ -1,0 +1,15 @@
+version: '3'
+services:
+  locaweb-sorteio-dev:
+    image: node:9.8.0
+    ports:
+      - 8080:8080
+    command: bash -c "yarn && yarn run dev"
+    container_name: locaweb-sorteio-dev
+    working_dir: /src
+    volumes:
+      - "../../.:/src"
+    environment:
+      HOST: 0.0.0.0
+      APP_ENV: dev
+      TERM: xterm-256color

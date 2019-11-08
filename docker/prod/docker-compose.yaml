@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  locaweb-sorteio-prod:
+    build:
+      context: ../../.
+      dockerfile: ./docker/prod/Dockerfile
+    container_name: locaweb-sorteio-prod
+    command: bash -c "npm run server"
+    environment:
+      - APP_ENV=prod
+      - TERM=xterm-256color
+      - PORT:80
+    privileged: true
+    restart: always
+    expose:
+      - "80"
+      - "443"
+    ports:
+      - "80:80"
+      - "443:443"
