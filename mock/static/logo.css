@@ -94,8 +94,8 @@ h2 {
 }
 
 .logo-user {
-	-webkit-animation: dash 6s linear infinite forwards;
-	animation: dash 6s linear infinite forwards;
+	/* -webkit-animation: dash 6s linear infinite forwards;
+	animation: dash 6s linear infinite forwards; */
 	fill: url(#grad1);
 	-webkit-filter: url(#dropshadow);
 	filter: url(#dropshadow);
