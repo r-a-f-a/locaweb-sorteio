@@ -4,7 +4,8 @@ services:
     image: node:9.8.0
     ports:
       - 8080:8080
-    command: bash -c "yarn && yarn run dev"
+      - 3000:3000
+    command: bash -c "yarn && yarn start"
     container_name: locaweb-sorteio-dev
     working_dir: /src
     volumes:
