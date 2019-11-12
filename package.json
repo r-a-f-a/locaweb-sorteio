@@ -8,7 +8,8 @@
 		"dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
 		"server": "yarn api && node server.js",
 		"api": "npx json-server db.json &",
-		"start": "yarn api && yarn dev ",
+		"install": "yarn &",
+		"start": "yarn api && yarn dev",
 		"lint": "eslint --ext .js,.vue src",
 		"sync": "node sync/index.js",
 		"build": "node build/build.js"
@@ -71,9 +72,5 @@
 		"node": ">= 6.0.0",
 		"npm": ">= 3.0.0"
 	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions",
-		"not ie <= 8"
-	]
+	"browserslist": [ "> 1%", "last 2 versions", "not ie <= 8" ]
 }

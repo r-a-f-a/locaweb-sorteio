@@ -1,11 +1,11 @@
 version: '3'
 services:
   locaweb-sorteio-dev:
-    image: node:9.8.0
+    image: node:13.1.0
     ports:
       - 8080:8080
       - 3000:3000
-    command: bash -c "yarn && yarn start"
+    command: bash -c "yarn start"
     container_name: locaweb-sorteio-dev
     working_dir: /src
     volumes:
