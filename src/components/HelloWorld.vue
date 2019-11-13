@@ -1,41 +1,33 @@
 <template>
   <div class="hello">
-    <titleCOMP bgColor="#000000" bgHover="#fff000" title="FUnciona?"></titleCOMP>
-
-<titleCOMP bgColor="red" bgHover="blue" title="FUnciona?"></titleCOMP>
-
+    <h1>{{ msg }}</h1>
+    <div class="test"></div>
   </div>
 </template>
 
 <script>
-import titleCOMP from './title'
 export default {
-  components: {
-    titleCOMP
+  name: "HelloWorld",
+  props: {
+    msg: String
   },
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  created() {
+    /*eslint no-console: ["error", { allow: ["warn", "error"] }] */
+
+    console.warn("ENV", process.env);
+    console.error("Log an error level message.");
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+<style scoped lang="scss">
+$backgroundcolor: #000;
+
+.test {
+  background: $backgroundcolor;
+  border: 1px solid $backgroundcolor;
+  height: 100px;
+  width: 100px;
 }
 </style>
