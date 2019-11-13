@@ -1,0 +1,79 @@
+<template>
+  <div class="theme-default-home">
+    <div id="overlay">
+      <div class="wrapper">
+        <h1>Locaweb</h1>
+        <h2>Sorteador</h2>
+
+        <svg height="320" width="400" class="logo-triangle">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop
+                offset="0%"
+                style="stop-color:rgb(50,50,50);stop-opacity:1"
+              />
+              <stop offset="100%" style="stop-color:black;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <filter id="dropshadow" height="130%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+            <feOffset dx="2" dy="2" result="offsetblur" />
+            <feMerge>
+              <feMergeNode />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <polygon
+            points="0,0 400,0 200,300"
+            stroke="#36e2f8"
+            stroke-width="3"
+          />
+        </svg>
+      </div>
+    </div>
+    <div id="hey">
+      <div id="layer-up"></div>
+    </div>
+    <div id="layer-0">
+      <div id="layer-1">
+        <div id="layer-2">
+          <div id="lines">
+            <div id="layer-corner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mtnZZZ"></div>
+  </div>
+</template>
+<script>
+export default {
+  name: "home"
+};
+</script>
+<style scoped>
+@import "https://fonts.googleapis.com/css?family=Roboto&display=swap";
+@import "https://fonts.googleapis.com/css?family=Yellowtail";
+@import "https://fonts.googleapis.com/css?family=Orbitron:400,700,900";
+@import "style.css";
+@import "logo.css";
+#lines {
+  animation-name: run;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  background-size: 40px 2000px;
+}
+
+@keyframes run {
+  0% {
+    background-size: 40px 2000px;
+  }
+  100% {
+    background-size: 40px 3000px;
+  }
+  /* 100% { background-size: 40px 2000px;} */
+}
+</style>

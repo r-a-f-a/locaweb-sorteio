@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Locaweb Sorteio</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700,900" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="logo.css" />
+  <style>
+    @keyframes example {
+      0%   {width:0px; height: 0px; }
+      100% { width: 200%; height: 200%; left:50%;top:50%; opacity:0}
+    }
+    .item {
+      display: block;
+      /* background-color: rgba(128, 0, 128, 0.5); */
+      width: 400px;
+      height: 800px;
+      position: absolute;
+      overflow: hidden;
+      margin:0;  
+      
+      
+      /* animation-name: example;
+      animation-duration: 10s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: normal; */
+
+      /* -webkit-animation-name: example;
+      -webkit-animation-duration: 4s; 
+      /* -webkit-animation-delay: 2s; */
+      /* animation-name: example infinite;  */
+      /* animation-duration: 6s; */
+      /* animation-delay: 2s; */
+      
+    }
+    .item .avatar img{
+      margin:10px auto;
+       display:block; 
+   width:80%;  
+   border-radius:50%;
+    }
+    .item .name{
+      text-align: center;
+      display: block;
+      font-size: 20px;
+    }
+    .item .name span{
+      display: block;
+      font-size: 16px;
+    }
+
+    
+    /* .item:nth-child(1){
+      top:43%;
+      left:100px;
+      animation-delay: 3s;
+    }
+
+    .item:nth-child(2){
+      top:15%;
+      left:450px;
+      animation-delay: 2s;
+    }
+
+    .item:nth-child(3){
+      top:45%;
+      left:100px;
+      animation-delay: 6s;
+    }
+
+    .item:nth-child(4){
+      top:65%;
+      left:350px;
+      animation-delay: 3s;
+    } */
+   
+
+  #lines {
+    /* animation-name: run; */
+    animation-duration: 350ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+  @keyframes run {
+      0%   {background-size: 40px 2000px;}
+      100% { background-size: 40px 2100px;}
+    }
+
+/*
+.fliperama{
+  width: 800px;
+  height: 600px;
+  background-color: #000;
+  border: 1px solid white;
+  border-top:100px solid white;
+  margin: 10px auto;
+  float:left;
+}
+
+.fliperama-left{
+  width: 500px;
+  height:300px;
+  background-color: #000;
+  border: 1px solid white;
+  margin: 200px auto;
+  transform: rotateY(-30deg) scale(0.5)  perspective(400px);
+  float:left;
+}
+.fliperama-right{
+  width: 500px;
+  height:300px;
+  background-color: #000;
+  border: 1px solid white;
+  margin: 200px auto;
+  transform: rotateY(-30deg) scale(0.5)  perspective(400px);
+  float:left;
+}
+*/
+.arcade {
+  float:left;
+  background: url('/home/projetos/locaweb/locaweb-sorteio/imgs/arcade_black.jpg');
+  background-position: center top;
+  background-size: 160% auto;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.zoom {
+  background: url('/home/projetos/locaweb/locaweb-sorteio/imgs/arcade_black.jpg');
+  background-repeat: no-repeat;
+    background-size: 200% auto;
+  background-position: center -600px;
+  width: 1400px;
+  height: 1000px;
+}
+.zoom .screen {
+  border: 1px solid black;
+  background-color:black;
+  width: 100px;
+  height: 100px;
+}
+  </style>
+</head>
+
+<body>
+  
+  <div class="fliperama">
+  </div>
+  <div class="arcade">
+    <div class='screen'></div>
+  </div>
+  <div class="arcade">
+    <div class='screen'></div>
+  </div>
+  <div class="arcade">
+    <div class='screen'></div>
+  </div>
+  
+  <div class='content'>
+    <div class="cards">
+      <!-- <div class="item">
+        <div class="avatar">
+          <img
+            src="https://instagram.frao1-1.fna.fbcdn.net/vp/f9390364097bb874626decf118c5c0f5/5E435503/t51.2885-15/e35/65652050_2349838378620645_9097800868219838158_n.jpg?_nc_ht=instagram.frao1-1.fna.fbcdn.net&_nc_cat=109" />
+        </div>
+      </div> -->
+  
+<!--   
+      <div class="item">
+        <div class="avatar">
+          <img
+            src="https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q80/wp-content/uploads/2014/04/cohnhece-goku.jpg.jpeg" />
+        </div>
+      </div>
+  
+  
+      <div class="item">
+        <div class="avatar">
+          <img
+            src="https://i.ytimg.com/vi/KfWrwBCYfsk/maxresdefault.jpg" />
+        </div>
+      </div>
+  
+  
+      <div class="item">
+        <div class="avatar">
+          <img
+            src="https://i.ytimg.com/vi/SczQEopiWmE/maxresdefault.jpg" />
+        </div>
+      </div>
+  
+  
+      <div class="item">
+        <div class="avatar">
+          <img
+            src="https://observatoriodocinema.bol.uol.com.br/wp-content/uploads/2019/02/dragon-ball-super-broly-ssb-goku-1145923.jpeg" />
+        </div>
+      </div> 
+    -->
+
+
+
+
+    </div>
+  </div>
+  <div id="hey">
+    <div id="layer-up">
+    </div>
+      
+  </div>
+  <div id="layer-0">
+    <div id="layer-1">
+      <div id="layer-2">
+        <div id="lines">
+          <div id="layer-corner">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="mtnZZZ">
+  </div>
+
+  <!-- <svg height="320" width="400" class="logo-user">
+        <defs>
+          <linearGradient id="grad1" x1="100%" y1="100%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:rgb(50,50,50);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:purple;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <filter id="dropshadow" height="130%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+          <feOffset dx="2" dy="2" result="offsetblur" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <rect width="10" height="250" stroke="#36e2f8" stroke-width="3" />
+        <image xlink:href="https://instagram.frao1-1.fna.fbcdn.net/vp/f9390364097bb874626decf118c5c0f5/5E435503/t51.2885-15/e35/65652050_2349838378620645_9097800868219838158_n.jpg?_nc_ht=instagram.frao1-1.fna.fbcdn.net&_nc_cat=109" x="10" y="10" height="150px" width="150px"
+          preserveAspectRatio="none" />
+      </svg> -->
+</body>
+
+</html>
