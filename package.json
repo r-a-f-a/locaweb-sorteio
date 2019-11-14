@@ -13,6 +13,8 @@
 		"sync": "node sync/index.js"
 	},
 	"dependencies": {
+		"bootstrap": "^4.3.1",
+		"bootstrap-vue": "^2.1.0",
 		"core-js": "^3.3.2",
 		"json-server": "^0.15.1",
 		"node-xlsx": "^0.15.0",
@@ -42,7 +44,10 @@
 		"env": {
 			"node": true
 		},
-		"extends": [ "plugin:vue/essential", "@vue/prettier" ],
+		"extends": [
+			"plugin:vue/essential",
+			"@vue/prettier"
+		],
 		"rules": {},
 		"parserOptions": {
 			"parser": "babel-eslint"
@@ -53,5 +58,8 @@
 			"autoprefixer": {}
 		}
 	},
-	"browserslist": [ "> 1%", "last 2 versions" ]
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	]
 }

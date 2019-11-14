@@ -8,4 +8,4 @@ export default {
   name: "LOCAWEB-SORTEIO"
 };
 </script>
-<style lang="scss"></style>
+<style></style>
