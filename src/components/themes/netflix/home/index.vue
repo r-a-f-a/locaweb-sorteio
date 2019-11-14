@@ -1,5 +1,5 @@
 <template>
-  <b> TEMPLATE BLACK </b>
+  <b> THEME NETFLIX </b>
 </template>
 <script>
 export default {

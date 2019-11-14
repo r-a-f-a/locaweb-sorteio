@@ -10,6 +10,11 @@ async function getDB() {
   return db;
 }
 
+async function getPickerConfig() {
+  let rawdata = await fs.readFileSync(path.join(__dirname, "picker.json"));
+  let json = JSON.parse(rawdata);
+  return json;
+}
 async function xlsxToJson(file) {
   const sheet = await xlsx.parse(directoryPath + "/" + file, {
     raw: true,
@@ -54,16 +59,17 @@ async function getFiles() {
 async function process() {
   let db = await getDB();
   await getFiles().then(async files => {
-    console.log("Files", files);
+    // console.log("Files", files);
     let total = files.length;
     for (var index = 0; index < total; index++) {
       let file = files[index];
       let fileName = file.replace(".xlsx", "");
       let sheet = await xlsxToJson(file);
       let transform = await transformData(sheet);
-      console.log(`Process: ${fileName}`, transform.length);
+      // console.log(`Process: ${fileName}`, transform.length);
       db[fileName] = transform;
     }
+    db["picker"] = await getPickerConfig();
     let json = JSON.stringify(db);
     await fs.writeFile(dbPath + "/db.json", json, "utf8", () => {});
   });
