@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/sort/:type',
     name: 'sort',
-    component: () => import('@/components/themes/series/contest')
+    component: () => import(`@/components/themes/${THEME}/contest`)
   }
 ]
 
