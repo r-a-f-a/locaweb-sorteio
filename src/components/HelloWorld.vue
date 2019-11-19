@@ -7,17 +7,17 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
   props: {
     msg: String
   },
-  created() {
-    /*eslint no-console: ["error", { allow: ["warn", "error"] }] */
+  created () {
+    /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
 
-    console.warn("ENV", process.env);
-    console.error("Log an error level message.");
+    console.warn('ENV', process.env)
+    console.error('Log an error level message.')
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

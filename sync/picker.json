@@ -1,6 +1,7 @@
-{
-	"geral": {
-		"image": "https://st3.depositphotos.com/2899123/18626/v/1600/depositphotos_186264814-stock-illustration-realistic-silver-champion-award-medal.jpg",
+[
+	{
+		"id": "geral",
+		"image": "geral.jpg",
 		"name": "Geral",
 		"title": "Sorteio geral",
 		"describe":"Deste sorteio participam todos colaboradores.",
@@ -31,7 +32,8 @@
 			{ "image": "samsung50.jpg", "name": "TV Samsung 50\"", "winner": "" }
 		]
 	},
-	"madrugada": {
+	{ 
+		"id": "madrugada",
 		"awards": [
 			{
 				"image": "notebook.jpg",
@@ -65,7 +67,8 @@
 			}
 		]
 	},
-	"pratas": {
+	{
+	"id":"pratas",
 		"awards": [
 			{
 				"image": "samsung50.jpg",
@@ -74,7 +77,8 @@
 			}
 		]
 	},
-	"valeu": {
+	{
+	"id":"valeu",
 		"awards": [
 			{
 				"image": "notebook.jpg",
@@ -88,4 +92,4 @@
 			}
 		]
 	}
-}
+]

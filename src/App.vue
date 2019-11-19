@@ -6,25 +6,25 @@
 <script>
 /* eslint-disable no-console */
 export default {
-  name: "LOCAWEB-SORTEIO",
-  data() {
+  name: 'LOCAWEB-SORTEIO',
+  data () {
     return {
       style: `./components/themes/${process.env.VUE_APP_THEME}/styles.css`
-    };
-  },
-  computed: {
-    appStyles() {
-      return {
-        "--style": this.style,
-        $importStyle: this.style
-      };
     }
   },
-  created() {
+  computed: {
+    appStyles () {
+      return {
+        '--style': this.style,
+        $importStyle: this.style
+      }
+    }
+  },
+  created () {
     // document.querySelector(":root").style.setProperty("--style", this.style);
-    console.log("THIS ENV", process.env.VUE_APP_THEME);
+    console.log('THIS ENV', process.env.VUE_APP_THEME)
   }
-};
+}
 </script>
 <style>
 body {
