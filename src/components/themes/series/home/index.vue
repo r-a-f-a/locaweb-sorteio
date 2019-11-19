@@ -35,16 +35,22 @@ export default {
               name: "Valeu"
             }
           ]
+          image:
+            "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
+          router: "/valeu",
+          name: "Valeu"
         },
         {
-          fields: [
-            {
-              image:
-                "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
-              router: "/valeu",
-              name: "Madrugada"
-            }
-          ]
+          image:
+            "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
+          router: "/geral",
+          name: "Geral"
+        },
+        {
+          image:
+            "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
+          router: "/valeu",
+          name: "Madrugada"
         },
         {
           fields: [
@@ -55,6 +61,10 @@ export default {
               name: "Pratas da casa"
             }
           ]
+          image:
+            "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
+          router: "/valeu",
+          name: "Esqueci"
         }
       ]
     };
