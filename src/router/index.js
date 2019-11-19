@@ -8,11 +8,6 @@ const routes = [
     path: '/',
     name: 'home',
     component: () => import(`@/components/themes/${THEME}/contest`)
-  },
-  {
-    path: '/sort/:type',
-    name: 'homeTEST',
-    component: () => import(`@/components/themes/${THEME}/contest`)
   }
 ]
 
