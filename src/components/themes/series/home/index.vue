@@ -17,30 +17,6 @@ export default {
     return {
       dataCard: [
         {
-          fields: [
-            {
-              image:
-                "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
-              router: "/geral",
-              name: "Geral"
-            }
-          ]
-        },
-        {
-          fields: [
-            {
-              image:
-                "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
-              router: "/valeu",
-              name: "Valeu"
-            }
-          ]
-          image:
-            "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
-          router: "/valeu",
-          name: "Valeu"
-        },
-        {
           image:
             "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
           router: "/geral",
@@ -50,21 +26,19 @@ export default {
           image:
             "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
           router: "/valeu",
-          name: "Madrugada"
+          name: "Valeu"
         },
         {
-          fields: [
-            {
-              image:
-                "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
-              router: "/valeu",
-              name: "Pratas da casa"
-            }
-          ]
           image:
             "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
           router: "/valeu",
-          name: "Esqueci"
+          name: "Madrugada"
+        },
+        {
+          image:
+            "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
+          router: "/valeu",
+          name: "Pratas da casa"
         }
       ]
     };
