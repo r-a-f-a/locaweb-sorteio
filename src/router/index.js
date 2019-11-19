@@ -7,7 +7,7 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: () => import(`@/components/themes/${THEME}/home`)
+    component: () => import(`@/components/themes/${THEME}/contest`)
   }
 ];
 
