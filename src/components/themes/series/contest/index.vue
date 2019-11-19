@@ -7,7 +7,7 @@
 <script>
 import sort from './components/sort'
 export default {
-  name: 'constest',
+  name: "constest",
   components: {
     sort
   },
