@@ -46,12 +46,6 @@ export default {
 }
 </script>
 
-<style>
-body {
-  background: #000000;
-  color: #fff;
-}
-</style>
 <style scoped>
 .container {
   display: flex;
