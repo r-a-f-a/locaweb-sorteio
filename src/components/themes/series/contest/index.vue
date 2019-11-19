@@ -1,23 +1,23 @@
 <template>
   <div id="constest">
+    <describe></describe>
     <sort></sort>
-  </div>  
+  </div>
 </template>
 
 <script>
-import sort from './components/sort'
+import describe from "./components/describe";
+import sort from "./components/sort";
 export default {
-  name: 'constest',
+  name: "constest",
   components: {
-    sort
+    sort,
+    describe
   },
-  data () {
-    return {
-      // test
-    }
+  data() {
+    return {};
   }
-}
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
