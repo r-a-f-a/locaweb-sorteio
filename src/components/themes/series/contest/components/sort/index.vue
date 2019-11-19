@@ -6,6 +6,7 @@
 <script>
 export default {
   name: 'sort',
+  props: ['collaborators'],
   data () {
     return {
       // test
