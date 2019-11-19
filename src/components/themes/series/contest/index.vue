@@ -1,7 +1,7 @@
 <template>
   <div id="constest">
     <describe :configs="configs"></describe>
-    <Sort :collaborators="collaborators"></Sort>
+    <Sort v-if="collaborators.length" :collaborators="collaborators"></Sort>
   </div>
 </template>
 
