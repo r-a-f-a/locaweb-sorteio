@@ -4,17 +4,42 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 import BootstrapVue from 'bootstrap-vue'
-import Axios from './utils/axios'
+import axios from './utils/axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import events from 'events-vue-allin'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
-Vue.use(Axios)
+Vue.use(axios)
+Vue.use(events)
 
 new Vue({
   router,
   store,
-  Axios,
+  axios,
+  events,
+  mounted () {
+    const _this = this
+    window.addEventListener('keydown', function (event) {
+      if ([33, 34, 27, 116, 190].includes(event.keyCode)) {
+        event.preventDefault()
+        switch (event.keyCode) {
+          case 33:
+            _this.$events.emit('button-pressed-prev')
+            break
+          case 34:
+            _this.$events.emit('button-pressed-next')
+            break
+          case 190:
+            _this.$events.emit('button-pressed-home')
+            break
+          default:
+            _this.$events.emit('button-pressed-enter')
+            break
+        }
+      }
+    }, true)
+  },
   render: (h) => h(App)
 }).$mount('#app')
