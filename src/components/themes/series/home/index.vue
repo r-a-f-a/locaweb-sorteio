@@ -21,8 +21,8 @@ export default {
             {
               image:
                 "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
-              router: "/valeu",
-              name: "Valeu"
+              router: "/geral",
+              name: "Geral"
             }
           ]
         },
@@ -31,8 +31,8 @@ export default {
             {
               image:
                 "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
-              router: "/geral",
-              name: "Geral"
+              router: "/valeu",
+              name: "Valeu"
             }
           ]
         },
@@ -52,7 +52,7 @@ export default {
               image:
                 "https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png",
               router: "/valeu",
-              name: "Esqueci"
+              name: "Pratas da casa"
             }
           ]
         }

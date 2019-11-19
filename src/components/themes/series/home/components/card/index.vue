@@ -34,7 +34,7 @@ export default {
   background-color: transparent;
 }
 .card-title {
-  align-items: center !important;
+  text-align: center !important;
 }
 .card-img-bottom {
   width: 185px;
