@@ -22,7 +22,7 @@ export default {
   },
   created () {
     // document.querySelector(":root").style.setProperty("--style", this.style);
-    console.log('THIS ENV', process.env.VUE_APP_THEME)
+    console.log('THIS AXIOS', process.env.VUE_APP_AXIOS)
   }
 }
 </script>

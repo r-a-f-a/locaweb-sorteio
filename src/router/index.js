@@ -5,20 +5,14 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-<<<<<<< HEAD
-    path: "/",
-    name: "home",
+    path: '/',
+    name: 'home',
     component: () => import(`@/components/themes/${THEME}/home`)
   },
   {
-    path: "/sort",
-    name: "sort",
-    component: () => import("@/components/themes/series/contest")
-=======
-    path: '/',
-    name: 'home',
-    component: () => import(`@/components/themes/${THEME}/contest`)
->>>>>>> 4feecbfddc1ca59a3656a01cda45674def4dee6f
+    path: '/sort',
+    name: 'sort',
+    component: () => import('@/components/themes/series/contest')
   }
 ]
 

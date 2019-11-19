@@ -6,18 +6,18 @@
 </template>
 
 <script>
-import describe from "./components/describe";
-import sort from "./components/sort";
+import describe from './components/describe'
+import sort from './components/sort'
 export default {
-  name: "constest",
+  name: 'constest',
   components: {
     sort,
     describe
   },
-  data() {
-    return {};
+  data () {
+    return {}
   }
-};
+}
 </script>
 
 <style scoped></style>
