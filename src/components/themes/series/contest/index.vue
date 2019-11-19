@@ -1,17 +1,17 @@
 <template>
   <div id="constest">
     <describe :configs="configs"></describe>
-    <sort :collaborators="collaborators"></sort>
+    <Sort :collaborators="collaborators"></Sort>
   </div>
 </template>
 
 <script>
 import describe from './components/describe'
-import sort from './components/sort'
+import Sort from './components/sort'
 export default {
   name: 'constest',
   components: {
-    sort,
+    Sort,
     describe
   },
   data () {
