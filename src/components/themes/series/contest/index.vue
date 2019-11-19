@@ -1,15 +1,15 @@
 <template>
   <div id="constest">
-    <sort></sort>
+    <Sort></Sort>
   </div>
 </template>
 
 <script>
-import sort from './components/sort'
+import Sort from './components/sort'
 export default {
   name: 'constest',
   components: {
-    sort
+    Sort
   },
   data () {
     return {
