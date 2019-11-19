@@ -45,22 +45,21 @@
 		"vue-template-compiler": "^2.6.10"
 	},
 	"eslintConfig": {
-		"root": true,
-		"env": {
-			"node": true
+  "root": true,
+  "parserOptions": {
+    "parser": "babel-eslint"
 		},
-		"extends": [
-			"plugin:vue/essential",
-			"standard"
+  "extends": [
+	  "plugin:vue/essential",
+    "standard"
 		],
-		"plugins": [
-			"vue"
+  "plugins": [
+    "vue"
 		],
-		"rules": {
-			"generator-star-spacing": "off"
-		},
-		"parserOptions": {
-			"parser": "babel-eslint"
+  "rules": {
+			
+    "generator-star-spacing": "off",
+		"no-debugger":  "error"
 		}
 	},
 	"postcss": {

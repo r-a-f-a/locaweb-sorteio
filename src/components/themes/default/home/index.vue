@@ -48,8 +48,8 @@
 </template>
 <script>
 export default {
-  name: "home"
-};
+  name: 'home'
+}
 </script>
 <style scoped>
 @import "https://fonts.googleapis.com/css?family=Roboto&display=swap";

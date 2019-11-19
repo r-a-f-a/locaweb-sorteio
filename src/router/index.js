@@ -1,20 +1,20 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-const THEME = process.env.VUE_APP_THEME || "default";
-Vue.use(VueRouter);
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+const THEME = process.env.VUE_APP_THEME || 'default'
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "home",
+    path: '/',
+    name: 'home',
     component: () => import(`@/components/themes/${THEME}/contest`)
   }
-];
+]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
-});
+})
 
-export default router;
+export default router

@@ -15,14 +15,14 @@
 
 <script>
 export default {
-  name: "Card-sort",
-  props: ["dataCard"],
+  name: 'Card-sort',
+  props: ['dataCard'],
   methods: {
-    getCol() {
-      return "col-md-" + Math.abs(Math.ceil(12 / this.dataCard.length));
+    getCol () {
+      return 'col-md-' + Math.abs(Math.ceil(12 / this.dataCard.length))
     }
   }
-};
+}
 </script>
 
 <style scoped>
