@@ -7,6 +7,11 @@ const routes = [
   {
     path: '/',
     name: 'home',
+    component: () => import(`@/components/themes/${THEME}/home`)
+  },
+  {
+    path: '/sort',
+    name: 'sort',
     component: () => import(`@/components/themes/${THEME}/contest`)
   }
 ]

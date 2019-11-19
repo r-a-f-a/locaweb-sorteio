@@ -29,6 +29,12 @@ export default {
   }
 }
 </script>
+<style>
+body {
+  background: #000000 !important;
+  color: #fff !important;
+}
+</style>
 <style lang="scss" scoped>
 $base-style: "./components/themes/series/styles.css";
 // $importStyle: var(--style);

@@ -3,6 +3,8 @@
 		"id": "geral",
 		"image": "geral.jpg",
 		"name": "Geral",
+		"title": "Sorteio geral",
+		"describe":"Deste sorteio participam todos colaboradores.",
 		"awards": [
 			{ "image": "notebook.jpg", "name": "Notebook Dell Inspiron 15", "winner": "" },
 			{ "image": "xbox.jpg", "name": "Xbox ONE", "winner": "" },
