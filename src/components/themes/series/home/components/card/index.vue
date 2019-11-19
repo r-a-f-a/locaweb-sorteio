@@ -1,15 +1,11 @@
 <template>
   <div class="row">
-    <template v-for="row in dataCard">
-      <div
-        v-for="(field, keyCard) in row.fields"
-        :key="keyCard"
-        :class="getCol()"
-      >
+    <template v-for="(row, index) in dataCard">
+      <div :key="index" :class="getCol()">
         <div class="card">
-          <img class="card-img-bottom" :src="field.image" alt="Card image" />
+          <img class="card-img-bottom" :src="row.image" alt="Card image" />
           <div class="card-body">
-            <h4 class="card-title">{{ field.name }}</h4>
+            <h4 class="card-title">{{ row.name }}</h4>
           </div>
         </div>
       </div>
@@ -34,7 +30,7 @@ export default {
   background-color: transparent;
 }
 .card-title {
-  align-items: center !important;
+  text-align: center !important;
 }
 .card-img-bottom {
   width: 185px;
