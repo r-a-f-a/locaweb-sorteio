@@ -4,7 +4,6 @@
   </div>
 </template>
 <script>
-/* eslint-disable no-console */
 export default {
   name: 'LOCAWEB-SORTEIO',
   data () {
@@ -21,8 +20,12 @@ export default {
     }
   },
   created () {
-    // document.querySelector(":root").style.setProperty("--style", this.style);
-    console.log('THIS AXIOS', process.env.VUE_APP_AXIOS)
+    this.$api.get('/geral').then(data => {
+      console.log('RESULT USERS', data)
+    })
+    this.$api.get('/picker/geral').then(data => {
+      console.log('RESULT API GERAL', data)
+    })
   }
 }
 </script>

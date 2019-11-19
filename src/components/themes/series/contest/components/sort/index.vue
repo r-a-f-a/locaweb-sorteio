@@ -5,8 +5,8 @@
 
 <script>
 export default {
-  name: "sort",
-  data() {
+  name: 'sort',
+  data () {
     return {
       // test
     }

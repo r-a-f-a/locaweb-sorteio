@@ -13,6 +13,7 @@
 		"sync": "node sync/index.js"
 	},
 	"dependencies": {
+		"axios": "^0.19.0",
 		"bootstrap": "^4.3.1",
 		"bootstrap-vue": "^2.1.0",
 		"core-js": "^3.3.2",
@@ -45,21 +46,20 @@
 		"vue-template-compiler": "^2.6.10"
 	},
 	"eslintConfig": {
-  "root": true,
-  "parserOptions": {
-    "parser": "babel-eslint"
+		"root": true,
+		"parserOptions": {
+			"parser": "babel-eslint"
 		},
-  "extends": [
-	  "plugin:vue/essential",
-    "standard"
+		"extends": [
+			"plugin:vue/essential",
+			"standard"
 		],
-  "plugins": [
-    "vue"
+		"plugins": [
+			"vue"
 		],
-  "rules": {
-			
-    "generator-star-spacing": "off",
-		"no-debugger":  "error"
+		"rules": {
+			"generator-star-spacing": "off",
+			"no-debugger": "error"
 		}
 	},
 	"postcss": {
