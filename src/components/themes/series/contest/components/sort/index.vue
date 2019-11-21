@@ -5,7 +5,7 @@
       <option value=false>F</option>
     </select>
     <div class="sort-box">
-      <transition enter-active-class="ani-running-enter-active" mode="out-in" v-on:enter="onEnter" v-on:after-enter="onEnd">
+      <transition name="ani-running" mode="out-in" v-on="hooks">
         <div class="sort-line" v-show="state == 'true'" :style="style">
           <div v-for="(item, k) in sliced" :key="k" class="sort-item">
             {{ item.funcionario | firsLastName }}
@@ -28,7 +28,35 @@ export default {
       style: {
         left: '5px'
       },
-      state: false
+      state: false,
+      hooks: {
+        beforeEnter: function (el) {
+          console.log('BEFORE ENTER')
+        },
+        afterEnter: function (el) {
+          el.className += ' ani-running-enter-to'
+        },
+        enterCancelled: function (el) {
+          console.log('ENTER CANCELLED')
+        },
+
+        beforeLeave: function (el) {
+          console.log('BEFORE LEAVE')
+        },
+
+        leave: function (el, done) {
+          console.log('LEAVE')
+          done()
+        },
+        afterLeave: function (el) {
+          console.log('AFTER LEAVE')
+        },
+
+        leaveCancelled: function (el) {
+          console.log('LEAVE CANCELLED')
+        }
+      }
+
     }
   },
   methods: {
@@ -104,7 +132,8 @@ export default {
   border: 1px solid green;
 }
 
-.ani-running-enter-active
+.ani-running-enter-active,
+.ani-running-enter-to
 {
   // animation: running 5s;
   animation-name: running;
