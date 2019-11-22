@@ -4,11 +4,13 @@
       <option value=true>T</option>
       <option value=false>F</option>
     </select>
-    <div class="sort-box">
+    <div class="sort-box" :style="style.sortBox">
       <transition name="ani-running" mode="out-in" v-on="hooks">
-        <div class="sort-line" v-show="state == 'true'" :style="style">
+        <div class="sort-line" v-if="state == 'true'" :style="style">
           <div v-for="(item, k) in sliced" :key="k" class="sort-item">
-            {{ item.funcionario | firsLastName }}
+            <!-- {{ item.funcionario | firsLastName }} -->
+            <img :src="'https://picsum.photos/200/300?x=' + Math.random(1,99999)" >
+            <b>{{ item.funcionario  | firsLastName}}</b>
           </div>
         </div>
       </transition>
@@ -25,16 +27,18 @@ export default {
     return {
       choosedIndex: 0,
       sliced: [],
-      style: {
-        left: '5px'
+      image: {
+        size: '260px'
       },
       state: false,
       hooks: {
-        beforeEnter: function (el) {
+        beforeEnter: (el) => {
+          this.makeSort()
           console.log('BEFORE ENTER')
         },
-        afterEnter: function (el) {
+        afterEnter: (el) => {
           el.className += ' ani-running-enter-to'
+          console.log('SELECIONADO', this.sliced[97])
         },
         enterCancelled: function (el) {
           console.log('ENTER CANCELLED')
@@ -60,6 +64,11 @@ export default {
     }
   },
   methods: {
+    makeSort () {
+      this.setSliced()
+      this.setChoosed()
+      this.changeIndexChoosed()
+    },
     onEnter () {
       console.log('INICIOU')
     },
@@ -84,16 +93,35 @@ export default {
       this.sliced[this.choosedIndex] = antepenult
     }
   },
+  created () {
+    const that = this
+    this.$events.off('button-pressed-enter')
+    this.$events.on('button-pressed-enter', () => {
+      that.state = 'true'
+    })
+    this.$events.off('button-pressed-prev')
+    this.$events.on('button-pressed-prev', () => {
+      that.state = 'false'
+    })
+  },
   mounted () {
-    this.setSliced()
-    this.setChoosed()
-    this.changeIndexChoosed()
+    document.querySelector('body').focus()
+    // this.makeSort()
   },
   filters: {
     firsLastName: function (val) {
-      // var arr = val.split(' ')
-      // var str = `${arr[0]} ${arr[arr.length - 1]}`
-      return 'A'
+      var arr = val.split(' ')
+      var str = `${arr[0]} ${arr[arr.length - 1]}`
+      return str
+    }
+  },
+  computed: {
+    style () {
+      return {
+        sortBox: {
+          width: `calc(5 * ${this.image.size})`
+        }
+      }
     }
   }
 }
@@ -104,13 +132,13 @@ export default {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 150px;
+  height: 250px;
   margin: 20px 0;
 }
 
 .sort-box {
-  min-width: 800px;
-  max-width: 800px;
+  // min-width: 800px;
+  // width: calc(5 * 260px);
   height: 100%;
   border: 1px solid white;
   position: relative;
@@ -127,19 +155,31 @@ export default {
 
 .sort-item {
   display: inline-flex;
-  padding: 40px 67px;
+  width: 250px;
+  height: 250px;
   margin: 0 5px;
   border: 1px solid green;
 }
-
+.sort-item img {
+  width: 100%;
+}
+.sort-item b{
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-weight: bold;
+}
 .ani-running-enter-active,
 .ani-running-enter-to
 {
   // animation: running 5s;
   animation-name: running;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-fill-mode: forwards;
-  // animation-timing-function: ease-in-out;
+  // animation-timing-function: cubic-bezier(1,0.20,0.80,1);
+  animation-timing-function: ease-in-out;
 }
 
 // .ani-running-leave-active{
@@ -169,6 +209,6 @@ export default {
 
 @keyframes running {
     from {left: -5px;}
-    to {left: -14500px;}
+    to {left: calc(95 * -260px);}
 }
 </style>
