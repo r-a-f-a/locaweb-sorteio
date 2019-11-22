@@ -1,5 +1,8 @@
 <template>
   <div id="app" :style="appStyles">
+    <router-link tag="a" to="/">
+      <img class="logo-coner" src="https://images.tcdn.com.br/static_inst/escoladeecommerce/prod/wp-content/uploads/2017/03/logo_locaweb.png" alt="">
+    </router-link>
     <router-view />
   </div>
 </template>
@@ -31,8 +34,12 @@ export default {
 </script>
 <style>
 body {
-  background: #000000 !important;
+  background: #233344 !important;
   color: #fff !important;
+}
+.logo-coner{
+  width: 250px;
+  height: auto;
 }
 </style>
 <style lang="scss" scoped>

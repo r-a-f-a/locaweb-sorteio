@@ -1,6 +1,7 @@
 <template>
-  <div class="theme-series items-center">
-    <div class="container">
+  <div class="container">
+    <div class="content">
+      <h2>Selecione o sorteio</h2>
       <CardHome :dataCard="dataCard"></CardHome>
     </div>
   </div>
@@ -18,27 +19,27 @@ export default {
       dataCard: [
         {
           image:
-            'https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png',
+            'https://api.adorable.io/avatars/285/@adorable.io.png',
           router: '/geral',
           name: 'Geral'
         },
         {
           image:
-            'https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png',
+            'https://api.adorable.io/avatars/285/fl@adorable.io.png',
           router: '/valeu',
           name: 'Valeu'
         },
         {
           image:
-            'https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png',
-          router: '/valeu',
-          name: 'Madrugada'
+            'https://api.adorable.io/avatars/285/bob@adorable.io.png',
+          router: '/pratas',
+          name: 'Pratas'
         },
         {
           image:
-            'https://occ-0-894-1567.1.nflxso.net/art/8ddc9/8a688e737601c0de965fc98e41403e972e78ddc9.png',
-          router: '/valeu',
-          name: 'Pratas da casa'
+            'https://api.adorable.io/avatars/285/joe@adorable.io.png',
+          router: '/madrugada',
+          name: 'Madrugada'
         }
       ]
     }
@@ -47,10 +48,25 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.container{
+  width: auto;
+  max-width: 50%;
+  height: auto;
+  display: flex;
+  margin: 10% auto;
+}
+.content{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-}
+  flex-direction: row;
+} */
 </style>
