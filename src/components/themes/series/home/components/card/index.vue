@@ -1,15 +1,15 @@
 <template>
   <div class="row">
-    <template v-for="(row, index) in dataCard">
-      <div :key="index" :class="getCol()">
-        <div class="card">
-          <img class="card-img-bottom" :src="row.image" alt="Card image" />
-          <div class="card-body">
-            <h4 class="card-title">{{ row.name }}</h4>
-          </div>
+    <div v-for="(row, index) in dataCard" :key="index" class="col-md-3">
+      <div class="card">
+        <img :src="row.image" alt="Card image" />
+        <div class="card-body">
+          <h4 class="card-title">
+            <router-link to="/sort/geral" tag="a">{{ row.name }}</router-link>
+          </h4>
         </div>
       </div>
-    </template>
+    </div>
   </div>
 </template>
 
@@ -29,11 +29,15 @@ export default {
 .card {
   background-color: transparent;
 }
-.card-title {
-  text-align: center !important;
+.card img {
+  width: 100%;
+  height: auto;
 }
-.card-img-bottom {
-  width: 185px;
-  height: 185px;
+.card-title {
+  text-align: center;
+}
+.card-title a {
+  color: #fff;
+  text-decoration: none;
 }
 </style>
