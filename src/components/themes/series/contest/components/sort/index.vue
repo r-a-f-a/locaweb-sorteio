@@ -1,5 +1,5 @@
 <template>
-  <div id="sort" class="sort">
+  <div id="sort" class="sort" :style="style.animation">
     <select name="" id="" v-model="state">
       <option value=true>T</option>
       <option value=false>F</option>
@@ -8,7 +8,6 @@
       <transition name="ani-running" mode="out-in" v-on="hooks">
         <div class="sort-line" v-if="state == 'true'" :style="style">
           <div v-for="(item, k) in sliced" :key="k" class="sort-item">
-            <!-- {{ item.funcionario | firsLastName }} -->
             <img :src="'https://picsum.photos/200/300?x=' + Math.random(1,99999)" >
             <b>{{ item.funcionario  | firsLastName}}</b>
           </div>
@@ -76,19 +75,29 @@ export default {
       console.log('PAROU')
     },
     setSliced () {
-      this.sliced = shuffle.pick(this.collaborators, { picks: 100 })
+      var sliced = shuffle.pick(this.collaborators, { picks: 60 })
+      if (sliced.length < 100) sliced = this.checkQtty(sliced)
+      this.sliced = sliced
+    },
+    checkQtty (sliced) {
+      const diff = 100 - sliced.length
+      const turns = Math.ceil(diff / sliced.length)
+      for (let i = 0; i < turns; i++) {
+        sliced = sliced.concat(sliced)
+      }
+      return sliced.slice(0, 100)
     },
     setChoosed () {
       this.choosedIndex = Math.floor((Math.random() * this.sliced.length))
     },
     changeIndexChoosed () {
       var antepenultIndex = this.sliced.length - 3
-      console.log('ANTEPENULT INDEX', antepenultIndex)
-      console.log('CHOOSED INDEX', this.choosedIndex)
+      // console.log('ANTEPENULT INDEX', antepenultIndex)
+      // console.log('CHOOSED INDEX', this.choosedIndex)
       var choosed = this.sliced[this.choosedIndex]
-      console.log('CHOOSED', choosed)
+      // console.log('CHOOSED', choosed)
       var antepenult = this.sliced[antepenultIndex]
-      console.log('ANTEPENULT', antepenult)
+      // console.log('ANTEPENULT', antepenult)
       this.sliced[antepenultIndex] = choosed
       this.sliced[this.choosedIndex] = antepenult
     }
@@ -119,7 +128,11 @@ export default {
     style () {
       return {
         sortBox: {
-          width: `calc(5 * ${this.image.size})`
+          width: `calc(5 * ${this.image.size})`,
+          'min-width': `calc(5 * ${this.image.size})`
+        },
+        animation: {
+          '--left': `calc(95 * -${this.image.size})`
         }
       }
     }
@@ -137,8 +150,6 @@ export default {
 }
 
 .sort-box {
-  // min-width: 800px;
-  // width: calc(5 * 260px);
   height: 100%;
   border: 1px solid white;
   position: relative;
@@ -174,41 +185,15 @@ export default {
 .ani-running-enter-active,
 .ani-running-enter-to
 {
-  // animation: running 5s;
   animation-name: running;
   animation-duration: 10s;
+  animation-delay: 1000ms;
   animation-fill-mode: forwards;
-  // animation-timing-function: cubic-bezier(1,0.20,0.80,1);
   animation-timing-function: ease-in-out;
 }
 
-// .ani-running-leave-active{
-//   animation-name: running;
-//   animation-duration: 5s;
-//   animation-direction: reverse;
-//   animation-fill-mode: forwards;
-//   // animation-timing-function: ease-in-out;
-// }
-
-// .ani-running-enter
-// {
-//   // animation: running 5s;
-//   animation-name: running;
-//   animation-duration: 5s;
-//   animation-fill-mode: forwards;
-// }
-
-// .ani-running-enter-active {
-//   animation: running 5s;
-//   // animation-fill-mode: forwards;
-// }
-// .ani-running-enter-leave {
-//   // animation: running 30s;
-//   animation-fill-mode: forwards;
-// }
-
 @keyframes running {
     from {left: -5px;}
-    to {left: calc(95 * -260px);}
+    to {left: var(--left);}
 }
 </style>
