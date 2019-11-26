@@ -16,33 +16,19 @@ export default {
   },
   data () {
     return {
-      dataCard: [
-        {
-          image:
-            'https://api.adorable.io/avatars/285/@adorable.io.png',
-          router: '/geral',
-          name: 'Geral'
-        },
-        {
-          image:
-            'https://api.adorable.io/avatars/285/fl@adorable.io.png',
-          router: '/valeu',
-          name: 'Valeu'
-        },
-        {
-          image:
-            'https://api.adorable.io/avatars/285/bob@adorable.io.png',
-          router: '/pratas',
-          name: 'Pratas'
-        },
-        {
-          image:
-            'https://api.adorable.io/avatars/285/joe@adorable.io.png',
-          router: '/madrugada',
-          name: 'Madrugada'
-        }
-      ]
+      dataCard: []
     }
+  },
+  methods: {
+    getConfigs () {
+      this.$api.get('/picker')
+        .then(res => {
+          this.dataCard = res.data
+        })
+    }
+  },
+  created () {
+    this.getConfigs()
   }
 }
 </script>

@@ -5,7 +5,7 @@
         <img :src="row.image" alt="Card image" />
         <div class="card-body">
           <h4 class="card-title">
-            <router-link to="/sort/geral" tag="a">{{ row.name }}</router-link>
+            <router-link :to="`sort/${row.id}`" tag="a">{{ row.name }}</router-link>
           </h4>
         </div>
       </div>
