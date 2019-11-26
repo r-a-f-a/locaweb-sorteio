@@ -1,30 +1,29 @@
 <template>
   <div id="constest">
-    <describe :configs="configs"></describe>
-    <Sort v-if="collaborators.length" :collaborators="collaborators"></Sort>
+    <!-- <describe :configs="configs"></describe> -->
+    <!-- <Sort v-if="collaborators.length" :collaborators="collaborators"></Sort> -->
+    <awards :configs="configs"></awards>
   </div>
 </template>
 
 <script>
-import describe from './components/describe'
-import Sort from './components/sort'
+// import describe from './components/describe'
+// import Sort from './components/sort'
+import awards from './components/awards'
 export default {
   name: 'constest',
   components: {
-    Sort,
-    describe
+    // Sort,
+    // describe,
+    awards
   },
   data () {
     return {
       collaborators: [],
-      configs: [],
-      type: ''
+      configs: []
     }
   },
   methods: {
-    setType () {
-      this.type = this.$route.params.type
-    },
     getCollaborators () {
       this.$api.get(`/${this.type}`)
         .then(res => {
@@ -39,12 +38,14 @@ export default {
     }
 
   },
+  computed: {
+    type () {
+      return this.$route.params.type
+    }
+  },
   mounted () {
     this.getCollaborators()
     this.getConfigs()
-  },
-  created () {
-    this.setType()
   }
 }
 </script>

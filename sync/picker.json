@@ -4,7 +4,7 @@
 		"image": "https://api.adorable.io/avatars/285/@adorable.io.png",
 		"name": "Geral",
 		"title": "Sorteio geral",
-		"describe":"Deste sorteio participam todos colaboradores.",
+		"describe": "Deste sorteio participam todos colaboradores.",
 		"awards": [
 			{ "image": "notebook.jpg", "name": "Notebook Dell Inspiron 15", "winner": "" },
 			{ "image": "xbox.jpg", "name": "Xbox ONE", "winner": "" },
@@ -29,15 +29,20 @@
 				"winner": ""
 			},
 			{ "image": "ps4.jpg", "name": "Playstation 4", "winner": "" },
-			{ "image": "samsung50.jpg", "name": "TV Samsung 50\"", "winner": "" }
+			{ "image": "samsung50.jpg", "name": "TV Samsung 50\"", "winner": "" },
+			{
+				"image": "samsung50.jpg",
+				"name": "TV Samsung 50\"",
+				"winner": ""
+			}
 		]
 	},
-	{ 
+	{
 		"id": "madrugada",
 		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
 		"name": "Madrugada",
 		"title": "Sorteio madrugada",
-		"describe":"Deste sorteio participam todos colaboradores da madrugada.",
+		"describe": "Deste sorteio participam todos colaboradores da madrugada.",
 		"awards": [
 			{
 				"image": "notebook.jpg",
@@ -72,11 +77,11 @@
 		]
 	},
 	{
-		"id":"pratas",
+		"id": "pratas",
 		"image": "https://api.adorable.io/avatars/285/bob@adorable.io.png",
 		"name": "Pratas",
 		"title": "Sorteio pratas",
-		"describe":"Deste sorteio participam todos colaboradores pratas da casa.",
+		"describe": "Deste sorteio participam todos colaboradores pratas da casa.",
 		"awards": [
 			{
 				"image": "samsung50.jpg",
@@ -86,11 +91,11 @@
 		]
 	},
 	{
-		"id":"valeu",
+		"id": "valeu",
 		"image": "https://api.adorable.io/avatars/285/joe@adorable.io.png",
 		"name": "Valeu",
 		"title": "Sorteio valeu",
-		"describe":"Deste sorteio participam todos colaboradores que ganharam o valeu.",
+		"describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
 		"awards": [
 			{
 				"image": "notebook.jpg",
