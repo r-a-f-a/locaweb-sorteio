@@ -10,9 +10,14 @@ const routes = [
     component: () => import(`@/components/themes/${THEME}/home`)
   },
   {
-    path: '/sort/:type',
-    name: 'sort',
-    component: () => import(`@/components/themes/${THEME}/contest`)
+    path: '/sorteios',
+    name: 'sorteios',
+    component: () => import(`@/components/themes/${THEME}/sorteios`)
+  },
+  {
+    path: '/sorteios/:type',
+    name: 'sorteio',
+    component: () => import(`@/components/themes/${THEME}/sorteio`)
   }
 ]
 

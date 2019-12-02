@@ -3,14 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
-import BootstrapVue from 'bootstrap-vue'
 import axios from './utils/axios'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 import events from 'events-vue-allin'
 
 Vue.config.productionTip = false
-Vue.use(BootstrapVue)
 Vue.use(axios)
 Vue.use(events)
 

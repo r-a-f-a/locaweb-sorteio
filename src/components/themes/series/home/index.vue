@@ -24,6 +24,7 @@ export default {
       this.$api.get('/picker')
         .then(res => {
           this.dataCard = res.data
+          console.log(res.data)
         })
     }
   },
