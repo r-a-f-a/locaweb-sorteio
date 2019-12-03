@@ -20,7 +20,9 @@
               </div>
           </div>
           <div class="lw-col">
-            CONTAGEM REGRESSIVA CARAIO
+            <div class="sort-message">
+              <h1 class="sort-message-spam">SORTEIO FINALIZADO</h1>
+            </div>
           </div>
       </div>
     </div>

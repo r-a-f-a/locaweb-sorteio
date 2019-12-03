@@ -222,8 +222,13 @@ li {
   width: 350px;
   height: auto;
 }
+.sort-message{
+  height: 100%;
+  vertical-align: middle !important;
+}
 .roulet-section{
   margin-top: 120px;
+  width: 100%;
 }
 .roulet {
   display: -ms-flexbox;
@@ -231,6 +236,7 @@ li {
   padding-left: 0;
   list-style: none;
   border-radius: .25rem;
+  width: 100%;
 }
 .roulet-item:first-child .roulet-card {
   margin-left: 0;
@@ -246,17 +252,23 @@ li {
   margin-left: -1px;
   line-height: 1.25;
   border-radius: 5px;
+  width: calc(100%/7) !important;
 }
 
-.active img{
-  margin-top: -15px !important;
-  width: 280px !important;
+.active{
+  margin-top: -10px !important;
+  margin-left: -20px;
+  width: 300px !important;
   height: 200px !important;
+  position: absolute !important;
+  z-index: 999;
+  border: 8px solid #fff;
 }
 
 .roulet-item img{
-  width: 250px;
+  width: 100%;
   height: 160px;
   margin-top: 15px;
+  border-radius: 6px;
 }
 </style>

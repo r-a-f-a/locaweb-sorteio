@@ -2,16 +2,13 @@
   <div class="roulet-section">
     <nav>
       <ul class="roulet">
-        <li class="roulet-item" v-for="item in 3" :key="item">
-            <img :src="'https://api.adorable.io/avatars/285/' + Math.random(1,99999) + '@adorable.io.png'" >
-        </li>
-
-        <li class="roulet-item active">
-            <img :src="'https://api.adorable.io/avatars/285/' + Math.random(1,99999) + '@adorable.io.png'" >
-        </li>
-
-        <li class="roulet-item" v-for="item in 3" :key="item">
-            <img :src="'https://api.adorable.io/avatars/285/' + Math.random(1,99999) + '@adorable.io.png'" >
+        <li class="roulet-item" v-for="item in 7" :key="item">
+            <div v-if="item === 4">
+              <img class="active" :src="'https://api.adorable.io/avatars/285/' + Math.random(1,99999) + '@adorable.io.png'" >
+            </div>
+            <div v-else>
+              <img :src="'https://api.adorable.io/avatars/285/' + Math.random(1,99999) + '@adorable.io.png'" >
+            </div>
         </li>
       </ul>
     </nav>
