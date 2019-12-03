@@ -36,6 +36,8 @@ export default {
   font-family: 'LwFont', sans-serif
 } */
 body{
+  padding: 0;
+  margin: 0;
   color: #fff !important;
   background-image: url("./assets/themes/netflix/bg/1.jpg");
   -webkit-background-size: cover;
@@ -56,6 +58,10 @@ body.sorteio{
 }
 a, p, span, b, h1, h2, h3{
   text-decoration: none !important;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
 .container-center{
   width: 20%;
@@ -216,34 +222,41 @@ a, p, span, b, h1, h2, h3{
   width: 350px;
   height: auto;
 }
-/* .grid-container {
-  display: -webkit-flex;
-  -webkit-flex-direction: row;
+.roulet-section{
+  margin-top: 120px;
+}
+.roulet {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  padding-left: 0;
+  list-style: none;
+  border-radius: .25rem;
 }
-.grid-container > div {
-  padding: 20px 0px;
-  font-size: 30px;
-  width: 33%;
+.roulet-item:first-child .roulet-card {
+  margin-left: 0;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
 }
-.sort-detail{
-  font-weight: 400;
+.roulet-item:not(:first-child){
+  margin-left: 10px;
 }
-.sort-detail p{
-  margin-top: -20px;
-  font-size: 14pt;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.roulet-item {
+  position: relative;
+  display: block;
+  margin-left: -1px;
+  line-height: 1.25;
+  border-radius: 5px;
 }
-.sort-avatar-card{
-  margin-left: 300px;
+
+.active img{
+  margin-top: -15px !important;
+  width: 280px !important;
+  height: 200px !important;
 }
-.sort-avatar{
-  width: 350px;
-  height: auto;
-  box-shadow: 1px 11px 16px 0px rgba(0,0,0,0.24);
+
+.roulet-item img{
+  width: 250px;
+  height: 160px;
+  margin-top: 15px;
 }
-.start-sort{
-  width: 100% !important;
-} */
 </style>
