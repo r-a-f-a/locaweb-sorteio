@@ -2,13 +2,9 @@
   <div class="roulet-section">
     <nav>
       <ul class="roulet">
-        <li class="roulet-item" v-for="item in 7" :key="item">
-            <div v-if="item === 4">
-              <img class="active" :src="'https://api.adorable.io/avatars/285/' + Math.random(1,99999) + '@adorable.io.png'" >
-            </div>
-            <div v-else>
-              <img :src="'https://api.adorable.io/avatars/285/' + Math.random(1,99999) + '@adorable.io.png'" >
-            </div>
+        <li class="roulet-item" v-for="(item, index) in items" :key="index">
+              <span>{{item.funcionario}}</span>
+              <img :class="{ 'active' : index === 3 }" :src="getImage(item.id)" >
         </li>
       </ul>
     </nav>
@@ -35,9 +31,10 @@
 var shuffle = require('shuffle-array')
 export default {
   name: 'sort',
-  props: ['collaborators'],
+  props: ['collaborators', 'winner'],
   data () {
     return {
+      index: 0,
       choosedIndex: 0,
       sliced: [],
       image: {
@@ -77,6 +74,10 @@ export default {
     }
   },
   methods: {
+    getImage (index) {
+      // const index = Math.floor(Math.random(0, 10) * 10)
+      return require(`@/assets/themes/netflix/povofeio/${index}.jpg`)
+    },
     makeSort () {
       this.setSliced()
       this.setChoosed()
@@ -114,17 +115,42 @@ export default {
       // console.log('ANTEPENULT', antepenult)
       this.sliced[antepenultIndex] = choosed
       this.sliced[this.choosedIndex] = antepenult
+    },
+    start () {
+      clearInterval(this.interval)
+      const _this = this
+      _this.index = 0
+      this.interval = setInterval(function () {
+        _this.next()
+      }, 50)
+    },
+    prev () {
+      const index = this.index - 1
+      this.index = (index <= 0) ? 0 : index
+    },
+    next () {
+      console.log('NEXT')
+      console.time('NEXT')
+      const index = this.index + 1
+      const last = this.sliced.length - 7
+      this.index = (index > last) ? last : index
+      console.timeEnd('NEXT')
     }
   },
   created () {
+    this.makeSort()
     const that = this
     this.$events.off('button-pressed-enter')
     this.$events.on('button-pressed-enter', () => {
-      that.state = 'true'
+      that.start()
     })
     this.$events.off('button-pressed-prev')
     this.$events.on('button-pressed-prev', () => {
-      that.state = 'false'
+      that.prev()
+    })
+    this.$events.off('button-pressed-next')
+    this.$events.on('button-pressed-next', () => {
+      that.next()
     })
   },
   mounted () {
@@ -138,7 +164,25 @@ export default {
       return str
     }
   },
+  watch: {
+    index (val) {
+      this.$events.emit('user-sort', this.items[3])
+      if (val === 93) {
+        clearInterval(this.interval)
+        alert('ACABOU MOSTRA O VENCEDOR')
+      }
+      // console.log('WINNER', )
+      // this.winner =
+    }
+  },
   computed: {
+
+    items () {
+      const end = this.index + 7
+      const items = this.sliced.slice(this.index, end)
+      // items[3].class = 'active'
+      return items
+    },
     style () {
       return {
         sortBox: {
@@ -209,5 +253,16 @@ export default {
 @keyframes running {
     from {left: -5px;}
     to {left: var(--left);}
+}
+
+.roulet-item span {
+  border: 1px solid black;
+  position: absolute;
+  top: 100px;
+  z-index: 999;
+  left: 110px;
+  color: #000;
+  background-color:#fff;
+  z-index: 9999 !important;
 }
 </style>

@@ -16,7 +16,11 @@
           </div>
           <div class="lw-col">
               <div class="card-avatar">
-                  <img class="sort-avatar" src="@/assets/themes/netflix/avatar/flash.jpg" alt="">
+                  <div class="data" v-if="user.id">
+                    {{user}}
+                  </div>
+                  <img v-if="user.id" class="sort-avatar" :src="getImage(user.id)" alt="">
+                  <img src="@/assets/themes/netflix/avatar/flash.jpg" v-else>
               </div>
           </div>
           <div class="lw-col">
@@ -37,13 +41,24 @@ export default {
   data () {
     return {
       collaborators: [],
-      configs: []
+      configs: [],
+      user: {
+      }
     }
   },
   components: {
     Roleta
   },
   methods: {
+    getImage (index) {
+      // const index = Math.floor(Math.random(0, 10) * 10)
+      try {
+        const image = require(`@/assets/themes/netflix/povofeio/${index}.jpg`) || null
+        return image
+      } catch (error) {
+        return null
+      }
+    },
     getCollaborators () {
       this.$api.get(`/${this.type}`)
         .then(res => {
@@ -66,6 +81,11 @@ export default {
   created () {
     var body = document.querySelector('body')
     body.classList.add('sorteio')
+    const _this = this
+    this.$events.off('user-sort')
+    this.$events.on('user-sort', (user) => {
+      _this.user = user
+    })
   },
   mounted () {
     this.getCollaborators()
