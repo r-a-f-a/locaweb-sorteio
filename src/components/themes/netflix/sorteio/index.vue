@@ -9,15 +9,15 @@
               <div class="sort-detail">
                   <p>SORTEIO <br>
                   <span class="lw-red">PRATAS DA CASA</span></p>
-                  <a href="#" class="btn btn-red btn-rouded">Iniciar sorteio</a>
+                  <a href="#" class="btn btn-red btn-rounded">Iniciar sorteio</a>
               </div>
           </div>
           <div class="lw-col">
               <div class="card-avatar">
                   <img v-if="user.id" class="sort-avatar" :src="getImage(user.id)" alt="">
                   <img src="@/assets/themes/netflix/avatar/flash.jpg" v-else>
-                  <div class="bottom-left" v-if="user.id">
-                    <p>{{user.funcionario}}</p>
+                  <div class="user-details bottom-left" v-if="user.id">
+                    <h1>{{user.funcionario | pasedName }}</h1>
                     <p>{{user.area}}</p>
                     <p>{{user.email}}</p>
                   </div>
@@ -48,6 +48,12 @@ export default {
   },
   components: {
     Roleta
+  },
+  filters: {
+    pasedName: function (value) {
+      const fullName = value.split(' ')
+      return fullName[0] + ' ' + fullName[fullName.length - 1]
+    }
   },
   methods: {
     getImage (index) {

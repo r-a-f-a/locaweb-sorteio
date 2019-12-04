@@ -136,6 +136,7 @@ li {
   width: 150px;
   height: auto;
   margin-top: 30px;
+  margin-left: -20px;
 }
 .sort-content{
   width: 50%;
@@ -228,12 +229,28 @@ li {
 .card-avatar img{
   width: 100%;
   height: 100%;
+  top: -100px;
+  border-radius: 6px;
   object-fit: cover !important;
+}
+.user-details{
+  width: 100%;
+  height: auto;
+  bottom: 0 !important;
+  left: 0 !important;
+  /* background-color: rgba(240, 9, 67, 0.8); */
+  background-image: linear-gradient(transparent, #242323);
+}
+.user-details h1{
+  margin-bottom: -10px;
+}
+.user-details h1, p{
+  text-shadow: 1px 1px #000;
 }
 .bottom-left {
   position: absolute;
   bottom: 20px;
-  left: 16px;
+  padding-left: 16px;
 }
 .avatar-name{
   font-size: 24pt !important;
