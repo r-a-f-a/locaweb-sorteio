@@ -122,7 +122,7 @@ export default {
       _this.index = 0
       this.interval = setInterval(function () {
         _this.next()
-      }, 50)
+      }, 100)
     },
     prev () {
       const index = this.index - 1
@@ -142,6 +142,7 @@ export default {
     const that = this
     this.$events.off('button-pressed-enter')
     this.$events.on('button-pressed-enter', () => {
+      that.makeSort()
       that.start()
     })
     this.$events.off('button-pressed-prev')
@@ -169,7 +170,7 @@ export default {
       this.$events.emit('user-sort', this.items[3])
       if (val === 93) {
         clearInterval(this.interval)
-        alert('ACABOU MOSTRA O VENCEDOR')
+        // alert('ACABOU MOSTRA O VENCEDOR')
       }
       // console.log('WINNER', )
       // this.winner =
