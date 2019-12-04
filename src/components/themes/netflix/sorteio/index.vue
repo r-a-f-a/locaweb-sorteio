@@ -7,25 +7,25 @@
       <div class="grid">
           <div class="lw-col">
               <div class="sort-detail">
-                  <p class="sort-content-title">SORTEIO <br>
-                      <span class="lw-red">PRATAS DA CASA</span>
-                  </p>
-                  <p class="m-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in est a orci pretium faucibus id a elit. Pellentesque id dictum tellus. </p>
-                  <a href="#" class="btn btn-red btn-rounded start-sort">INICIAR SORTEIO</a>
+                  <p>SORTEIO <br>
+                  <span class="lw-red">PRATAS DA CASA</span></p>
+                  <a href="#" class="btn btn-red btn-rouded">Iniciar sorteio</a>
               </div>
           </div>
           <div class="lw-col">
               <div class="card-avatar">
-                  <div class="data" v-if="user.id">
-                    {{user}}
-                  </div>
                   <img v-if="user.id" class="sort-avatar" :src="getImage(user.id)" alt="">
                   <img src="@/assets/themes/netflix/avatar/flash.jpg" v-else>
+                  <div class="bottom-left" v-if="user.id">
+                    <p>{{user.funcionario}}</p>
+                    <p>{{user.area}}</p>
+                    <p>{{user.email}}</p>
+                  </div>
               </div>
           </div>
           <div class="lw-col">
             <div class="sort-message">
-              <h1 class="sort-message-spam">SORTEIO FINALIZADO</h1>
+              <!-- <p>SORTEIO FINALIZADO</p> -->
             </div>
           </div>
       </div>
@@ -71,7 +71,6 @@ export default {
           this.configs = res.data
         })
     }
-
   },
   computed: {
     type () {

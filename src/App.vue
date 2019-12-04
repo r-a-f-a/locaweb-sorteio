@@ -30,11 +30,6 @@ export default {
 }
 </script>
 <style>
-/* body {
-  background: #233344 !important;
-  color: #fff !important;
-  font-family: 'LwFont', sans-serif
-} */
 body{
   padding: 0;
   margin: 0;
@@ -62,6 +57,12 @@ a, p, span, b, h1, h2, h3{
 li {
   display: list-item;
   text-align: -webkit-match-parent;
+}
+.text-center{
+  text-align: center !important;
+}
+.lw-red{
+  color: #f00943;
 }
 .container-center{
   width: 20%;
@@ -143,13 +144,6 @@ li {
   display: flex;
   flex-direction: column;
 }
-.sort-content-title{
-  font-weight: 500;
-  font-size: 36pt;
-}
-.lw-red{
-  color: #f00943;
-}
 .cards{
   margin-top: 30px;
   display: flex;
@@ -204,27 +198,45 @@ li {
   width: 20%;
   display: inline-flex;
 }
+.sort-detail{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.sort-detail p{
+  font-size: 48pt;
+}
+.sort-message{
+  display: flex;
+  align-content: center;
+}
+.sort-message p{
+  font-size: 48pt;
+}
 .m-20{
   margin-top: -30px;
 }
-.sort-detail{
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.start-sort{
-  margin-top: 30px;
-}
 .card-avatar{
-  margin: 0 auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
 }
 .card-avatar img{
-  width: 350px;
-  height: auto;
-}
-.sort-message{
+  width: 100%;
   height: 100%;
-  vertical-align: middle !important;
+  object-fit: cover !important;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+}
+.avatar-name{
+  font-size: 24pt !important;
 }
 .roulet-section{
   margin-top: 120px;
@@ -246,29 +258,27 @@ li {
 .roulet-item:not(:first-child){
   margin-left: 10px;
 }
-.roulet-item {
+.roulet-item{
   position: relative;
   display: block;
   margin-left: -1px;
   line-height: 1.25;
-  border-radius: 5px;
   width: calc(100%/7) !important;
+  height: auto;
 }
-
-.active{
-  margin-top: -10px !important;
-  margin-left: -20px;
-  width: 300px !important;
-  height: 200px !important;
+.roulet-item .active{
+  z-index: 999 !important;
+  transform: scale(1.3,1.3);
   position: absolute !important;
-  z-index: 999;
-  border: 8px solid #fff;
+  border: 5px solid #fff;
 }
-
 .roulet-item img{
   width: 100%;
-  height: 160px;
-  margin-top: 15px;
-  border-radius: 6px;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover !important;
+}
+.roulet-span{
+  z-index: 1 !important;
 }
 </style>

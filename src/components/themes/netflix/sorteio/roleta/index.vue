@@ -3,28 +3,12 @@
     <nav>
       <ul class="roulet">
         <li class="roulet-item" v-for="(item, index) in items" :key="index">
-              <span>{{item.funcionario}}</span>
-              <img :class="{ 'active' : index === 3 }" :src="getImage(item.id)" >
+          <!-- <span class="roulet-span">{{item.funcionario}}</span> -->
+          <img :class="{ 'active' : index === 3 }" :src="getImage(item.id)" >
         </li>
       </ul>
     </nav>
   </div>
-  <!-- <div id="sort" class="sort" :style="style.animation">
-    <select name="" id="" v-model="state">
-      <option value=true>T</option>
-      <option value=false>F</option>
-    </select>
-    <div class="sort-box" :style="style.sortBox">
-      <transition name="ani-running" mode="out-in" v-on="hooks">
-        <div class="sort-line" v-if="state == 'true'" :style="style">
-          <div v-for="(item, k) in sliced" :key="k" class="sort-item">
-            <img :src="'https://picsum.photos/200/300?x=' + Math.random(1,99999)" >
-            <b>{{ item.funcionario  | firsLastName}}</b>
-          </div>
-        </div>
-      </transition>
-    </div>
-  </div> -->
 </template>
 
 <script>
