@@ -8,7 +8,7 @@
           <div class="lw-col">
               <div class="sort-detail">
                   <p>SORTEIO <br>
-                  <span class="lw-red">PRATAS DA CASA</span></p>
+                  <span class="lw-red">{{ configs.name }}</span></p>
                   <a href="#" class="btn btn-red btn-rounded">Iniciar sorteio</a>
               </div>
           </div>
@@ -25,7 +25,7 @@
           </div>
           <div class="lw-col">
             <div class="sort-message">
-              <!-- <p>SORTEIO FINALIZADO</p> -->
+              <timer></timer>
             </div>
           </div>
       </div>
@@ -36,6 +36,7 @@
 
 <script>
 import Roleta from './roleta'
+import timer from './timer'
 export default {
   name: 'sorteio',
   data () {
@@ -47,7 +48,8 @@ export default {
     }
   },
   components: {
-    Roleta
+    Roleta,
+    timer
   },
   filters: {
     pasedName: function (value) {

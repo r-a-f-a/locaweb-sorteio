@@ -2,7 +2,7 @@
   <div class="roulet-section">
     <nav>
       <ul class="roulet">
-        <li class="roulet-item" v-for="(item, index) in items" :key="index">
+        <li class="roulet-item" :class="{ 'arrow' : index === 3 }" v-for="(item, index) in items" :key="index">
           <!-- <span class="roulet-span">{{item.funcionario}}</span> -->
           <img :class="{ 'active' : index === 3 }" :src="getImage(item.id)" >
         </li>
@@ -200,6 +200,17 @@ export default {
   display: flex;
   align-items: center;
 }
+.arrow:before {
+  content: "";
+  position: absolute;
+  z-index:1034!important;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 50px solid #f00943;
+  margin-left: 94px!important;
+  margin-top: -55px!important;
+
+}
 
 .sort-line {
   position: absolute;
@@ -248,6 +259,6 @@ export default {
   left: 110px;
   color: #000;
   background-color:#fff;
-  z-index: 9999 !important;
+  z-index: 1036 !important;
 }
 </style>

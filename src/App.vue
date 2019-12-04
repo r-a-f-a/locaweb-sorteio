@@ -289,6 +289,7 @@ li {
   position: absolute !important;
   border: 5px solid #fff;
 }
+
 .roulet-item img{
   width: 100%;
   height: 100%;
