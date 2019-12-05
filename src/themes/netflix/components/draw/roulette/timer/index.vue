@@ -38,6 +38,19 @@ export default {
   created () {
     this.start()
   },
+  mounted () {
+    this.$events.on('timer-start', () => {
+      this.start()
+    })
+
+    this.$events.on('timer-stop', () => {
+      this.stopTime()
+    })
+
+    this.$events.on('timer-restart', () => {
+      this.restart()
+    })
+  },
   watch: {
     number: function () {
       const _this = this
