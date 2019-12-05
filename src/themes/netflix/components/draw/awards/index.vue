@@ -9,6 +9,12 @@
 
 <script>
 export default {
+  metaInfo: {
+  // Children can override the title.
+    bodyAttrs: {
+      class: ['awards']
+    }
+  },
   name: 'awards',
   props: ['configs', 'collaborators', 'user']
 }

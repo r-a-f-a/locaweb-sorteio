@@ -29,7 +29,6 @@ import cardAvatar from './card'
 import description from './description'
 export default {
   metaInfo: {
-  // Children can override the title.
     bodyAttrs: {
       class: ['roullete']
     }
