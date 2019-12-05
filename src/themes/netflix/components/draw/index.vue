@@ -1,9 +1,9 @@
 <template>
   <div>
     <button @click="change()">MUDAR</button>
-    <transition name="fade">
+    <transition name="fadeUp">
     <roulette :configs='configs' :collaborators='collaborators' :user="user" v-if="roulette"></roulette>
-    <awards v-else></awards>
+    <awards :configs="configs" :user="user" v-else></awards>
     </transition>
   </div>
 </template>
@@ -11,6 +11,7 @@
 <script>
 import roulette from './roulette'
 import awards from './awards'
+require('vue2-animate/dist/vue2-animate.min.css')
 // import timer from './timer'
 export default {
   metaInfo: {

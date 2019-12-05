@@ -9,6 +9,7 @@
                 <winner :user="user"></winner>
             </div>
             <div class="lw-col">
+                <sort :configs="configs"></sort>
             </div>
         </div>
     </div>
@@ -18,15 +19,25 @@
 
 <script>
 import winner from './winner'
+import sort from './sort'
 export default {
+  metaInfo: {
+  // Children can override the title.
+    bodyAttrs: {
+      class: ['awards']
+    }
+  },
   name: 'awards',
   props: ['configs', 'collaborators', 'user'],
   components: {
-    winner
+    winner,
+    sort
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+.lw-col {
+    width: auto!important;
+}
 </style>

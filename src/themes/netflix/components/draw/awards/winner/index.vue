@@ -1,9 +1,11 @@
 <template>
   <div class="winner">
     <div class="detail">
-        <h2 class="lw-red">Nome <br> Sobrenome</h2>
-        <p>(LOCAWEB - Suporte) email@locaweb.com.br</p>
-        {{ user }}
+        <h2 class="lw-red">{{ user.funcionario }}</h2>
+        <p>
+          {{ user.area }} <br/>
+          {{ user.email}}
+        </p>
     </div>
   </div>
 </template>
@@ -22,9 +24,10 @@ export default {
   align-content: center;
 }
 .detail h2 {
-    font-size: 50pt;
+  font-size: 50pt;
 }
 .detail p{
   font-size: 32pt;
+  margin-top: -5%;
 }
 </style>
