@@ -13,7 +13,7 @@
           </div>
           <div class="lw-col">
             <div class="sort-message">
-              <timer></timer>
+              <timer v-if="showTimer"></timer>
             </div>
           </div>
       </div>
@@ -43,11 +43,16 @@ export default {
   },
   data () {
     return {
-
+      showTimer: false
     }
   },
   created () {
 
+  },
+  mounted () {
+    this.$events.on('roulette-showTimer', (val) => {
+      this.showTimer = val
+    })
   }
 }
 </script>

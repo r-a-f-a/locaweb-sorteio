@@ -62,6 +62,7 @@ export default {
       return require(`../../../../assets/povofeio/${index}.jpg`)
     },
     makeSort () {
+      this.$events.emit('roulette-showTimer', false)
       this.setSliced()
       this.setChoosed()
       this.changeIndexChoosed()
@@ -154,6 +155,7 @@ export default {
       if (val === 93) {
         clearInterval(this.interval)
         // alert('ACABOU MOSTRA O VENCEDOR')
+        this.$events.emit('roulette-showTimer', true)
       }
       // console.log('WINNER', )
       // this.winner =
