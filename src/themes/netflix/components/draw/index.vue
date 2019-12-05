@@ -1,56 +1,35 @@
 <template>
   <div>
-    <roulette :configs='configs' :collaborators='collaborators' :user="user"></roulette>
-
-    <!-- <div class="container">
-      <div class="row">
-          <img class="logo-corner" src="../../assets/logos/logo-default.png" alt="">
-      </div> -->
-      <!-- <div class="grid">
-          <div class="lw-col">
-              <div class="sort-detail">
-                  <p>SORTEIO <br>
-                  <span class="lw-red">{{ configs.name }}</span></p>
-                  <a href="#" class="btn btn-red btn-rounded">Iniciar sorteio</a>
-              </div>
-          </div>
-          <div class="lw-col">
-              <div class="card-avatar">
-                  <img v-if="user.id" class="sort-avatar" :src="getImage(user.id)" alt="">
-                  <img src="../../assets/avatar/flash.jpg" v-else>
-                  <div class="user-details bottom-left" v-if="user.id">
-                    <h1>{{user.funcionario | pasedName }}</h1>
-                    <p>{{user.area}}</p>
-                    <p>{{user.email}}</p>
-                  </div>
-              </div>
-          </div>
-          <div class="lw-col">
-            <div class="sort-message">
-              <timer></timer>
-            </div>
-          </div>
-      </div> -->
-    <!-- </div> -->
-    <!-- <roulette v-if="collaborators.length" :collaborators="collaborators"></roulette> -->
+    <button @click="change()">MUDAR</button>
+    <transition name="fade">
+    <roulette :configs='configs' :collaborators='collaborators' :user="user" v-if="roulette"></roulette>
+    <awards v-else></awards>
+    </transition>
   </div>
 </template>
 
 <script>
 import roulette from './roulette'
+import awards from './awards'
 // import timer from './timer'
 export default {
+  metaInfo: {
+    bodyAttrs: {
+      class: ['sorteio']
+    }
+  },
   name: 'sorteio',
   data () {
     return {
+      roulette: true,
       collaborators: [],
       configs: [],
       user: {}
     }
   },
   components: {
-    roulette
-    // timer
+    roulette,
+    awards
   },
   filters: {
     pasedName: function (value) {
@@ -59,6 +38,9 @@ export default {
     }
   },
   methods: {
+    change () {
+      this.roulette = !this.roulette
+    },
     getImage (index) {
       // const index = Math.floor(Math.random(0, 10) * 10)
       try {
@@ -87,8 +69,6 @@ export default {
     }
   },
   created () {
-    var body = document.querySelector('body')
-    body.classList.add('sorteio')
     const _this = this
     this.$events.off('user-sort')
     this.$events.on('user-sort', (user) => {
@@ -103,5 +83,10 @@ export default {
 </script>
 
 <style>
-
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+  opacity: 0;
+}
 </style>

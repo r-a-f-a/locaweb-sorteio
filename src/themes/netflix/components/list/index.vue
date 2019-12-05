@@ -13,6 +13,11 @@
 <script>
 import Cards from './cards'
 export default {
+  metaInfo: {
+    bodyAttrs: {
+      class: ['sorteios']
+    }
+  },
   name: 'sorteios',
   components: {
     Cards
@@ -33,8 +38,6 @@ export default {
   },
   created () {
     this.getConfigs()
-    var body = document.querySelector('body')
-    body.classList.add('sorteios')
   }
 }
 </script>

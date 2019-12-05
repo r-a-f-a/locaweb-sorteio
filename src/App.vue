@@ -5,6 +5,9 @@
 </template>
 <script>
 export default {
+  metaInfo: {
+    title: 'Locaweb Sorteio'
+  },
   name: 'LOCAWEB-SORTEIO',
   data () {
     return {
