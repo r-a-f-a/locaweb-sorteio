@@ -106,6 +106,7 @@ export default {
       this.interval = setInterval(function () {
         _this.next()
       }, 100)
+      this.$events.emit('sort-start')
     },
     prev () {
       const index = this.index - 1
@@ -154,6 +155,8 @@ export default {
       if (val === 93) {
         clearInterval(this.interval)
         // alert('ACABOU MOSTRA O VENCEDOR')
+        this.$events.emit('sort-finished')
+        this.$events.emit('add-overlay')
       }
       // console.log('WINNER', )
       // this.winner =

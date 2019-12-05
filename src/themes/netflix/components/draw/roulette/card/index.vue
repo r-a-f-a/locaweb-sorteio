@@ -1,5 +1,5 @@
 <template>
-  <div class="card-avatar">
+  <div class="card-avatar" :class="classCard" id="card-avatar">
       <img v-if="user.id" class="sort-avatar" :src="getImage(user.id)" alt="">
       <img src="../../../../assets/avatar/flash.jpg" v-else>
       <div class="user-details bottom-left" v-if="user.id">
@@ -14,6 +14,11 @@
 export default {
   name: 'card-avatar',
   props: ['user'],
+  data () {
+    return {
+      winner: false
+    }
+  },
   filters: {
     pasedName: function (value) {
       const fullName = value.split(' ')
@@ -30,6 +35,22 @@ export default {
         return null
       }
     }
+  },
+  computed: {
+    classCard () {
+      if (this.winner) {
+        return 'zindex selectedAvatar'
+      }
+      return ''
+    }
+  },
+  created () {
+    this.$events.on('sort-finished', () => {
+      this.winner = true
+    })
+    this.$events.on('sort-start', () => {
+      this.winner = false
+    })
   }
 }
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div :class="overlay"></div>
     <button @click="change()">MUDAR</button>
     <transition name="fade">
     <roulette :configs='configs' :collaborators='collaborators' :user="user" v-if="roulette"></roulette>
@@ -21,6 +22,7 @@ export default {
   name: 'sorteio',
   data () {
     return {
+      winner: false,
       roulette: true,
       collaborators: [],
       configs: [],
@@ -66,6 +68,12 @@ export default {
   computed: {
     type () {
       return this.$route.params.type
+    },
+    overlay () {
+      if (this.winner) {
+        return 'overlayBg'
+      }
+      return ''
     }
   },
   created () {
@@ -73,6 +81,12 @@ export default {
     this.$events.off('user-sort')
     this.$events.on('user-sort', (user) => {
       _this.user = user
+    })
+    this.$events.on('sort-finished', () => {
+      this.winner = true
+    })
+    this.$events.on('sort-start', () => {
+      this.winner = false
     })
   },
   mounted () {
