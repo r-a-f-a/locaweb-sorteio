@@ -8,14 +8,14 @@ export default {
   name: 'LOCAWEB-SORTEIO',
   data () {
     return {
-      style: `./components/themes/${process.env.VUE_APP_THEME}/styles.css`
+      style: `./themes/${process.env.VUE_APP_THEME}/styles.css`
     }
   },
   methods: {
     appendStyle () {
       const file = document.createElement('link')
       file.rel = 'stylesheet'
-      file.href = require(`./components/themes/${process.env.VUE_APP_THEME}/styles.css`)
+      file.href = require(`./themes/${process.env.VUE_APP_THEME}/styles.css`)
       document.head.appendChild(file)
     }
   },
