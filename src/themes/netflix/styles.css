@@ -1,51 +1,8 @@
-<template>
-  <div id="app" :style="appStyles">
-    <router-view />
-  </div>
-</template>
-<script>
-export default {
-  name: 'LOCAWEB-SORTEIO',
-  data () {
-    return {
-      style: `./components/themes/${process.env.VUE_APP_THEME}/styles.css`
-    }
-  },
-  methods: {
-    appendStyle () {
-      const file = document.createElement('link')
-      file.rel = 'stylesheet'
-      file.href = require(`./components/themes/${process.env.VUE_APP_THEME}/styles.css`)
-      document.head.appendChild(file)
-    }
-  },
-  computed: {
-    appStyles () {
-      return {
-        '--theme': 'netflix',
-        '--style': this.style,
-        $importStyle: this.style
-      }
-    }
-  },
-  created () {
-    this.appendStyle()
-    this.$api.get('/geral').then(data => {
-      console.log('RESULT USERS', data)
-    })
-    this.$api.get('/picker/geral').then(data => {
-      console.log('RESULT API GERAL', data)
-    })
-  }
-}
-</script>
-<style lang="scss" scoped>
-/*
 body{
   padding: 0;
   margin: 0;
   color: #fff !important;
-  background-image: url("./assets/themes/netflix/bg/1.jpg");
+  background-image: url("./assets/bg/1.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -53,14 +10,14 @@ body{
   font-family: 'LwFont', sans-serif
 }
 body.sorteios{
-  background-image: url("./assets/themes/netflix/bg/2.jpg");
+  background-image: url("./assets/bg/2.jpg");
 }
 body.sorteio{
-  background-image: url("./assets/themes/netflix/bg/3.jpg");
+  background-image: url("./assets/bg/3.jpg");
 }
 @font-face {
   font-family: 'LwFont';
-  src:  url('./assets/themes/netflix/fonts/bebas.ttf');
+  src:  url('./assets/fonts/bebas.ttf');
 }
 a, p, span, b, h1, h2, h3{
   text-decoration: none !important;
@@ -249,7 +206,7 @@ li {
   height: auto;
   bottom: 0 !important;
   left: 0 !important;
-  //background-color: rgba(240, 9, 67, 0.8);
+  /* background-color: rgba(240, 9, 67, 0.8); */
   background-image: linear-gradient(transparent, #242323);
 }
 .user-details h1{
@@ -309,5 +266,4 @@ li {
 }
 .roulet-span{
   z-index: 1 !important;
-} */
-</style>
+}

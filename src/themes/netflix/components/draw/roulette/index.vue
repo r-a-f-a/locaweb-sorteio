@@ -59,8 +59,7 @@ export default {
   },
   methods: {
     getImage (index) {
-      // const index = Math.floor(Math.random(0, 10) * 10)
-      return require(`@/assets/themes/netflix/povofeio/${index}.jpg`)
+      return require(`../../../assets/povofeio/${index}.jpg`)
     },
     makeSort () {
       this.setSliced()

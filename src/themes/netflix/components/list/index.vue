@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <img class="logo-corner" src="@/assets/themes/netflix/logos/logo-default.png" alt="">
+      <img class="logo-corner" src="../../assets/logos/logo-default.png" alt="">
     </div>
     <div class="sort-content">
       <p class="sort-content-title">SELECIONE O TIPO DE <span class="lw-red">SORTEIO</span></p>

@@ -23,9 +23,9 @@ export default {
   methods: {
     parseImage (sort) {
       if (sort.hover) {
-        return require(`@/assets/themes/netflix/sorteios/${sort.id}-white.png`)
+        return require(`../../../assets/sorteios/${sort.id}-white.png`)
       } else {
-        return require(`@/assets/themes/netflix/sorteios/${sort.id}.png`)
+        return require(`../../../assets/sorteios/${sort.id}.png`)
       }
     },
     mouseOver (index) {

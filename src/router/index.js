@@ -7,17 +7,17 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import(`@/components/themes/${THEME}/home`)
+    component: () => import(`@/themes/${THEME}/components/home`)
   },
   {
     path: '/list',
     name: 'list',
-    component: () => import(`@/components/themes/${THEME}/list`)
+    component: () => import(`@/themes/${THEME}/components/list`)
   },
   {
     path: '/draw/:type',
     name: 'draw',
-    component: () => import(`@/components/themes/${THEME}/draw`)
+    component: () => import(`@/themes/${THEME}/components/draw`)
   }
 ]
 
