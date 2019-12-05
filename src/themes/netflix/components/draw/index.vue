@@ -70,10 +70,9 @@ export default {
     }
   },
   created () {
-    const _this = this
     this.$events.off('user-sort')
     this.$events.on('user-sort', (user) => {
-      _this.user = user
+      this.user = user
     })
   },
   mounted () {
