@@ -28,6 +28,12 @@ import timer from './timer'
 import cardAvatar from './card'
 import description from './description'
 export default {
+  metaInfo: {
+  // Children can override the title.
+    bodyAttrs: {
+      class: ['roullete']
+    }
+  },
   name: 'Roullete',
   props: ['configs', 'collaborators', 'user'],
   components: {

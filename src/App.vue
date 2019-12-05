@@ -5,6 +5,9 @@
 </template>
 <script>
 export default {
+  metaInfo: {
+    title: 'Locaweb Sorteio'
+  },
   name: 'LOCAWEB-SORTEIO',
   data () {
     return {
@@ -15,7 +18,7 @@ export default {
     appendStyle () {
       const file = document.createElement('link')
       file.rel = 'stylesheet'
-      file.href = require(`./components/themes/${process.env.VUE_APP_THEME}/styles.css`)
+      file.href = require(`./themes/${process.env.VUE_APP_THEME}/styles.css`)
       document.head.appendChild(file)
     }
   },
