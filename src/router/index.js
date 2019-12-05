@@ -10,14 +10,14 @@ const routes = [
     component: () => import(`@/components/themes/${THEME}/home`)
   },
   {
-    path: '/sorteios',
-    name: 'sorteios',
-    component: () => import(`@/components/themes/${THEME}/sorteios`)
+    path: '/list',
+    name: 'list',
+    component: () => import(`@/components/themes/${THEME}/list`)
   },
   {
-    path: '/sorteios/:type',
-    name: 'sorteio',
-    component: () => import(`@/components/themes/${THEME}/sorteio`)
+    path: '/draw/:type',
+    name: 'draw',
+    component: () => import(`@/components/themes/${THEME}/draw`)
   }
 ]
 

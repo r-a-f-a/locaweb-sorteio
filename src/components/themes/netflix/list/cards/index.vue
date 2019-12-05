@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <router-link v-for="(sorteio, index) in dataCard" :key="index" tag="a" :to="`sorteios/${sorteio.id}`">
+    <router-link v-for="(sorteio, index) in dataCard" :key="index" tag="a" :to="`draw/${sorteio.id}`">
       <div class="card">
         <div class="card-img" @mouseover="mouseOver(index)" @mouseleave="mouseLeave(index)">
           <img :src="parseImage(sorteio)" alt="Card image" />

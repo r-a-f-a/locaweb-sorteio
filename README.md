@@ -1,4 +1,14 @@
-# sorteio
+# Locaweb Sorteio
+
+
+## THEME SCHEME
+```
+  > home
+  > list
+  > draw
+  > awards
+  > thanks
+```  
 
 ## Project setup
 ```

@@ -30,12 +30,12 @@
           </div>
       </div>
     </div>
-    <Roleta v-if="collaborators.length" :collaborators="collaborators"></Roleta>
+    <roulette v-if="collaborators.length" :collaborators="collaborators"></roulette>
   </div>
 </template>
 
 <script>
-import Roleta from './roleta'
+import roulette from './roulette'
 import timer from './timer'
 export default {
   name: 'sorteio',
@@ -48,7 +48,7 @@ export default {
     }
   },
   components: {
-    Roleta,
+    roulette,
     timer
   },
   filters: {
