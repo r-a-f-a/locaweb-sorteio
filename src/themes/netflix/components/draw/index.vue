@@ -1,10 +1,12 @@
 <template>
   <div>
-    <div class="container">
+    <roulette :configs='configs' :collaborators='collaborators' :user="user"></roulette>
+
+    <!-- <div class="container">
       <div class="row">
           <img class="logo-corner" src="../../assets/logos/logo-default.png" alt="">
-      </div>
-      <div class="grid">
+      </div> -->
+      <!-- <div class="grid">
           <div class="lw-col">
               <div class="sort-detail">
                   <p>SORTEIO <br>
@@ -28,28 +30,27 @@
               <timer></timer>
             </div>
           </div>
-      </div>
-    </div>
-    <roulette v-if="collaborators.length" :collaborators="collaborators"></roulette>
+      </div> -->
+    <!-- </div> -->
+    <!-- <roulette v-if="collaborators.length" :collaborators="collaborators"></roulette> -->
   </div>
 </template>
 
 <script>
 import roulette from './roulette'
-import timer from './timer'
+// import timer from './timer'
 export default {
   name: 'sorteio',
   data () {
     return {
       collaborators: [],
       configs: [],
-      user: {
-      }
+      user: {}
     }
   },
   components: {
-    roulette,
-    timer
+    roulette
+    // timer
   },
   filters: {
     pasedName: function (value) {
