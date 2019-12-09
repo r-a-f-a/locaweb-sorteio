@@ -3,7 +3,7 @@
 		"id": "geral",
 		"image": "https://api.adorable.io/avatars/285/@adorable.io.png",
 		"name": "Geral",
-		"title": "Sorteio geral",
+		"title": "Geral",
 		"describe": "Deste sorteio participam todos colaboradores.",
 		"awards": [
 			{ "image": "notebook.jpg", "name": "Notebook Dell Inspiron 15", "winner": "" },
@@ -41,7 +41,7 @@
 		"id": "madrugada",
 		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
 		"name": "Madrugada",
-		"title": "Sorteio madrugada",
+		"title": "Madrugada",
 		"describe": "Deste sorteio participam todos colaboradores da madrugada.",
 		"awards": [
 			{
@@ -80,7 +80,7 @@
 		"id": "pratas",
 		"image": "https://api.adorable.io/avatars/285/bob@adorable.io.png",
 		"name": "Pratas",
-		"title": "Sorteio pratas",
+		"title": "Pratas da Casa",
 		"describe": "Deste sorteio participam todos colaboradores pratas da casa.",
 		"awards": [
 			{
@@ -94,7 +94,7 @@
 		"id": "valeu",
 		"image": "https://api.adorable.io/avatars/285/joe@adorable.io.png",
 		"name": "Valeu",
-		"title": "Sorteio valeu",
+		"title": "Cartão Valeu",
 		"describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
 		"awards": [
 			{

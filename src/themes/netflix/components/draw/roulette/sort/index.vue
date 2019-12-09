@@ -107,6 +107,7 @@ export default {
       this.interval = setInterval(function () {
         _this.next()
       }, 100)
+      this.$events.emit('sort-start')
     },
     prev () {
       const index = this.index - 1
@@ -155,6 +156,8 @@ export default {
       if (val === 93) {
         clearInterval(this.interval)
         // alert('ACABOU MOSTRA O VENCEDOR')
+        this.$events.emit('add-overlay')
+        this.$events.emit('sort-finished')
         this.$events.emit('roulette-showTimer', true)
       }
       // console.log('WINNER', )
@@ -205,14 +208,12 @@ export default {
   content: "";
   position: absolute;
   z-index:1034!important;
-  border-left: 45px solid transparent;
-  border-right: 45px solid transparent;
-  border-top: 50px solid #f00943;
-  margin-left: 94px!important;
-  margin-top: -55px!important;
-
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 30px solid #f00943;
+  margin-left: 114px!important;
+  margin-top: -45px!important;
 }
-
 .sort-line {
   position: absolute;
   left: 5px;
@@ -246,12 +247,10 @@ export default {
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
-
 @keyframes running {
     from {left: -5px;}
     to {left: var(--left);}
 }
-
 .roulet-item span {
   border: 1px solid black;
   position: absolute;
