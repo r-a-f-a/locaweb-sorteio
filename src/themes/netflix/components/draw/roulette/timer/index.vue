@@ -41,7 +41,7 @@ export default {
       this.start()
     },
     showSort () {
-      this.$events.emit('timer-change-component')
+      this.$events.emit('sort-change')
     }
   },
   created () {

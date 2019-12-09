@@ -3,10 +3,10 @@
     <button style="position:fixed;z-index:9999" @click="change()">MUDAR</button>
     <div :class="overlay"></div>
     <button style="position:fixed;" @click="change()">MUDAR</button>
+<transition name="page">
+      <roulette :configs='configs' :collaborators='collaborators' :user="user"  v-if="roulette"></roulette>
 
-      <roulette :configs='configs' :collaborators='collaborators' :user="user" ></roulette>
-    <transition name="page">
-      <awards :configs="configs" :user="user"  v-if="!roulette"></awards>
+      <awards :configs="configs" :user="user" ></awards>
     </transition>
   </div>
 </template>
@@ -72,13 +72,18 @@ export default {
       return this.$route.params.type
     },
     overlay () {
-      if (this.have_winner) {
+      if (this.have_winner && this.roulette) {
         return 'overlay'
       }
       return ''
     }
   },
   created () {
+    this.$events.off('sort-change')
+    this.$events.on('sort-change', () => {
+      this.have_winner = !this.have_winner
+      this.change()
+    })
     this.$events.off('user-sort')
     this.$events.on('user-sort', (user) => {
       this.user = user

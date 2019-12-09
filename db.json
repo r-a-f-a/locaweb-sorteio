@@ -22649,7 +22649,7 @@
         {
           "image": "xbox.jpg",
           "name": "Xbox ONE",
-          "winner": ""
+          "winner": "99999"
         },
         {
           "image": "xbox.jpg",
@@ -22664,12 +22664,12 @@
         {
           "image": "ps4.jpg",
           "name": "Playstation 4",
-          "winner": ""
+          "winner": "99999"
         },
         {
           "image": "samsung50.jpg",
           "name": "TV Samsung 50\"",
-          "winner": ""
+          "winner": "99999"
         },
         {
           "image": "samsung50.jpg",
