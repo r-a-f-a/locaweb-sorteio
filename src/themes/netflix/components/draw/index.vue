@@ -1,9 +1,7 @@
 <template>
   <div>
     <button style="position:fixed;" @click="change()">MUDAR</button>
-    <transition name="fade">
     <div :class="overlay"></div>
-    <!-- <button @click="change()">MUDAR</button> -->
     <transition name="fadeUp">
     <roulette :configs='configs' :collaborators='collaborators' :user="user" v-if="roulette"></roulette>
     <awards :configs="configs" :user="user" v-else></awards>
