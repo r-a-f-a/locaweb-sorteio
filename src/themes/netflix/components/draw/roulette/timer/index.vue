@@ -1,9 +1,9 @@
 <template>
-  <div class="timer">
+  <div class="timer" :class="overlayClass">
     <div class="number"> {{ number }} </div>
-    <button @click="stopTime" :disabled="!running">STOP</button>
+    <!-- <button @click="stopTime" :disabled="!running">STOP</button>
     <button @click="start" :disabled="running">START</button>
-    <button @click="restart">RESTART</button>
+    <button @click="restart">RESTART</button> -->
   </div>
 </template>
 
@@ -14,7 +14,8 @@ export default {
     return {
       number: 10,
       running: true,
-      interval: {}
+      interval: {},
+      have_winner: false
     }
   },
   methods: {
@@ -37,6 +38,12 @@ export default {
   },
   created () {
     this.start()
+    this.$events.on('sort-finished', () => {
+      this.have_winner = true
+    })
+    this.$events.on('sort-start', () => {
+      this.have_winner = false
+    })
   },
   mounted () {
     this.$events.on('timer-start', () => {
@@ -57,6 +64,14 @@ export default {
       if (_this.number === 0) {
         clearInterval(_this.interval)
       }
+    }
+  },
+  computed: {
+    overlayClass () {
+      if (this.winner) {
+        return 'zindex'
+      }
+      return ''
     }
   }
 }

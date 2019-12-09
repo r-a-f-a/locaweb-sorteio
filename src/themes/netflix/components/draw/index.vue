@@ -2,6 +2,9 @@
   <div>
     <button style="position:fixed;" @click="change()">MUDAR</button>
     <transition name="fade">
+    <div :class="overlay"></div>
+    <!-- <button @click="change()">MUDAR</button> -->
+    <transition name="fadeUp">
     <roulette :configs='configs' :collaborators='collaborators' :user="user" v-if="roulette"></roulette>
     <awards :configs="configs" :user="user" v-else></awards>
     </transition>
@@ -25,7 +28,8 @@ export default {
       roulette: true,
       collaborators: [],
       configs: [],
-      user: {}
+      user: {},
+      have_winner: false
     }
   },
   components: {
@@ -67,6 +71,12 @@ export default {
   computed: {
     type () {
       return this.$route.params.type
+    },
+    overlay () {
+      if (this.have_winner) {
+        return 'overlay'
+      }
+      return ''
     }
   },
   created () {
@@ -74,6 +84,12 @@ export default {
     this.$events.off('user-sort')
     this.$events.on('user-sort', (user) => {
       _this.user = user
+    })
+    this.$events.on('sort-finished', () => {
+      this.have_winner = true
+    })
+    this.$events.on('sort-start', () => {
+      this.have_winner = false
     })
   },
   mounted () {
