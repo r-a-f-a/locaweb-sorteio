@@ -80,7 +80,7 @@
 		"id": "pratas",
 		"image": "https://api.adorable.io/avatars/285/bob@adorable.io.png",
 		"name": "Pratas",
-		"title": "Sorteio pratas",
+		"title": "Sorteio Pratas da Casa",
 		"describe": "Deste sorteio participam todos colaboradores pratas da casa.",
 		"awards": [
 			{
@@ -94,7 +94,7 @@
 		"id": "valeu",
 		"image": "https://api.adorable.io/avatars/285/joe@adorable.io.png",
 		"name": "Valeu",
-		"title": "Sorteio valeu",
+		"title": "Sorteio Cartão Valeu",
 		"describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
 		"awards": [
 			{
