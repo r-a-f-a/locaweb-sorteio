@@ -78,9 +78,8 @@ export default {
 </script>
 
 <style style="scss">
-
 .number {
-  font-size: 150px;
-  color: red;
+  font-size: 164pt;
+  color: #f00943;
 }
 </style>
