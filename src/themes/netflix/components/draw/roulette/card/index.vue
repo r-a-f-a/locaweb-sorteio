@@ -16,7 +16,7 @@ export default {
   props: ['user'],
   data () {
     return {
-      winner: false
+      have_winner: false
     }
   },
   filters: {
@@ -38,18 +38,18 @@ export default {
   },
   computed: {
     classCard () {
-      if (this.winner) {
-        return 'zindex selectedAvatar'
+      if (this.have_winner) {
+        return 'zindex'
       }
       return ''
     }
   },
   created () {
     this.$events.on('sort-finished', () => {
-      this.winner = true
+      this.have_winner = true
     })
     this.$events.on('sort-start', () => {
-      this.winner = false
+      this.have_winner = false
     })
   }
 }
