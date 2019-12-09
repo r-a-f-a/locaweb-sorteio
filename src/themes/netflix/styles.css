@@ -174,21 +174,24 @@ li {
   justify-content: space-between;
 }
 .lw-col{
-  width: 20%;
-  display: inline-flex;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
 }
-.sort-detail{
+.detail{
   display: flex;
   flex-direction: column;
   align-content: center;
   z-index: 998 !important;
 }
-.sort-detail p{
+.detail p{
   font-size: 48pt;
 }
 .sort-message{
   display: flex;
-  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .sort-message p{
   font-size: 48pt;

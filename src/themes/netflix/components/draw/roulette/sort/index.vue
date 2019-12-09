@@ -62,7 +62,7 @@ export default {
       return require(`../../../../assets/povofeio/${index}.jpg`)
     },
     makeSort () {
-      this.$events.emit('roulette-showTimer', false)
+      this.$events.emit('roulette-showRegressive', false)
       this.setSliced()
       this.setChoosed()
       this.changeIndexChoosed()
@@ -158,7 +158,7 @@ export default {
         // alert('ACABOU MOSTRA O VENCEDOR')
         this.$events.emit('add-overlay')
         this.$events.emit('sort-finished')
-        this.$events.emit('roulette-showTimer', true)
+        this.$events.emit('roulette-showRegressive', true)
       }
       // console.log('WINNER', )
       // this.winner =

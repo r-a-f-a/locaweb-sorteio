@@ -1,12 +1,12 @@
 <template>
   <div class="timer" :class="overlayClass">
-    <div class="number"> {{ number }} </div>
-    <!-- <button @click="stopTime" :disabled="!running">STOP</button>
-    <button @click="start" :disabled="running">START</button>
-    <button @click="restart">RESTART</button> -->
+    <div class="number" v-if="number !== 0"> {{ number }} </div>
+    <div class="buttons" v-else>
+      <button @click="showSort" class="btn btn-red btn-rounded">PRÊMIOS</button>
+      <button class="btn btn-red btn-rounded"> SORTEAR</button>
+    </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'timer',
@@ -23,6 +23,10 @@ export default {
       const _this = this
       this.running = true
       _this.interval = setInterval(() => {
+        if (_this.number === 0) {
+          _this.stopTime()
+          return false
+        }
         _this.number--
       }, 1000)
     },
@@ -34,9 +38,20 @@ export default {
       this.number = 10
       this.running = false
       clearInterval(this.interval)
+      this.start()
+    },
+    showSort () {
+      this.$events.emit('timer-change-component')
     }
   },
   created () {
+    this.$events.on('button-pressed-home', () => {
+      if (this.running === true) {
+        this.stopTime()
+      } else {
+        this.start()
+      }
+    })
     this.start()
     this.$events.on('sort-finished', () => {
       this.have_winner = true
@@ -56,6 +71,11 @@ export default {
 
     this.$events.on('timer-restart', () => {
       this.restart()
+    })
+
+    this.$events.on('timer-change-component', () => {
+      this.roulette = !this.roulette
+      console.log('ROULETTE', this.roulette)
     })
   },
   watch: {
@@ -77,9 +97,20 @@ export default {
 }
 </script>
 
-<style style="scss">
+<style style="scss" scoped>
+.timer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 .number {
-  font-size: 164pt;
+  text-align: center;
+  font-size: 280pt;
   color: #f00943;
+}
+.btn {
+  width: 284px;
+  margin: 20px;
 }
 </style>

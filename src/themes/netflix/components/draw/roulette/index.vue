@@ -13,7 +13,7 @@
           </div>
           <div class="lw-col">
             <div class="sort-message">
-              <timer v-if="showTimer"></timer>
+              <regressive v-if="showRegressive"></regressive>
             </div>
           </div>
       </div>
@@ -24,9 +24,9 @@
 
 <script>
 import sort from './sort'
-import timer from './timer'
 import cardAvatar from './card'
 import description from './description'
+import regressive from './regressive'
 export default {
   metaInfo: {
     bodyAttrs: {
@@ -36,22 +36,22 @@ export default {
   name: 'Roullete',
   props: ['configs', 'collaborators', 'user'],
   components: {
-    timer,
     sort,
     cardAvatar,
-    description
+    description,
+    regressive
   },
   data () {
     return {
-      showTimer: false
+      showRegressive: false
     }
   },
   created () {
 
   },
   mounted () {
-    this.$events.on('roulette-showTimer', (val) => {
-      this.showTimer = val
+    this.$events.on('roulette-showRegressive', (val) => {
+      this.showRegressive = val
     })
   }
 }

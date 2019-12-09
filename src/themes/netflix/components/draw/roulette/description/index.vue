@@ -1,5 +1,5 @@
 <template>
-  <div class="sort-detail">
+  <div class="detail">
       <p>
         Sorteio<br>
         <span class="lw-red">{{ configs.title }}</span>
