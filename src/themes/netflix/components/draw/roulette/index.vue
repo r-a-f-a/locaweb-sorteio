@@ -30,7 +30,7 @@ import description from './description'
 export default {
   metaInfo: {
     bodyAttrs: {
-      class: ['roullete']
+      class: ['sorteio roullete']
     }
   },
   name: 'Roullete',

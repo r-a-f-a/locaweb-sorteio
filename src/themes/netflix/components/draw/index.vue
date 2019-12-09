@@ -1,7 +1,7 @@
 <template>
   <div>
-    <button @click="change()">MUDAR</button>
-    <transition name="fadeUp">
+    <button style="position:fixed;" @click="change()">MUDAR</button>
+    <transition name="fade">
     <roulette :configs='configs' :collaborators='collaborators' :user="user" v-if="roulette"></roulette>
     <awards :configs="configs" :user="user" v-else></awards>
     </transition>

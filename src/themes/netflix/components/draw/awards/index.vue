@@ -37,7 +37,12 @@ export default {
 </script>
 
 <style scoped>
+.awards {
+  height: 100vh;
+  background-image: url("../../../assets/bg/Background-Tela-5-opacity.jpg");
+
+}
 .lw-col {
-    width: auto!important;
+  width: auto!important;
 }
 </style>

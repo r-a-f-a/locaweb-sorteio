@@ -16,7 +16,7 @@ body.sorteio{
   background-image: url("./assets/bg/3.jpg");
 }
 body.awards{
-  background-image: url("./assets/bg/Background-Tela-5-opacity.jpg");
+  /* background-image: url("./assets/bg/Background-Tela-5-opacity.jpg"); */
 }
 @font-face {
   font-family: 'LwFont';
