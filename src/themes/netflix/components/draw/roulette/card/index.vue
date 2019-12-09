@@ -39,7 +39,7 @@ export default {
   computed: {
     classCard () {
       if (this.have_winner) {
-        return 'zindex'
+        return 'zindex selectedAvatar'
       }
       return ''
     }

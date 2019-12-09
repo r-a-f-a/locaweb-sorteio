@@ -214,6 +214,7 @@ li {
   object-fit: cover !important;
 }
 .selectedAvatar{
+  border-radius: 6px;
   border: 8px solid #fff !important;
   animation: blinker 0.7s linear infinite;
 }
