@@ -59,7 +59,12 @@ export default {
   },
   methods: {
     getImage (index) {
-      return require(`../../../../assets/povofeio/${index}.jpg`)
+      try {
+        const image = require(`../../../../assets/employees/${index}.jpg`) || null
+        return image
+      } catch (error) {
+        return `https://api.adorable.io/avatars/285/${index}.png`
+      }
     },
     makeSort () {
       this.$events.emit('roulette-showTimer', false)

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button style="position:fixed;" @click="change()">MUDAR</button>
+    <button style="position:fixed;z-index:9999" @click="change()">MUDAR</button>
     <div :class="overlay"></div>
     <transition name="fadeUp">
     <roulette :configs='configs' :collaborators='collaborators' :user="user" v-if="roulette"></roulette>
@@ -13,7 +13,6 @@
 import roulette from './roulette'
 import awards from './awards'
 require('vue2-animate/dist/vue2-animate.min.css')
-// import timer from './timer'
 export default {
   metaInfo: {
     bodyAttrs: {
@@ -26,7 +25,7 @@ export default {
       roulette: true,
       collaborators: [],
       configs: [],
-      user: {},
+      user: { id: 9, funcionario: 'LARISSA ENDO', email: 'LARISSA.ENDO@LOCAWEB.COM.BR', situacao: 'Férias', area: 'LOCAWEB - ENDOMARKETING', diretoria: 'LOCAWEB' },
       have_winner: false
     }
   },

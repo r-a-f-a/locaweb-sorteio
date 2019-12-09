@@ -29,10 +29,10 @@ export default {
     getImage (index) {
       // const index = Math.floor(Math.random(0, 10) * 10)
       try {
-        const image = require(`../../../../assets/povofeio/${index}.jpg`) || null
+        const image = require(`../../../../assets/employees/${index}.jpg`) || null
         return image
       } catch (error) {
-        return null
+        return `https://api.adorable.io/avatars/285/${index}.png`
       }
     }
   },
