@@ -2,9 +2,10 @@
   <div>
     <button style="position:fixed;z-index:9999" @click="change()">MUDAR</button>
     <div :class="overlay"></div>
-    <transition name="fadeUp">
-    <roulette :configs='configs' :collaborators='collaborators' :user="user" v-if="roulette"></roulette>
-    <awards :configs="configs" :user="user" v-else></awards>
+    <button style="position:fixed;" @click="change()">MUDAR</button>
+    <transition name="page">
+      <roulette :configs='configs' :collaborators='collaborators' :user="user" v-if="roulette"></roulette>
+      <awards :configs="configs" :user="user"></awards>
     </transition>
   </div>
 </template>
@@ -94,12 +95,49 @@ export default {
   }
 }
 </script>
-
-<style>
+<style lang="scss">
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+  transform: translateY(-100%);
+  transition: transform 400ms cubic-bezier(0.4, 0.1, 0.7, 0.95);
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+.fade-enter, .fade-leave-to {
   opacity: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  overflow: hidden;
+}
+
+@for $i from 1 through 5 {
+  $enter-delay: 400ms;
+
+  .page-enter-active {
+    overflow: hidden;
+    transition: transform $enter-delay cubic-bezier(0.4, 0.1, 0.7, 0.95);
+
+    .enter-#{$i} {
+      transition: 300ms cubic-bezier(0.1, 0.7, 0.6, 0.9);
+      transition-property: opacity, transform;
+      transition-delay: #{120ms * $i + $enter-delay};
+    }
+  }
+
+  .page-enter {
+    transform: translateY(100%);
+
+    .enter-#{$i} {
+      opacity: 0;
+    }
+  }
+
+  .page-leave-active {
+    display: block;
+  }
 }
 </style>

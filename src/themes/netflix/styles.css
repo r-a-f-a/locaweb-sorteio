@@ -34,7 +34,7 @@ li {
   width: 100%;
   height: 100%;
   z-index: 999 !important;
-  background-color: rgba(0, 0, 0, 0.8)
+  background-color: rgba(0, 0, 0, 0.6)
 }
 .text-center{
   text-align: center !important;
@@ -122,6 +122,9 @@ li {
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+.sort-content-title{
+  font-size: 32pt;
 }
 .cards{
   margin-top: 30px;
@@ -277,7 +280,7 @@ li {
   margin-left: -1px;
   line-height: 1.25;
   width: calc(100%/7) !important;
-  height: auto;
+  height: 160px;
 }
 .roulet-item .active{
   z-index: 999 !important;
