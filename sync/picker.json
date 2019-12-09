@@ -6,11 +6,9 @@
 		"title": "Geral",
 		"describe": "Deste sorteio participam todos colaboradores.",
 		"awards": [
-			{ "image": "notebook.jpg", "name": "Notebook Dell Inspiron 15", "winner": "" },
-			{ "image": "xbox.jpg", "name": "Xbox ONE", "winner": "" },
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
+				"image": "notebook.jpg",
+				"name": "Notebook Dell Inspiron 15",
 				"winner": ""
 			},
 			{
@@ -28,8 +26,26 @@
 				"name": "Xbox ONE",
 				"winner": ""
 			},
-			{ "image": "ps4.jpg", "name": "Playstation 4", "winner": "" },
-			{ "image": "samsung50.jpg", "name": "TV Samsung 50\"", "winner": "" },
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "ps4.jpg",
+				"name": "Playstation 4",
+				"winner": ""
+			},
+			{
+				"image": "samsung50.jpg",
+				"name": "TV Samsung 50\"",
+				"winner": ""
+			},
 			{
 				"image": "samsung50.jpg",
 				"name": "TV Samsung 50\"",
@@ -100,6 +116,41 @@
 			{
 				"image": "notebook.jpg",
 				"name": "Notebook Dell Inspiron 15",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "notebook.jpg",
+				"name": "Notebook Dell Inspiron 15",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "notebook.jpg",
+				"name": "Notebook Dell Inspiron 15",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
 				"winner": ""
 			},
 			{

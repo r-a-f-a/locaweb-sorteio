@@ -53,6 +53,13 @@ export default {
       }
     })
     this.start()
+    this.$events.on('button-pressed-home', () => {
+      if (this.running) {
+        this.stopTime()
+        return false
+      }
+      this.start()
+    })
     this.$events.on('sort-finished', () => {
       this.have_winner = true
     })
