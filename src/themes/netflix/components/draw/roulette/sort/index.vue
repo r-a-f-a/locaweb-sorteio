@@ -1,5 +1,10 @@
 <template>
   <div class="roulet-section">
+    <button @click="play">PLAY</button>
+    <button @click="pause">PAUSE</button>
+    <button @click="makeSort">MAKE</button>
+    <button @click="prev">prev</button>
+    <button @click="next">NEXT</button>
     <nav>
       <ul class="roulet">
         <li class="roulet-item" :class="{ 'arrow' : index === 3 }" v-for="(item, index) in items" :key="index">
@@ -18,6 +23,7 @@ export default {
   props: ['collaborators', 'winner'],
   data () {
     return {
+      audioBackground: new Audio('https://www.myinstants.com/media/sounds/piao-do-bau-loop-extra.mp3'),
       index: 0,
       choosedIndex: 0,
       sliced: [],
@@ -58,6 +64,12 @@ export default {
     }
   },
   methods: {
+    play () {
+      this.audioBackground.play()
+    },
+    pause () {
+      this.audioBackground.pause()
+    },
     getImage (index) {
       try {
         const image = require(`../../../../assets/employees/${index}.jpg`) || null
@@ -79,11 +91,12 @@ export default {
       console.log('PAROU')
     },
     setSliced () {
-      var sliced = shuffle.pick(this.collaborators, { picks: 60 })
+      var sliced = shuffle.pick(this.collaborators, { picks: 100 })
       if (sliced.length < 100) sliced = this.checkQtty(sliced)
       this.sliced = sliced
     },
     checkQtty (sliced) {
+      console.log('NEED CONCAT', sliced)
       const diff = 100 - sliced.length
       const turns = Math.ceil(diff / sliced.length)
       for (let i = 0; i < turns; i++) {
@@ -109,6 +122,8 @@ export default {
       clearInterval(this.interval)
       const _this = this
       _this.index = 0
+      this.audioBackground.loop = true
+      this.audioBackground.play()
       this.interval = setInterval(function () {
         _this.next()
       }, 100)
@@ -164,6 +179,7 @@ export default {
         this.$events.emit('add-overlay')
         this.$events.emit('sort-finished')
         this.$events.emit('roulette-showTimer', true)
+        this.audioBackground.pause()
       }
       // console.log('WINNER', )
       // this.winner =
