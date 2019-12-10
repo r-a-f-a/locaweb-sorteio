@@ -4,7 +4,7 @@
         Sorteio<br>
         <span class="lw-red">{{ configs.title }}</span>
       </p>
-      <a href="#" class="btn btn-red btn-rounded">Iniciar Sorteio</a>
+      <!-- <a href="#" class="btn btn-red btn-rounded">Iniciar Sorteio</a> -->
   </div>
 </template>
 

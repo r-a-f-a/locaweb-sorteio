@@ -3,9 +3,8 @@
     <button style="position:fixed;z-index:9999" @click="change()">MUDAR</button>
     <div :class="overlay"></div>
     <button style="position:fixed;" @click="change()">MUDAR</button>
-<transition name="page">
+    <transition name="page">
       <roulette :configs='configs' :collaborators='collaborators' :user="user"  v-if="roulette"></roulette>
-
       <awards :configs="configs" :user="user" ></awards>
     </transition>
   </div>
