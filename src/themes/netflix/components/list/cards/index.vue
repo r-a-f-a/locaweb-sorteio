@@ -23,9 +23,9 @@ export default {
   methods: {
     parseImage (sort) {
       if (sort.hover) {
-        return require(`../../../assets/sorteios/${sort.id}-white.png`)
+        return require(`../../../assets/sorteios/${sort.id}-white.svg`)
       } else {
-        return require(`../../../assets/sorteios/${sort.id}.png`)
+        return require(`../../../assets/sorteios/${sort.id}.svg`)
       }
     },
     mouseOver (index) {

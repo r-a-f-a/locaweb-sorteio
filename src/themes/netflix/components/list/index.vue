@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-    <div class="row">
-      <img class="logo-corner" src="../../assets/logos/logo-default.png" alt="">
-    </div>
+    <logoCorner></logoCorner>
     <div class="sort-content">
       <p class="sort-content-title">SELECIONE O TIPO DE <span class="lw-red">SORTEIO</span></p>
       <Cards :dataCard="dataCard"></Cards>
@@ -12,6 +10,7 @@
 
 <script>
 import Cards from './cards'
+import logoCorner from '../logoCorner'
 export default {
   metaInfo: {
     bodyAttrs: {
@@ -20,7 +19,8 @@ export default {
   },
   name: 'sorteios',
   components: {
-    Cards
+    Cards,
+    logoCorner
   },
   data () {
     return {
@@ -31,8 +31,9 @@ export default {
     getConfigs () {
       this.$api.get('/picker')
         .then(res => {
+          const cards = res.data[0]
           this.dataCard = res.data
-          console.log(res.data)
+          this.dataCard.push(cards)
         })
     }
   },
