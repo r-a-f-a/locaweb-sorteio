@@ -27,12 +27,12 @@ export default {
     })
     this.$events.on('button-pressed-next', () => {
       const next = this.selected + 1
-      const total = this.dataCard.length
+      const total = this.dataCard.length - 1
       this.selected = next <= total ? next : total
     })
     this.$events.on('button-pressed-enter', () => {
       const draw = this.dataCard[this.selected]
-      this.$router.push(`draw/${draw.id}`)
+      this.$router.push(`/draw/${draw.id}`)
     })
   },
   methods: {
