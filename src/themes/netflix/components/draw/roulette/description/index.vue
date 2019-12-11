@@ -1,11 +1,11 @@
 <template>
-  <div class="detail">
-      <p>
-        Sorteio
-        <span class="lw-red">{{ configs.title }}</span>
-      </p>
-      <!-- <a href="#" class="btn btn-red btn-rounded">Iniciar Sorteio</a> -->
+  <div class="detail description">
+    <p>
+      Sorteio
+      <span class="lw-red">{{ configs.title }}</span>
+    </p>
   </div>
+
 </template>
 
 <script>
@@ -39,11 +39,14 @@ export default {
 </script>
 
 <style scoped>
-.detail {
+.description {
+  width: 100%;
   position: fixed;
-  z-index:1034!important;
+  left: 0;
+  text-align: center;
+}
+.detail {
   top: 0!important;
-  margin-top: -98px!important;
-  margin-left: 90px!important;
+  margin-top: -55px!important;
 }
 </style>

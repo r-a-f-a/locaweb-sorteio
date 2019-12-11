@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style scoped>
+.winner {
+  margin: 50px;
+}
 .detail{
   display: flex;
   flex-direction: column;

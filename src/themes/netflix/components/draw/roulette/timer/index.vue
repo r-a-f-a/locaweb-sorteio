@@ -1,8 +1,8 @@
 <template>
   <div class="timer" :class="overlayClass">
     <div class="number" v-if="number !== 0"> {{ number }} </div>
-    <div class="buttons" v-else>
-      <span class="lw-red">ENCERRADO</span>
+    <div class="sort-message" v-else>
+      <span class="lw-red">CONTAGEM ENCERRADO</span>
       <!-- <button @click="showSort" class="btn btn-red btn-rounded">PRÊMIOS</button>
       <button class="btn btn-red btn-rounded"> SORTEAR</button> -->
     </div>
@@ -116,6 +116,7 @@ export default {
   text-align: center;
   font-size: 280pt;
   color: #f00943;
+  margin-top: 90px;
 }
 .btn {
   width: 284px;
@@ -125,5 +126,9 @@ export default {
   text-align: center;
   z-index: 1034;
   font-size: 100px!important;
+}
+.sort-message {
+  margin-left: 70px;
+  margin-top: 56px;
 }
 </style>

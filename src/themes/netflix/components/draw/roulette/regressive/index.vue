@@ -27,7 +27,7 @@ export default {
     }
   },
   created () {
-    this.timer()
+    // this.timer()
   }
 }
 </script>
@@ -36,6 +36,6 @@ export default {
 .lw-red {
   text-align: center;
   z-index: 1034;
-  font-size: 90px!important;
+  font-size: 100px!important;
 }
 </style>

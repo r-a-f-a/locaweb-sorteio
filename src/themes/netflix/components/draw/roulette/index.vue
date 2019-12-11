@@ -61,6 +61,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.grid {
+  margin-top: 75px!important;
+}
 .sort {
   display: flex;
   justify-content: center;

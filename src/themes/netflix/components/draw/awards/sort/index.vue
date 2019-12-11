@@ -1,20 +1,16 @@
 <template>
   <div class="sort">
-    <button @click="start">START</button>
+    <!-- <button @click="start">START</button> -->
       <div class="cards">
-
         <div  :ref="`card${index}`" class="card-sort product flip" :class='selected(index,product)' v-for="(product,index) in products"   :key="index">
-
         <div class='front'>
             <img :src="getImage(index,product , selected(index,product))">
         </div>
         <div class='back'>
         <img src="https://www.extra-imagens.com.br/Games/XboxOne/ConsolesXboxOne/2182949/23591374/Console-Xbox-One-Microsoft-com-Kinect-e-500GB-2182949.jpg" />
         </div>
-
           <!-- <div :class="`card-image card-image-${index}`"></div> -->
-            <!-- <img v-if="selected2 == i" :src="getImage(i, 'On')"> -->
-
+          <!-- <img v-if="selected2 == i" :src="getImage(i, 'On')"> -->
         </div>
 
       </div>
@@ -118,36 +114,36 @@ img {
   border-radius: 6px;
 }
 .flip {
-    border-radius: 6px;
-    position: relative;
-    >.front,
-    >.back {
-        display: block;
-        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
-        transition-duration: .5s;
-        transition-property: transform, opacity;
-    }
-    >.front {
-        transform: rotateY(0deg);
-    }
-    >.back {
-        position: absolute;
-        opacity: 0;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        transform: rotateY(-180deg);
-    }
+  border-radius: 6px;
+  position: relative;
+  >.front,
+  >.back {
+    display: block;
+    transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+    transition-duration: .5s;
+    transition-property: transform, opacity;
+  }
+  >.front {
+    transform: rotateY(0deg);
+  }
+  >.back {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+  }
 }
 .selected {
-    >.front {
-        transform: rotateY(180deg);
-    }
-    >.back {
-        opacity: 1;
-        transform: rotateY(0deg);
-    }
+  >.front {
+    transform: rotateY(180deg);
+  }
+  >.back {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
 }
 
 .sort {
@@ -155,7 +151,9 @@ img {
   max-width: 100%;
 }
 .cards {
-    max-width: 510px;
+  max-width: 800px;
+  margin-right: 61px;
+  margin-top: 80px;
 }
 .card-sort {
   margin: 10px;
@@ -163,6 +161,10 @@ img {
 .card-image{
   width:148px;
   height:148px;
+}
+img {
+  width: 230px;
+  height: 165px;
 }
 /*
 .card-image-0{
