@@ -96,7 +96,6 @@ export default {
       this.sliced = sliced
     },
     checkQtty (sliced) {
-      console.log('NEED CONCAT', sliced)
       const diff = 100 - sliced.length
       const turns = Math.ceil(diff / sliced.length)
       for (let i = 0; i < turns; i++) {
@@ -134,12 +133,12 @@ export default {
       this.index = (index <= 0) ? 0 : index
     },
     next () {
-      console.log('NEXT')
-      console.time('NEXT')
+      // console.log('NEXT')
+      // console.time('NEXT')
       const index = this.index + 1
       const last = this.sliced.length - 7
       this.index = (index > last) ? last : index
-      console.timeEnd('NEXT')
+      // console.timeEnd('NEXT')
     }
   },
   created () {
