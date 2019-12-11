@@ -11,6 +11,16 @@
 </template>
 <script>
 export default {
-  name: 'home'
+  name: 'home',
+  methods: {
+    goToList () {
+      this.$router.push('/list')
+    }
+  },
+  created () {
+    this.$events.on('button-pressed-enter', () => {
+      this.goToList()
+    })
+  }
 }
 </script>

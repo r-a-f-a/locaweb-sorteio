@@ -2,8 +2,8 @@
   <div class="cards">
     <router-link v-for="(sorteio, index) in dataCard" :key="index" tag="a" :to="`draw/${sorteio.id}`">
       <div class="card">
-        <div class="card-img" @mouseover="mouseOver(index)" @mouseleave="mouseLeave(index)">
-          <img :src="parseImage(sorteio)" alt="Card image" />
+        <div class="card-img" v-bind:class="{ active: index === selected }">
+          <img :src="parseImage(sorteio, index)" alt="Card image" />
         </div>
         <p class="card-title">{{ sorteio.name }}</p>
       </div>
@@ -17,12 +17,27 @@ export default {
   props: ['dataCard'],
   data () {
     return {
-      mouseHover: false
+      selected: 0
     }
   },
+  created () {
+    this.$events.on('button-pressed-prev', () => {
+      const prev = this.selected - 1
+      this.selected = prev >= 0 ? prev : 0
+    })
+    this.$events.on('button-pressed-next', () => {
+      const next = this.selected + 1
+      const total = this.dataCard.length
+      this.selected = next <= total ? next : total
+    })
+    this.$events.on('button-pressed-enter', () => {
+      const draw = this.dataCard[this.selected]
+      this.$router.push(`draw/${draw.id}`)
+    })
+  },
   methods: {
-    parseImage (sort) {
-      if (sort.hover) {
+    parseImage (sort, index) {
+      if (index === this.selected) {
         return require(`../../../assets/sorteios/${sort.id}-white.svg`)
       } else {
         return require(`../../../assets/sorteios/${sort.id}.svg`)
