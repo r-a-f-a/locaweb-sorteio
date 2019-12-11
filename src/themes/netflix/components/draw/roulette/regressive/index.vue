@@ -34,8 +34,8 @@ export default {
 
 <style scoped>
 .lw-red {
-    text-align: center;
-    z-index: 1034;
-    font-size: 90px!important;
+  text-align: center;
+  z-index: 1034;
+  font-size: 90px!important;
 }
 </style>

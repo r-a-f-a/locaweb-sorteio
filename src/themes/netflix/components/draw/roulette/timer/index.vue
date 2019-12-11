@@ -2,8 +2,9 @@
   <div class="timer" :class="overlayClass">
     <div class="number" v-if="number !== 0"> {{ number }} </div>
     <div class="buttons" v-else>
-      <button @click="showSort" class="btn btn-red btn-rounded">PRÊMIOS</button>
-      <button class="btn btn-red btn-rounded"> SORTEAR</button>
+      <span class="lw-red">ENCERRADO</span>
+      <!-- <button @click="showSort" class="btn btn-red btn-rounded">PRÊMIOS</button>
+      <button class="btn btn-red btn-rounded"> SORTEAR</button> -->
     </div>
   </div>
 </template>
@@ -119,5 +120,10 @@ export default {
 .btn {
   width: 284px;
   margin: 20px;
+}
+.lw-red {
+  text-align: center;
+  z-index: 1034;
+  font-size: 100px!important;
 }
 </style>

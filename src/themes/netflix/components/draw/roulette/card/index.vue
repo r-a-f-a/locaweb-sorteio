@@ -2,11 +2,6 @@
   <div class="card-avatar" :class="classCard" id="card-avatar">
       <img v-if="user.id" class="sort-avatar" :src="getImage(user.id)" alt="">
       <img src="../../../../assets/avatar/flash.jpg" v-else>
-      <div class="user-details bottom-left" v-if="user.id">
-        <h1>{{user.funcionario | pasedName }}</h1>
-        <p>{{user.area}}</p>
-        <p>{{user.email}}</p>
-      </div>
   </div>
 </template>
 
@@ -17,12 +12,6 @@ export default {
   data () {
     return {
       have_winner: false
-    }
-  },
-  filters: {
-    pasedName: function (value) {
-      const fullName = value.split(' ')
-      return fullName[0] + ' ' + fullName[fullName.length - 1]
     }
   },
   methods: {
@@ -55,6 +44,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.card-avatar{
+  margin-top: 90px!important;
+}
 </style>

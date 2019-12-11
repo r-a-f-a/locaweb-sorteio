@@ -6,9 +6,10 @@
       </div>
         <div class="grid">
           <div class="lw-col">
-              <description :configs='configs'></description>
+            <employee :user="user"></employee>
           </div>
           <div class="lw-col">
+              <description :configs='configs'></description>
               <cardAvatar :user="user"></cardAvatar>
           </div>
           <div class="lw-col">
@@ -24,6 +25,7 @@
 
 <script>
 import sort from './sort'
+import employee from './employee'
 import cardAvatar from './card'
 import description from './description'
 import regressive from './regressive'
@@ -37,6 +39,7 @@ export default {
   props: ['configs', 'collaborators', 'user'],
   components: {
     sort,
+    employee,
     cardAvatar,
     description,
     regressive

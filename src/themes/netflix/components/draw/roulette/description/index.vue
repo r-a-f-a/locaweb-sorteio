@@ -1,7 +1,7 @@
 <template>
   <div class="detail">
       <p>
-        Sorteio<br>
+        Sorteio
         <span class="lw-red">{{ configs.title }}</span>
       </p>
       <!-- <a href="#" class="btn btn-red btn-rounded">Iniciar Sorteio</a> -->
@@ -38,6 +38,12 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.detail {
+  position: fixed;
+  z-index:1034!important;
+  top: 0!important;
+  margin-top: -98px!important;
+  margin-left: 90px!important;
+}
 </style>
