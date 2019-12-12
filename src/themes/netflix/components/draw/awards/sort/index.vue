@@ -1,20 +1,26 @@
 <template>
-  <div class="sort">
-    <!-- <button @click="start">START</button> -->
+  <div class="award-cards">
+    <div class="award-card flip" :ref="`card${index}`" :class='selected(index,product)' v-for="(product,index) in products" :key="index">
+      <div class="front">
+        <img :src="getImage(index,product , selected(index,product))">
+      </div>
+      <div class="back">
+        <img src="https://www.extra-imagens.com.br/Games/XboxOne/ConsolesXboxOne/2182949/23591374/Console-Xbox-One-Microsoft-com-Kinect-e-500GB-2182949.jpg" />
+      </div>
+    </div>
+  </div>
+  <!-- <div class="sort">
       <div class="cards">
         <div  :ref="`card${index}`" class="card-sort product flip" :class='selected(index,product)' v-for="(product,index) in products"   :key="index">
-        <div class='front'>
-            <img :src="getImage(index,product , selected(index,product))">
+          <div class='front'>
+              <img :src="getImage(index,product , selected(index,product))">
+          </div>
+          <div class='back'>
+            <img src="https://www.extra-imagens.com.br/Games/XboxOne/ConsolesXboxOne/2182949/23591374/Console-Xbox-One-Microsoft-com-Kinect-e-500GB-2182949.jpg" />
+          </div>
         </div>
-        <div class='back'>
-        <img src="https://www.extra-imagens.com.br/Games/XboxOne/ConsolesXboxOne/2182949/23591374/Console-Xbox-One-Microsoft-com-Kinect-e-500GB-2182949.jpg" />
-        </div>
-          <!-- <div :class="`card-image card-image-${index}`"></div> -->
-          <!-- <img v-if="selected2 == i" :src="getImage(i, 'On')"> -->
-        </div>
-
       </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -33,9 +39,9 @@ export default {
     getImage (index, product, selected) {
       const position = index + 1
       const image = {
-        active: require(`../../../../assets/icons/Botao${position}-premio-On.png`)
+        active: require(`../../../../assets/icons/Botao${position}-premio-On.svg`)
       }
-      return image[selected] || require(`../../../../assets/icons/Botao${position}-premio-Off.png`)
+      return image[selected] || require(`../../../../assets/icons/Botao${position}-premio-Off.svg`)
     },
     setWinner (index) {
       this.$events.emit('awards-set-winner')
@@ -110,11 +116,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img {
+.award-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 3rem;
+  max-width: 800px;
+  margin-right: 61px;
+  margin-top: 80px;
+}
+.award-card{
+  width: 148px;
+  height: 148px;
+}
+/* img {
   width: 148px;
   height: 148px;
   border-radius: 6px;
-}
+} */
 .flip {
   border-radius: 6px;
   position: relative;
@@ -133,8 +152,6 @@ img {
     opacity: 0;
     top: 0px;
     left: 0px;
-    width: 100%;
-    height: 100%;
     transform: rotateY(-180deg);
   }
 }
@@ -146,8 +163,12 @@ img {
     opacity: 1;
     transform: rotateY(0deg);
   }
+  >.back img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+  }
 }
-
 .sort {
   display: flex!important;
   max-width: 100%;
@@ -159,16 +180,17 @@ img {
 }
 .card-sort {
   margin: 10px;
+  background-color: aqua;
 }
 .card-image{
   width:148px;
   height:148px;
 }
+/*
 img {
   width: 230px;
   height: 165px;
 }
-/*
 .card-image-0{
   background: url(`../../../../assets/icons/Botao1-premio-Off.png`)
 }
