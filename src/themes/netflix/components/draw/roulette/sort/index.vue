@@ -4,7 +4,7 @@
       <ul class="roulet">
         <li class="roulet-item" :class="{ 'arrow' : index === 3 }" v-for="(item, index) in items" :key="index">
           <!-- <span class="roulet-span">{{item.funcionario}}</span> -->
-          <img :class="{ 'active' : index === 3 }" :src="getImage(item.id)" >
+          <img :class="{ 'active' : index === 3 }"  v-if="item" :src="getImage(item.id)" >
         </li>
       </ul>
     </nav>
@@ -18,10 +18,10 @@ export default {
   props: ['collaborators', 'winner', 'configs'],
   data () {
     return {
-      audioBackground: new Audio('https://www.myinstants.com/media/sounds/piao-do-bau-loop-extra.mp3'),
       index: 0,
       choosedIndex: 0,
       sliced: [],
+      list: [],
       image: {
         size: '260px'
       },
@@ -29,19 +29,15 @@ export default {
     }
   },
   methods: {
-    blacklist (collaborators) {
-      // this.configs.blacklist
-      const black = [9, 2]
-      var filteredCollab = collaborators.filter((collab) => {
-        return black.indexOf(collab.id) <= -1
+    async blacklist (collaborators) {
+      console.log('COLLABS', collaborators)
+      const blacklist = this.configs.blacklist
+      var filteredCollab = await collaborators.filter((collab) => {
+        return blacklist.indexOf(collab.id) <= -1
       })
+      console.log('BLACKLIST', filteredCollab)
+      this.list = filteredCollab
       return filteredCollab
-    },
-    play () {
-      this.audioBackground.play()
-    },
-    pause () {
-      this.audioBackground.pause()
     },
     getImage (index) {
       try {
@@ -57,23 +53,21 @@ export default {
       this.setChoosed()
       this.changeIndexChoosed()
     },
-    onEnter () {
-      console.log('INICIOU')
-    },
-    onEnd () {
-      console.log('PAROU')
-    },
-    setSliced () {
-      var sliced = shuffle.pick(this.blacklist(this.collaborators), { picks: 100 })
-      if (sliced.length < 100) sliced = this.checkQtty(sliced)
+    async setSliced () {
+      var sliced = shuffle.pick(this.collaborators, { picks: 100 })
+      sliced = await this.blacklist(sliced)
+      if (sliced.length > 0 && sliced.length < 100) sliced = this.checkQtty(sliced)
       this.sliced = sliced
     },
     checkQtty (sliced) {
-      const diff = 100 - sliced.length
-      const turns = Math.ceil(diff / sliced.length)
+      const total = sliced.length
+      const diff = 100 - total
+      const turns = Math.ceil(diff / total)
+      var newSliced = []
       for (let i = 0; i < turns; i++) {
-        sliced = sliced.concat(sliced)
+        newSliced = newSliced.concat(sliced)
       }
+      sliced = sliced.concat(newSliced)
       return sliced.slice(0, 100)
     },
     setChoosed () {
@@ -89,8 +83,6 @@ export default {
     start () {
       clearInterval(this.interval)
       this.index = 0
-      this.audioBackground.loop = true
-      this.audioBackground.play()
       this.interval = setInterval(() => {
         this.next()
       }, 100)
@@ -108,7 +100,6 @@ export default {
   },
   created () {
     this.makeSort()
-
     this.$events.off('button-pressed-enter')
     this.$events.on('button-pressed-enter', () => {
       this.makeSort()
@@ -135,14 +126,11 @@ export default {
       this.$events.emit('user-sort', this.items[3])
       if (val === 93) {
         clearInterval(this.interval)
-        // alert('ACABOU MOSTRA O VENCEDOR')
         this.$events.emit('add-overlay')
         this.$events.emit('sort-finished')
         this.$events.emit('roulette-showRegressive', true)
-        this.audioBackground.pause()
+        this.$events.emit('add-blacklist')
       }
-      // console.log('WINNER', )
-      // this.winner =
     }
   },
   computed: {

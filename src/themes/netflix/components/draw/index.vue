@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="configs.id">
     <transition-group name="page">
       <roulette key="roulette" :configs='configs' :collaborators='collaborators' :user="user"  v-if="roulette"></roulette>
       <awards  key="awards" :configs="configs" :user="user" v-if="!roulette"></awards>
@@ -61,6 +61,13 @@ export default {
         .then(res => {
           this.configs = res.data
         })
+    },
+    setBlacklist () {
+      this.configs.blacklist.push(this.user.id)
+      this.$api.put(`/picker/${this.type}`, this.configs)
+        .then(res => {
+          console.log('UPDATED BLACKLIST', res)
+        })
     }
   },
   computed: {
@@ -89,6 +96,11 @@ export default {
     })
     this.$events.on('sort-start', () => {
       this.have_winner = false
+    })
+    this.$events.off('add-blacklist')
+    this.$events.on('add-blacklist', () => {
+      console.log('ADD BLACKLIST', this.user)
+      this.setBlacklist()
     })
   },
   mounted () {

@@ -9,7 +9,7 @@
                 <winner :user="user"></winner>
             </div>
             <div class="lw-col">
-                <sort :configs="configs" ></sort>
+                <sort :configs="configs" :user="user" ></sort>
             </div>
         </div>
     </div>

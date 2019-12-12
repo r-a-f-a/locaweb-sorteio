@@ -20,7 +20,7 @@
 <script>
 export default {
   name: 'sort',
-  props: ['configs'],
+  props: ['configs', 'user'],
   data () {
     return {
       winner: false,
@@ -39,7 +39,7 @@ export default {
     },
     setWinner (index) {
       this.$events.emit('awards-set-winner')
-      this.configs.awards[index].winner = '99999'
+      this.configs.awards[index].winner = this.user.id
       this.$api.put(`/picker/${this.type}`, this.configs)
         .then(res => {
           console.log('UPDATED', res)
