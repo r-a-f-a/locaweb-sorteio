@@ -5,6 +5,7 @@
 		"name": "Geral",
 		"title": "Geral",
 		"describe": "Deste sorteio participam todos colaboradores.",
+		"blacklist": [],
 		"awards": [
 			{
 				"image": "notebook.jpg",
@@ -59,6 +60,7 @@
 		"name": "Madrugada",
 		"title": "Madrugada",
 		"describe": "Deste sorteio participam todos colaboradores da madrugada.",
+		"blacklist": [],
 		"awards": [
 			{
 				"image": "notebook.jpg",
@@ -95,9 +97,10 @@
 	{
 		"id": "pratas",
 		"image": "https://api.adorable.io/avatars/285/bob@adorable.io.png",
-		"name": "Pratas",
+		"name": "Pratas da Casa",
 		"title": "Pratas da Casa",
 		"describe": "Deste sorteio participam todos colaboradores pratas da casa.",
+		"blacklist": [],
 		"awards": [
 			{
 				"image": "samsung50.jpg",
@@ -112,6 +115,62 @@
 		"name": "Valeu",
 		"title": "Cartão Valeu",
 		"describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "notebook.jpg",
+				"name": "Notebook Dell Inspiron 15",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "notebook.jpg",
+				"name": "Notebook Dell Inspiron 15",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "notebook.jpg",
+				"name": "Notebook Dell Inspiron 15",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			},
+			{
+				"image": "xbox.jpg",
+				"name": "Xbox ONE",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "conexao",
+		"image": "https://api.adorable.io/avatars/285/joe@adorable.io.png",
+		"name": "Conexao Saúde",
+		"title": "Conexao Saúde",
+		"describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
+		"blacklist": [],
 		"awards": [
 			{
 				"image": "notebook.jpg",

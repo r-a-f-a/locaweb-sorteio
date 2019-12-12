@@ -1,8 +1,5 @@
 <template>
   <div>
-    <button style="position:fixed;z-index:9999" @click="change()">MUDAR</button>
-    <div :class="overlay"></div>
-    <button style="position:fixed;" @click="change()">MUDAR</button>
     <transition-group name="page">
       <roulette key="roulette" :configs='configs' :collaborators='collaborators' :user="user"  v-if="roulette"></roulette>
       <awards  key="awards" :configs="configs" :user="user" v-if="!roulette"></awards>
@@ -26,7 +23,7 @@ export default {
       roulette: true,
       collaborators: [],
       configs: [],
-      user: { id: 9, funcionario: 'LARISSA ENDO', email: 'LARISSA.ENDO@LOCAWEB.COM.BR', situacao: 'Férias', area: 'LOCAWEB - ENDOMARKETING', diretoria: 'LOCAWEB' },
+      user: {},
       have_winner: false
     }
   },

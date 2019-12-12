@@ -9,7 +9,7 @@
                 <winner :user="user"></winner>
             </div>
             <div class="lw-col">
-                <sort :configs="configs"></sort>
+                <sort :configs="configs" ></sort>
             </div>
         </div>
     </div>
@@ -27,11 +27,31 @@ export default {
       class: ['awards']
     }
   },
+  data () {
+    return {
+      winner: false
+    }
+  },
   name: 'awards',
   props: ['configs', 'collaborators', 'user'],
   components: {
     winner,
     sort
+  },
+  created () {
+    this.$events.on('awards-set-winner', () => {
+      this.winner = true
+    })
+    this.$events.off('button-pressed-prev')
+    this.$events.off('button-pressed-next')
+
+    this.$events.off('button-pressed-home')
+    this.$events.on('button-pressed-home', () => {
+      console.log('IS WINNER', this.winner)
+      if (this.winner) {
+        this.$router.push('/list')
+      }
+    })
   }
 }
 </script>

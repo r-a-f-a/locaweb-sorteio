@@ -19,7 +19,7 @@
           </div>
       </div>
       </div>
-    <sort  v-if="collaborators.length"  :collaborators="collaborators"></sort>
+    <sort  v-if="collaborators.length"  :collaborators="collaborators" :configs="configs"></sort>
   </div>
 </template>
 
@@ -50,7 +50,12 @@ export default {
     }
   },
   created () {
-
+    this.$events.off('button-pressed-next')
+    this.$events.on('button-pressed-next', () => {
+      if (this.showRegressive && this.user.id) {
+        this.$events.emit('sort-change')
+      }
+    })
   },
   mounted () {
     this.$events.on('roulette-showRegressive', (val) => {

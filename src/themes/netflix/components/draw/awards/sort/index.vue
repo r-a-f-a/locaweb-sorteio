@@ -38,6 +38,7 @@ export default {
       return image[selected] || require(`../../../../assets/icons/Botao${position}-premio-Off.png`)
     },
     setWinner (index) {
+      this.$events.emit('awards-set-winner')
       this.configs.awards[index].winner = '99999'
       this.$api.put(`/picker/${this.type}`, this.configs)
         .then(res => {
@@ -72,10 +73,11 @@ export default {
     }
   },
   created () {
-    this.$events.off('button-pressed-next')
-    this.$events.on('button-pressed-next', () => {
-      this.start()
-    })
+    this.start()
+    // this.$events.off('button-pressed-next')
+    // this.$events.on('button-pressed-next', () => {
+    //   this.start()
+    // })
     this.$events.off('button-pressed-enter')
     this.$events.on('button-pressed-enter', () => {
       this.running = false

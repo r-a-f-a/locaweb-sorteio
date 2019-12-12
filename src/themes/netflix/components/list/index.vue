@@ -31,9 +31,7 @@ export default {
     getConfigs () {
       this.$api.get('/picker')
         .then(res => {
-          const cards = res.data[0]
           this.dataCard = res.data
-          this.dataCard.push(cards)
         })
     }
   },

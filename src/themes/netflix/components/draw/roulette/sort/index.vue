@@ -1,10 +1,5 @@
 <template>
   <div class="roulet-section">
-    <button @click="play">PLAY</button>
-    <button @click="pause">PAUSE</button>
-    <button @click="makeSort">MAKE</button>
-    <button @click="prev">prev</button>
-    <button @click="next">NEXT</button>
     <nav>
       <ul class="roulet">
         <li class="roulet-item" :class="{ 'arrow' : index === 3 }" v-for="(item, index) in items" :key="index">
@@ -20,7 +15,7 @@
 var shuffle = require('shuffle-array')
 export default {
   name: 'sort',
-  props: ['collaborators', 'winner'],
+  props: ['collaborators', 'winner', 'configs'],
   data () {
     return {
       audioBackground: new Audio('https://www.myinstants.com/media/sounds/piao-do-bau-loop-extra.mp3'),
@@ -30,40 +25,18 @@ export default {
       image: {
         size: '260px'
       },
-      state: false,
-      hooks: {
-        beforeEnter: (el) => {
-          this.makeSort()
-          console.log('BEFORE ENTER')
-        },
-        afterEnter: (el) => {
-          el.className += ' ani-running-enter-to'
-          console.log('SELECIONADO', this.sliced[97])
-        },
-        enterCancelled: function (el) {
-          console.log('ENTER CANCELLED')
-        },
-
-        beforeLeave: function (el) {
-          console.log('BEFORE LEAVE')
-        },
-
-        leave: function (el, done) {
-          console.log('LEAVE')
-          done()
-        },
-        afterLeave: function (el) {
-          console.log('AFTER LEAVE')
-        },
-
-        leaveCancelled: function (el) {
-          console.log('LEAVE CANCELLED')
-        }
-      }
-
+      state: false
     }
   },
   methods: {
+    blacklist (collaborators) {
+      // this.configs.blacklist
+      const black = [9, 2]
+      var filteredCollab = collaborators.filter((collab) => {
+        return black.indexOf(collab.id) <= -1
+      })
+      return filteredCollab
+    },
     play () {
       this.audioBackground.play()
     },
@@ -91,7 +64,7 @@ export default {
       console.log('PAROU')
     },
     setSliced () {
-      var sliced = shuffle.pick(this.collaborators, { picks: 100 })
+      var sliced = shuffle.pick(this.blacklist(this.collaborators), { picks: 100 })
       if (sliced.length < 100) sliced = this.checkQtty(sliced)
       this.sliced = sliced
     },
@@ -108,23 +81,18 @@ export default {
     },
     changeIndexChoosed () {
       var antepenultIndex = this.sliced.length - 3
-      // console.log('ANTEPENULT INDEX', antepenultIndex)
-      // console.log('CHOOSED INDEX', this.choosedIndex)
       var choosed = this.sliced[this.choosedIndex]
-      // console.log('CHOOSED', choosed)
       var antepenult = this.sliced[antepenultIndex]
-      // console.log('ANTEPENULT', antepenult)
       this.sliced[antepenultIndex] = choosed
       this.sliced[this.choosedIndex] = antepenult
     },
     start () {
       clearInterval(this.interval)
-      const _this = this
-      _this.index = 0
+      this.index = 0
       this.audioBackground.loop = true
       this.audioBackground.play()
-      this.interval = setInterval(function () {
-        _this.next()
+      this.interval = setInterval(() => {
+        this.next()
       }, 100)
       this.$events.emit('sort-start')
     },
@@ -133,29 +101,22 @@ export default {
       this.index = (index <= 0) ? 0 : index
     },
     next () {
-      // console.log('NEXT')
-      // console.time('NEXT')
       const index = this.index + 1
       const last = this.sliced.length - 7
       this.index = (index > last) ? last : index
-      // console.timeEnd('NEXT')
     }
   },
   created () {
     this.makeSort()
-    const that = this
+
     this.$events.off('button-pressed-enter')
     this.$events.on('button-pressed-enter', () => {
-      that.makeSort()
-      that.start()
+      this.makeSort()
+      this.start()
     })
     this.$events.off('button-pressed-prev')
     this.$events.on('button-pressed-prev', () => {
-      that.prev()
-    })
-    this.$events.off('button-pressed-next')
-    this.$events.on('button-pressed-next', () => {
-      that.next()
+      this.$router.push('/list')
     })
   },
   mounted () {
@@ -185,7 +146,6 @@ export default {
     }
   },
   computed: {
-
     items () {
       const end = this.index + 7
       const items = this.sliced.slice(this.index, end)

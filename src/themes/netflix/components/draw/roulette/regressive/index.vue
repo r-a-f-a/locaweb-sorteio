@@ -27,7 +27,7 @@ export default {
     }
   },
   created () {
-    // this.timer()
+    this.timer()
   }
 }
 </script>
