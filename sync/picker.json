@@ -8,48 +8,33 @@
 		"blacklist": [],
 		"awards": [
 			{
-				"image": "notebook.jpg",
+				"image": "fone.jpg",
 				"name": "Notebook Dell Inspiron 15",
 				"winner": ""
 			},
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
+				"image": "smartv.jpg",
+				"name": "Smart TV LED 32\"",
 				"winner": ""
 			},
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
+				"image": "notebook.jpg",
+				"name": "Notebook",
 				"winner": ""
 			},
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
+				"image": "churrasco.jpg",
+				"name": "Kit para churrasco Tramontina",
 				"winner": ""
 			},
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
+				"image": "jbl.jpg",
+				"name": "Caixa de som JBL",
 				"winner": ""
 			},
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "ps4.jpg",
-				"name": "Playstation 4",
-				"winner": ""
-			},
-			{
-				"image": "samsung50.jpg",
-				"name": "TV Samsung 50\"",
-				"winner": ""
-			},
-			{
-				"image": "samsung50.jpg",
-				"name": "TV Samsung 50\"",
+				"image": "chopeira.jpg",
+				"name": "Chopeira Beertender Heineken",
 				"winner": ""
 			}
 		]
@@ -63,33 +48,13 @@
 		"blacklist": [],
 		"awards": [
 			{
-				"image": "notebook.jpg",
-				"name": "Notebook Dell Inspiron 15",
+				"image": "gopro.jpg",
+				"name": "Câmera Digital GoPro Hero7",
 				"winner": ""
 			},
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "ps4.jpg",
-				"name": "Playstation 4",
-				"winner": ""
-			},
-			{
-				"image": "samsung50.jpg",
-				"name": "TV Samsung 50\"",
+				"image": "churrasco.jpg",
+				"name": "Kit para churrasco Tramontina",
 				"winner": ""
 			}
 		]
@@ -103,8 +68,18 @@
 		"blacklist": [],
 		"awards": [
 			{
-				"image": "samsung50.jpg",
-				"name": "TV Samsung 50\"",
+				"image": "motorola.jpg",
+				"name": "Smartphone Motorola",
+				"winner": ""
+			},
+			{
+				"image": "instax.jpg",
+				"name": "Câmera Instantânea Instax Mini",
+				"winner": ""
+			},
+			{
+				"image": "chopeira.jpg",
+				"name": "Chopeira Beertender Heineken",
 				"winner": ""
 			}
 		]
@@ -118,48 +93,18 @@
 		"blacklist": [],
 		"awards": [
 			{
-				"image": "notebook.jpg",
-				"name": "Notebook Dell Inspiron 15",
+				"image": "smartv.jpg",
+				"name": "Smart TV LED 32\"",
 				"winner": ""
 			},
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
+				"image": "instax.jpg",
+				"name": "Câmera Instantânea Instax Mini",
 				"winner": ""
 			},
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "notebook.jpg",
-				"name": "Notebook Dell Inspiron 15",
-				"winner": ""
-			},
-			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "notebook.jpg",
-				"name": "Notebook Dell Inspiron 15",
-				"winner": ""
-			},
-			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
+				"image": "ps4.jpg",
+				"name": "Playstation 4 Slim + 01 controle",
 				"winner": ""
 			}
 		]
@@ -173,48 +118,18 @@
 		"blacklist": [],
 		"awards": [
 			{
-				"image": "notebook.jpg",
-				"name": "Notebook Dell Inspiron 15",
+				"image": "airfryer.jpg",
+				"name": "Air Fryer",
 				"winner": ""
 			},
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
+				"image": "pao.jpg",
+				"name": "Máquina de Pão",
 				"winner": ""
 			},
 			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "notebook.jpg",
-				"name": "Notebook Dell Inspiron 15",
-				"winner": ""
-			},
-			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "notebook.jpg",
-				"name": "Notebook Dell Inspiron 15",
-				"winner": ""
-			},
-			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
-				"winner": ""
-			},
-			{
-				"image": "xbox.jpg",
-				"name": "Xbox ONE",
+				"image": "airfryer.jpg",
+				"name": "Air Fryer",
 				"winner": ""
 			}
 		]
