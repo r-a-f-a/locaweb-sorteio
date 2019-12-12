@@ -134,8 +134,8 @@ export default {
   margin-top: 80px;
 }
 .award-card{
-  width: 148px;
-  height: 148px;
+  width: 230px;
+  height: 230px;
 }
 /* img {
   width: 148px;
@@ -178,7 +178,7 @@ export default {
     object-fit: fill !important;
   }
 }
-.sort {
+/* .sort {
   display: flex!important;
   max-width: 100%;
 }
@@ -194,7 +194,7 @@ export default {
 .card-image{
   width:148px;
   height:148px;
-}
+} */
 /*
 img {
   width: 230px;
