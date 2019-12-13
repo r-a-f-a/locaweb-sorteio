@@ -37,6 +37,7 @@ export default {
   },
   created () {
     this.getConfigs()
+    this.$events.emit('awards-set-winner', false)
   }
 }
 </script>

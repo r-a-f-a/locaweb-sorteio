@@ -39,8 +39,8 @@ export default {
     sort
   },
   created () {
-    this.$events.on('awards-set-winner', () => {
-      this.winner = true
+    this.$events.on('awards-set-winner', (payload) => {
+      this.winner = payload
     })
     this.$events.off('button-pressed-prev')
     this.$events.off('button-pressed-next')

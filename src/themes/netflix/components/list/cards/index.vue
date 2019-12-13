@@ -21,6 +21,7 @@ export default {
     }
   },
   created () {
+    this.$events.off('button-pressed-prev')
     this.$events.on('button-pressed-prev', () => {
       const prev = this.selected - 1
       this.selected = prev >= 0 ? prev : 0
@@ -30,6 +31,7 @@ export default {
       const total = this.dataCard.length - 1
       this.selected = next <= total ? next : total
     })
+    this.$events.off('button-pressed-enter')
     this.$events.on('button-pressed-enter', () => {
       const draw = this.dataCard[this.selected]
       this.$router.push(`/draw/${draw.id}`)

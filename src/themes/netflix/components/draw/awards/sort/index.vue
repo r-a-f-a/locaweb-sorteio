@@ -52,7 +52,7 @@ export default {
       }
     },
     setWinner (index) {
-      this.$events.emit('awards-set-winner')
+      this.$events.emit('awards-set-winner', this.products[index])
       this.configs.awards[index].winner = this.user.id
       this.$api.put(`/picker/${this.type}`, this.configs)
         .then(res => {
@@ -60,11 +60,13 @@ export default {
         })
     },
     start () {
-      clearInterval(this.interval)
-      this.interval = setInterval(() => {
-        this.running = true
-        this.next = this.getNum()
-      }, 100)
+      if (this.sortable.length > 0) {
+        clearInterval(this.interval)
+        this.interval = setInterval(() => {
+          this.running = true
+          this.next = this.getNum()
+        }, 100)
+      }
     },
     selected (index, product) {
       if (product.winner) {
@@ -81,6 +83,7 @@ export default {
       return className
     },
     getNum  () {
+      if (this.sortable.length === 1) return this.sortable[0]
       const num = Math.floor(Math.random() * this.sortable.length)
       const selected = this.sortable[num]
       return selected !== this.next ? selected : this.getNum()

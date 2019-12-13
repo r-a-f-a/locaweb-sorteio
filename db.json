@@ -22630,22 +22630,29 @@
       "name": "Geral",
       "title": "Geral",
       "describe": "Deste sorteio participam todos colaboradores.",
-      "blacklist": [],
+      "blacklist": [
+        3063,
+        2147,
+        104,
+        2878,
+        3524,
+        3481
+      ],
       "awards": [
         {
           "image": "fone.jpg",
           "name": "Notebook Dell Inspiron 15",
-          "winner": ""
+          "winner": 2147
         },
         {
           "image": "smartv.jpg",
           "name": "Smart TV LED 32\"",
-          "winner": ""
+          "winner": 3524
         },
         {
           "image": "notebook.jpg",
           "name": "Notebook",
-          "winner": ""
+          "winner": 3481
         },
         {
           "image": "churrasco.jpg",
@@ -22655,12 +22662,12 @@
         {
           "image": "jbl.jpg",
           "name": "Caixa de som JBL",
-          "winner": ""
+          "winner": 104
         },
         {
           "image": "chopeira.jpg",
           "name": "Chopeira Beertender Heineken",
-          "winner": ""
+          "winner": 3063
         }
       ]
     },
@@ -22670,12 +22677,16 @@
       "name": "Madrugada",
       "title": "Madrugada",
       "describe": "Deste sorteio participam todos colaboradores da madrugada.",
-      "blacklist": [],
+      "blacklist": [
+        2892,
+        1917,
+        3189
+      ],
       "awards": [
         {
           "image": "gopro.jpg",
           "name": "Câmera Digital GoPro Hero7",
-          "winner": ""
+          "winner": 3189
         },
         {
           "image": "churrasco.jpg",
@@ -22690,7 +22701,9 @@
       "name": "Pratas da Casa",
       "title": "Pratas da Casa",
       "describe": "Deste sorteio participam todos colaboradores pratas da casa.",
-      "blacklist": [],
+      "blacklist": [
+        3135
+      ],
       "awards": [
         {
           "image": "motorola.jpg",
@@ -22705,7 +22718,7 @@
         {
           "image": "chopeira.jpg",
           "name": "Chopeira Beertender Heineken",
-          "winner": ""
+          "winner": 3135
         }
       ]
     },
@@ -22720,7 +22733,12 @@
         2,
         9,
         5,
-        10
+        10,
+        7,
+        8,
+        1,
+        6,
+        4
       ],
       "awards": [
         {
@@ -22736,7 +22754,7 @@
         {
           "image": "ps4.jpg",
           "name": "Playstation 4 Slim + 01 controle",
-          "winner": ""
+          "winner": 1
         }
       ]
     },

@@ -63,6 +63,7 @@ export default {
         })
     },
     setBlacklist () {
+      if (!this.type) return false
       this.configs.blacklist.push(this.user.id)
       this.$api.put(`/picker/${this.type}`, this.configs)
         .then(res => {
@@ -100,7 +101,9 @@ export default {
     this.$events.off('add-blacklist')
     this.$events.on('add-blacklist', () => {
       console.log('ADD BLACKLIST', this.user)
-      this.setBlacklist()
+      if (this.user.id) {
+        this.setBlacklist()
+      }
     })
   },
   mounted () {
