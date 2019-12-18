@@ -2,7 +2,7 @@
   <div class="timer" :class="overlayClass">
     <div class="number" v-if="number !== 0"> {{ number }} </div>
     <div class="sort-message" v-else>
-      <span class="lw-red">CONTAGEM ENCERRADO</span>
+      <span class="lw-red">CONTAGEM ENCERRADA</span>
       <!-- <button @click="showSort" class="btn btn-red btn-rounded">PRÊMIOS</button>
       <button class="btn btn-red btn-rounded"> SORTEAR</button> -->
     </div>
