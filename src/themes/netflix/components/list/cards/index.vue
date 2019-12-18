@@ -1,6 +1,8 @@
 <template>
   <div class="cards">
-    <router-link v-for="(sorteio, index) in dataCard" :key="index" tag="a" :to="`draw/${sorteio.id}`">
+<!--
+    <template v-if=""></template> -->
+    <router-link v-for="(sorteio, index) in dataCard" :key="index" tag="a" :to="`draw/${sorteio.id}`" :event="!sorteio.check ? 'click' : ''">
       <div class="card">
         <div class="card-img" v-bind:class="{ active: index === selected }">
           <img :src="parseImage(sorteio, index)" alt="Card image" />
@@ -34,7 +36,9 @@ export default {
     this.$events.off('button-pressed-enter')
     this.$events.on('button-pressed-enter', () => {
       const draw = this.dataCard[this.selected]
-      this.$router.push(`/draw/${draw.id}`)
+      if (!draw.check) {
+        this.$router.push(`/draw/${draw.id}`)
+      }
     })
   },
   methods: {
