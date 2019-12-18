@@ -150,6 +150,9 @@ li {
   justify-content: center;
   transition: all 0.3s;
 }
+.lineThrough{
+  text-decoration: line-through #f00943 !important;
+}
 .card-img{
   width: 250px;
   height: 250px;
@@ -177,7 +180,7 @@ li {
 .card-title{
   color: #fff;
   font-size: 2.8em;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 .grid{
   display: flex;

@@ -7,7 +7,7 @@
         <div class="card-img" v-bind:class="{ active: index === selected }">
           <img :src="parseImage(sorteio, index)" alt="Card image" />
         </div>
-        <p class="card-title">{{ sorteio.name }}</p>
+        <p class="card-title" v-bind:class="{ lineThrough: sorteio.check === true }">{{ sorteio.name }}</p>
       </div>
     </router-link>
   </div>
@@ -20,6 +20,14 @@ export default {
   data () {
     return {
       selected: 0
+    }
+  },
+  computed: {
+    validateSort () {
+      if (this.dataCard.validation) {
+        return 'sort-finished'
+      }
+      return ''
     }
   },
   created () {

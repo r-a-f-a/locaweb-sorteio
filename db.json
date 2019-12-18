@@ -12887,17 +12887,20 @@
       "name": "Madrugada",
       "title": "Madrugada",
       "describe": "Deste sorteio participam todos colaboradores da madrugada.",
-      "blacklist": [],
+      "blacklist": [
+        2083,
+        3573
+      ],
       "awards": [
         {
           "image": "gopro.jpg",
           "name": "Câmera Digital GoPro Hero7",
-          "winner": ""
+          "winner": 2083
         },
         {
           "image": "churrasco.jpg",
           "name": "Kit para churrasco Tramontina",
-          "winner": ""
+          "winner": 3573
         }
       ]
     },
@@ -12932,9 +12935,7 @@
       "name": "Valeu",
       "title": "Cartão Valeu",
       "describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
-      "blacklist": [
-        3641
-      ],
+      "blacklist": [],
       "awards": [
         {
           "image": "smartv.jpg",
@@ -12959,9 +12960,7 @@
       "name": "Conexao Saúde",
       "title": "Conexao Saúde",
       "describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
-      "blacklist": [
-        3676
-      ],
+      "blacklist": [],
       "awards": [
         {
           "image": "airfryer.jpg",
