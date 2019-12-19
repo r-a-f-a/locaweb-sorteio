@@ -150,6 +150,8 @@ export default {
   position: relative;
   >.front,
   >.back {
+    width: 100%;
+    height: 100%;
     display: block;
     transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
     transition-duration: .5s;

@@ -8,32 +8,32 @@
 		"blacklist": [],
 		"awards": [
 			{
-				"image": "fone.jpg",
+				"image": "fone.svg",
 				"name": "Fone JBL",
 				"winner": ""
 			},
 			{
-				"image": "smartv.jpg",
+				"image": "smartv.svg",
 				"name": "Smart TV LED 32\"",
 				"winner": ""
 			},
 			{
-				"image": "notebook.jpg",
+				"image": "notebook.svg",
 				"name": "Notebook",
 				"winner": ""
 			},
 			{
-				"image": "churrasco.jpg",
+				"image": "churrasco.svg",
 				"name": "Kit para churrasco Tramontina",
 				"winner": ""
 			},
 			{
-				"image": "jbl.jpg",
+				"image": "jbl.svg",
 				"name": "Caixa de som JBL",
 				"winner": ""
 			},
 			{
-				"image": "chopeira.jpg",
+				"image": "chopeira.svg",
 				"name": "Chopeira Beertender Heineken",
 				"winner": ""
 			}
@@ -48,12 +48,12 @@
 		"blacklist": [],
 		"awards": [
 			{
-				"image": "gopro.jpg",
+				"image": "gopro.svg",
 				"name": "Câmera Digital GoPro Hero7",
 				"winner": ""
 			},
 			{
-				"image": "churrasco.jpg",
+				"image": "churrasco.svg",
 				"name": "Kit para churrasco Tramontina",
 				"winner": ""
 			}
@@ -68,17 +68,17 @@
 		"blacklist": [],
 		"awards": [
 			{
-				"image": "motorola.jpg",
+				"image": "motorola.svg",
 				"name": "Smartphone Motorola",
 				"winner": ""
 			},
 			{
-				"image": "instax.jpg",
+				"image": "instax.svg",
 				"name": "Câmera Instantânea Instax Mini",
 				"winner": ""
 			},
 			{
-				"image": "chopeira.jpg",
+				"image": "chopeira.svg",
 				"name": "Chopeira Beertender Heineken",
 				"winner": ""
 			}
@@ -93,17 +93,17 @@
 		"blacklist": [],
 		"awards": [
 			{
-				"image": "smartv.jpg",
+				"image": "smartv.svg",
 				"name": "Smart TV LED 32\"",
 				"winner": ""
 			},
 			{
-				"image": "instax.jpg",
+				"image": "instax.svg",
 				"name": "Câmera Instantânea Instax Mini",
 				"winner": ""
 			},
 			{
-				"image": "ps4.jpg",
+				"image": "ps4.svg",
 				"name": "Playstation 4 Slim + 01 controle",
 				"winner": ""
 			}
@@ -112,23 +112,23 @@
 	{
 		"id": "conexao",
 		"image": "https://api.adorable.io/avatars/285/joe@adorable.io.png",
-		"name": "Conexao Saúde",
-		"title": "Conexao Saúde",
+		"name": "Conexão Saúde",
+		"title": "Conexão Saúde",
 		"describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
 		"blacklist": [],
 		"awards": [
 			{
-				"image": "airfryer.jpg",
+				"image": "airfryer.svg",
 				"name": "Air Fryer",
 				"winner": ""
 			},
 			{
-				"image": "pao.jpg",
+				"image": "pao.svg",
 				"name": "Máquina de Pão",
 				"winner": ""
 			},
 			{
-				"image": "airfryer.jpg",
+				"image": "airfryer.svg",
 				"name": "Air Fryer",
 				"winner": ""
 			}
