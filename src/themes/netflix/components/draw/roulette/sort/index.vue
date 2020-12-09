@@ -85,7 +85,7 @@ export default {
       this.index = 0
       this.interval = setInterval(() => {
         this.next()
-      }, 100)
+      }, 20)
       this.$events.emit('sort-start')
     },
     prev () {

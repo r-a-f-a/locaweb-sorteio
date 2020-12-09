@@ -22,19 +22,19 @@ new Vue({
     window.addEventListener(
       'keydown',
       function (event) {
-        if ([33, 34, 27, 116, 190].includes(event.keyCode)) {
+        if ([49, 50, 51, 52].includes(event.keyCode)) {
           event.preventDefault()
           switch (event.keyCode) {
-            case 33:
+            case 49:
               _this.$events.emit('button-pressed-prev')
               break
-            case 34:
+            case 50:
               _this.$events.emit('button-pressed-next')
               break
-            case 190:
+            case 51:
               _this.$events.emit('button-pressed-home')
               break
-            default:
+            case 52:
               _this.$events.emit('button-pressed-enter')
               break
           }

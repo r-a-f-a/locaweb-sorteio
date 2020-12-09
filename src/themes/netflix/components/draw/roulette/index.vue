@@ -13,9 +13,9 @@
               <cardAvatar :user="user"></cardAvatar>
           </div>
           <div class="lw-col">
-            <div class="sort-message">
+            <!-- <div class="sort-message">
               <regressive v-if="showRegressive"></regressive>
-            </div>
+            </div> -->
           </div>
       </div>
       </div>
@@ -28,7 +28,7 @@ import sort from './sort'
 import employee from './employee'
 import cardAvatar from './card'
 import description from './description'
-import regressive from './regressive'
+// import regressive from './regressive'
 export default {
   metaInfo: {
     bodyAttrs: {
@@ -41,8 +41,8 @@ export default {
     sort,
     employee,
     cardAvatar,
-    description,
-    regressive
+    description
+    // regressive
   },
   data () {
     return {

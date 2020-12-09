@@ -102,6 +102,10 @@ export default {
       this.winner = true
       this.setWinner(this.next)
     })
+    setTimeout(() => {
+      console.log('aqui')
+      this.$events.emit('button-pressed-enter')
+    }, 2000)
   },
   computed: {
     type () {
