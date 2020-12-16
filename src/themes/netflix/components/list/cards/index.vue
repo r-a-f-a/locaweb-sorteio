@@ -1,13 +1,10 @@
 <template>
   <div class="cards">
-<!--
-    <template v-if=""></template> -->
     <router-link v-for="(sorteio, index) in dataCard" :key="index" tag="a" :to="`draw/${sorteio.id}`" :event="!sorteio.check ? 'click' : ''">
       <div class="card">
         <div class="card-img" v-bind:class="{ active: index === selected }">
           <img :src="parseImage(sorteio, index)" alt="Card image" />
         </div>
-        <p class="card-title" v-bind:class="{ lineThrough: sorteio.check === true }">{{ sorteio.name }}</p>
       </div>
     </router-link>
   </div>

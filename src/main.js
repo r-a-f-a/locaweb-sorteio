@@ -6,11 +6,17 @@ import store from './store'
 import './registerServiceWorker'
 import axios from './utils/axios'
 import events from 'events-vue-allin'
+// import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
 Vue.use(axios)
 Vue.use(events)
 Vue.use(Meta)
+// Vue.use(BootstrapVue)
+// Vue.use(IconsPlugin)
 new Vue({
   router,
   store,

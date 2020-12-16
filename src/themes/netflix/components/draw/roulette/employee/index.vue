@@ -12,6 +12,15 @@
             </p>
         </div>
     </div>
+    <div class="user-details" v-else>
+      <div class="detail">
+        <h2 class="lw-red">SORTEIO PRATAS DA CASA</h2>
+        <p class="text-center">
+        Deste sorteio participam todos aqueles que foram nomeados pratas da casa neste ano
+        </p>
+      </div>
+      <button class="btn btn-home btn-red btn-rounded"> SORTEAR</button>
+    </div>
   </div>
 </template>
 
@@ -40,5 +49,9 @@ export default {
 .detail p{
   font-size: 32pt;
   margin-top: -5%;
+}
+
+.btn{
+  line-height: 1.0!important;
 }
 </style>

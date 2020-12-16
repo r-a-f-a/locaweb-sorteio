@@ -3,7 +3,9 @@
     <logoCorner></logoCorner>
     <div class="sort-content">
       <p class="sort-content-title">SELECIONE O TIPO DE <span class="lw-red">SORTEIO</span></p>
-      <Cards :dataCard="cards"></Cards>
+      <div class="container-cards">
+        <Cards :dataCard="cards"></Cards>
+      </div>
     </div>
   </div>
 </template>
@@ -66,5 +68,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.container-cards{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 </style>

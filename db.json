@@ -12934,7 +12934,8 @@
         1994,
         3509,
         1772,
-        1500041
+        1500041,
+        3422
       ],
       "awards": [
         {
@@ -12977,7 +12978,9 @@
       "describe": "Deste sorteio participam todos colaboradores da madrugada.",
       "blacklist": [
         2935,
-        3071
+        3071,
+        3242,
+        2936
       ],
       "awards": [
         {

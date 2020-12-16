@@ -1,7 +1,7 @@
 <template>
-    <div class="row">
-      <img class="logo-corner" src="../../assets/logos/locaweb.svg" alt="">
-    </div>
+  <div class="row">
+    <img class="logo-corner" src="../../assets/logos/locaweb.svg" alt="">
+  </div>
 </template>
 
 <script>

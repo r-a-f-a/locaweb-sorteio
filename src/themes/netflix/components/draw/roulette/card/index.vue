@@ -1,7 +1,7 @@
 <template>
   <div class="card-avatar" :class="classCard" id="card-avatar">
       <img v-if="user.id" class="sort-avatar" :src="getImage(user.id)" alt="">
-      <img src="../../../../assets/avatar/flash.jpg" v-else>
+      <img src="../../../../assets/avatar/Avatar-Default-Tela-de-Sorteio.jpg" v-else>
   </div>
 </template>
 
