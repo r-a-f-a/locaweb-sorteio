@@ -10,7 +10,8 @@
 		"server": "yarn api && node server.js",
 		"api": "npx json-server db.json &",
 		"start": "yarn api && yarn serve",
-		"sync": "node sync/index.js"
+		"sync": "node sync/index.js",
+		"netlify": "vue-cli-service build && yarn sync && yarn api"
 	},
 	"dependencies": {
 		"axios": "^0.19.0",
