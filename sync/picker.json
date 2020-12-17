@@ -40,81 +40,6 @@
 		]
 	},
 	{
-		"id": "pratas",
-		"image": "https://api.adorable.io/avatars/285/bob@adorable.io.png",
-		"name": "Pratas da Casa",
-		"title": "Pratas da Casa",
-		"describe": "Deste sorteio participam todos colaboradores pratas da casa.",
-		"blacklist": [],
-		"awards": [
-			{
-				"image": "motorola.svg",
-				"name": "Smartphone Motorola",
-				"winner": ""
-			},
-			{
-				"image": "instax.svg",
-				"name": "Câmera Instantânea Instax Mini",
-				"winner": ""
-			},
-			{
-				"image": "chopeira.svg",
-				"name": "Chopeira Beertender Heineken",
-				"winner": ""
-			}
-		]
-	},
-	{
-		"id": "valeu",
-		"image": "https://api.adorable.io/avatars/285/joe@adorable.io.png",
-		"name": "Valeu",
-		"title": "Cartão Valeu",
-		"describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
-		"blacklist": [],
-		"awards": [
-			{
-				"image": "smartv.svg",
-				"name": "Smart TV LED 32\"",
-				"winner": ""
-			},
-			{
-				"image": "instax.svg",
-				"name": "Câmera Instantânea Instax Mini",
-				"winner": ""
-			},
-			{
-				"image": "ps4.svg",
-				"name": "Playstation 4 Slim + 01 controle",
-				"winner": ""
-			}
-		]
-	},
-	{
-		"id": "conexao",
-		"image": "https://api.adorable.io/avatars/285/joe@adorable.io.png",
-		"name": "Conexão Saúde",
-		"title": "Conexão Saúde",
-		"describe": "Deste sorteio participam todos colaboradores que participaram do conexão saúde.",
-		"blacklist": [],
-		"awards": [
-			{
-				"image": "airfryer.svg",
-				"name": "Air Fryer",
-				"winner": ""
-			},
-			{
-				"image": "pao.svg",
-				"name": "Máquina de Pão",
-				"winner": ""
-			},
-			{
-				"image": "airfryer.svg",
-				"name": "Air Fryer",
-				"winner": ""
-			}
-		]
-	},
-	{
 		"id": "delivery",
 		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
 		"name": "Delivery Direto",
@@ -140,26 +65,6 @@
 		"name": "Etus",
 		"title": "Etus",
 		"describe": "Deste sorteio participam todos colaboradores da Etus.",
-		"blacklist": [],
-		"awards": [
-			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7",
-				"winner": ""
-			},
-			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina",
-				"winner": ""
-			}
-		]
-	},
-	{
-		"id": "karaoke",
-		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
-		"name": "Karaokê",
-		"title": "Karaokê",
-		"describe": "Deste sorteio participam todos que fizeram parte do Karaokê.",
 		"blacklist": [],
 		"awards": [
 			{
@@ -215,26 +120,6 @@
 		]
 	},
 	{
-		"id": "presenciais",
-		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
-		"name": "Presenciais",
-		"title": "Presenciais",
-		"describe": "Deste sorteio participam todos colaboradores da Presenciais.",
-		"blacklist": [],
-		"awards": [
-			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7",
-				"winner": ""
-			},
-			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina",
-				"winner": ""
-			}
-		]
-	},
-	{
 		"id": "socialminer",
 		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
 		"name": "Social Miner",
@@ -255,11 +140,126 @@
 		]
 	},
 	{
+		"id": "valeu",
+		"image": "https://api.adorable.io/avatars/285/joe@adorable.io.png",
+		"name": "Valeu",
+		"title": "Cartão Valeu",
+		"describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "smartv.svg",
+				"name": "Smart TV LED 32\"",
+				"winner": ""
+			},
+			{
+				"image": "instax.svg",
+				"name": "Câmera Instantânea Instax Mini",
+				"winner": ""
+			},
+			{
+				"image": "ps4.svg",
+				"name": "Playstation 4 Slim + 01 controle",
+				"winner": ""
+			}
+		]
+	},
+	{
 		"id": "surpresa",
 		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
 		"name": "Surpresa",
 		"title": "Surpresa",
 		"describe": "Deste sorteio participam todos colaboradores da Surpresa.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "gopro.svg",
+				"name": "Câmera Digital GoPro Hero7",
+				"winner": ""
+			},
+			{
+				"image": "churrasco.svg",
+				"name": "Kit para churrasco Tramontina",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "pratas",
+		"image": "https://api.adorable.io/avatars/285/bob@adorable.io.png",
+		"name": "Pratas da Casa",
+		"title": "Pratas da Casa",
+		"describe": "Deste sorteio participam todos colaboradores pratas da casa.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "motorola.svg",
+				"name": "Smartphone Motorola",
+				"winner": ""
+			},
+			{
+				"image": "instax.svg",
+				"name": "Câmera Instantânea Instax Mini",
+				"winner": ""
+			},
+			{
+				"image": "chopeira.svg",
+				"name": "Chopeira Beertender Heineken",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "conexao",
+		"image": "https://api.adorable.io/avatars/285/joe@adorable.io.png",
+		"name": "Conexão Saúde",
+		"title": "Conexão Saúde",
+		"describe": "Deste sorteio participam todos colaboradores que participaram do conexão saúde.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "airfryer.svg",
+				"name": "Air Fryer",
+				"winner": ""
+			},
+			{
+				"image": "pao.svg",
+				"name": "Máquina de Pão",
+				"winner": ""
+			},
+			{
+				"image": "airfryer.svg",
+				"name": "Air Fryer",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "presenciais",
+		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
+		"name": "Presenciais",
+		"title": "Presenciais",
+		"describe": "Deste sorteio participam todos colaboradores da Presenciais.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "gopro.svg",
+				"name": "Câmera Digital GoPro Hero7",
+				"winner": ""
+			},
+			{
+				"image": "churrasco.svg",
+				"name": "Kit para churrasco Tramontina",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "karaoke",
+		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
+		"name": "Karaokê",
+		"title": "Karaokê",
+		"describe": "Deste sorteio participam todos que fizeram parte do Karaokê.",
 		"blacklist": [],
 		"awards": [
 			{
