@@ -11,6 +11,7 @@
             {{ user.email}}
             </p>
         </div>
+        <button @click="reSort()" class="btn btn-home btn-white btn-rounded"> SORTEAR NOVAMENTE</button>
     </div>
     <div class="user-details" v-else>
       <div class="detail">
@@ -19,7 +20,7 @@
         Deste sorteio participam todos aqueles que foram nomeados pratas da casa neste ano
         </p>
       </div>
-      <button class="btn btn-home btn-red btn-rounded"> SORTEAR</button>
+      <button v-if="configs.awards.length > 0" @click="initSort()" class="btn btn-home btn-red btn-rounded"> SORTEAR</button>
     </div>
   </div>
 </template>
@@ -27,11 +28,25 @@
 <script>
 export default {
   name: 'employee',
-  props: ['user'],
+  props: ['user','award','configs'],
   filters: {
     pasedName: function (value) {
       const fullName = value.split(' ')
       return fullName[0] + ' ' + fullName[fullName.length - 1]
+    }
+  },
+  methods: {
+     reSort() {
+      let payload= false
+      this.$events.emit('remove-award')
+      this.$router.push('/list')
+      
+    },
+    initSort() {
+      let payload= false
+      this.$events.emit('roulette-showRegressive', payload)
+      this.$events.emit('sort-start')
+      this.$events.emit('button-pressed-enter')
     }
   }
 }

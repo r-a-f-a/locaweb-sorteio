@@ -6,9 +6,9 @@
       </div>
         <div class="grid">
           <div class="lw-col">
-            <employee :user="user"></employee>
+            <employee :user="user" :configs='configs' :award='award'></employee>
           </div>
-          <div class="lw-col">
+          <div class="lw-col" >
               <description :configs='configs'></description>
               <cardAvatar :user="user"></cardAvatar>
           </div>
@@ -60,6 +60,10 @@ export default {
         this.$events.emit('sort-change')
       }
     })
+    // this.$events.off('remove-award')
+    // this.$events.on('remove-award', () => {
+    //     this.configs.awards.shift()  
+    // })
   },
   mounted () {
     this.$events.on('roulette-showRegressive', (val) => {

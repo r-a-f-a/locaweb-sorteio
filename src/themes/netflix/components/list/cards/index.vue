@@ -4,6 +4,7 @@
       <div class="card">
         <div class="card-img">
           <img :src="parseImage(sorteio, index)" alt="Card image" />
+          <div class='over' v-if="sorteio.check"></div>
         </div>
       </div>
     </router-link>
@@ -20,6 +21,7 @@ export default {
     }
   },
   computed: {
+    
     validateSort () {
       if (this.dataCard.validation) {
         return 'sort-finished'
@@ -66,5 +68,14 @@ export default {
 </script>
 
 <style>
-
+.over {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    opacity: 0.7;
+    background-image: url('../../../assets/icons/neon-selector.png');
+}
 </style>

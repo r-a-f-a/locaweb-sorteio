@@ -10,7 +10,7 @@ import events from 'events-vue-allin'
 
 // import 'bootstrap/dist/css/bootstrap.css'
 // import 'bootstrap-vue/dist/bootstrap-vue.css'
-
+Vue.config.silent = true
 Vue.config.productionTip = false
 Vue.use(axios)
 Vue.use(events)

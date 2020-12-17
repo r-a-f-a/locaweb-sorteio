@@ -2,11 +2,12 @@
   <div v-if="configs.id">
     <transition-group name="page">
       <roulette 
-      key="roulette" 
-      :configs='configs' 
-      :collaborators='collaborators' 
-      :user="user"  
-      v-if="roulette" />
+        v-if="roulette"
+        key="roulette"        
+        :configs="configs"
+        :collaborators="collaborators"
+        :user="user"  
+      />
       <!-- <awards  key="awards" :configs="configs" :user="user" v-if="!roulette"></awards> -->
     </transition-group>
   </div>
@@ -22,7 +23,7 @@ export default {
       class: ['sorteio']
     }
   },
-  name: 'sorteio',
+  name: "Sorteio",
   data () {
     return {
       roulette: true,
@@ -82,6 +83,13 @@ export default {
         'user': this.user,
          award
       })
+      // configs.awards.shift()
+      this.$api.put(`/picker/${this.type}`, this.configs)
+        .then(res => {
+          console.log('UPDATED', res)
+        })
+    },
+    removeAward () {
       this.configs.awards.shift()
       this.$api.put(`/picker/${this.type}`, this.configs)
         .then(res => {
@@ -129,6 +137,12 @@ export default {
         this.setWinner(award)
       }
     })
+    this.$events.off('remove-award')
+    this.$events.on('remove-award', () => {
+      this.removeAward()
+    })
+
+
   },
   mounted () {
     this.getCollaborators()

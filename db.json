@@ -9389,95 +9389,34 @@
       "name": "Geral",
       "title": "Geral",
       "describe": "Deste sorteio participam todos colaboradores.",
-      "blacklist": [
-        3245,
-        3456,
-        1882,
-        3583,
-        3424,
-        3484
-      ],
-      "winners": [
+      "blacklist": [],
+      "winners": [],
+      "awards": [
         {
-          "user": {
-            "id": 3245,
-            "funcionario": "Jonathan Deivison Rodrigues da Silva",
-            "email": "JONATHAN.DEIVISON@LOCAWEB.COM.BR",
-            "area": "MARKETING DE CANAIS",
-            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
-          },
-          "award": {
-            "image": "fone.svg",
-            "name": "Fone JBL"
-          }
+          "image": "fone.svg",
+          "name": "Fone JBL"
         },
         {
-          "user": {
-            "id": 3456,
-            "funcionario": "Ana Paula Pena Munhoz",
-            "email": "ANA.MUNHOZ@LOCAWEB.COM.BR",
-            "area": "ATRAÇAO & DESENVOLVIMENTO",
-            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
-          },
-          "award": {
-            "image": "smartv.svg",
-            "name": "Smart TV LED 32\""
-          }
+          "image": "smartv.svg",
+          "name": "Smart TV LED 32\""
         },
         {
-          "user": {
-            "id": 1882,
-            "funcionario": "HELEN LAURA BISPO DA SILVA",
-            "email": "HELEN.BISPO@LOCAWEB.COM.BR",
-            "area": "JURÍDICO   ",
-            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
-          },
-          "award": {
-            "image": "notebook.svg",
-            "name": "Notebook"
-          }
+          "image": "notebook.svg",
+          "name": "Notebook"
         },
         {
-          "user": {
-            "id": 3583,
-            "funcionario": "Danilo Ribeiro Barbosa",
-            "email": "DANILO.BARBOSA@LOCAWEB.COM.BR",
-            "area": "ATENDIMENTO",
-            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
-          },
-          "award": {
-            "image": "churrasco.svg",
-            "name": "Kit para churrasco Tramontina"
-          }
+          "image": "churrasco.svg",
+          "name": "Kit para churrasco Tramontina"
         },
         {
-          "user": {
-            "id": 3424,
-            "funcionario": "Ury Eshkenazy",
-            "email": "URY.ESHKENAZY@LOCAWEB.COM.BR",
-            "area": "COMERCIAL  ",
-            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
-          },
-          "award": {
-            "image": "jbl.svg",
-            "name": "Caixa de som JBL"
-          }
+          "image": "jbl.svg",
+          "name": "Caixa de som JBL"
         },
         {
-          "user": {
-            "id": 3484,
-            "funcionario": "Henrique Fernandez Teixeira",
-            "email": "HENRIQUE.TEIXEIRA@LOCAWEB.COM.BR",
-            "area": "ENGENHARIA DE PRODUTOS",
-            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
-          },
-          "award": {
-            "image": "chopeira.svg",
-            "name": "Chopeira Beertender Heineken"
-          }
+          "image": "chopeira.svg",
+          "name": "Chopeira Beertender Heineken"
         }
-      ],
-      "awards": []
+      ]
     },
     {
       "id": "delivery",
@@ -9645,22 +9584,53 @@
       "name": "Conexão Saúde",
       "title": "Conexão Saúde",
       "describe": "Deste sorteio participam todos colaboradores que participaram do conexão saúde.",
-      "blacklist": [],
-      "winners": [],
-      "awards": [
+      "blacklist": [
+        3150,
+        3182,
+        3098
+      ],
+      "winners": [
         {
-          "image": "airfryer.svg",
-          "name": "Air Fryer"
+          "user": {
+            "id": 3150,
+            "funcionario": "Claudio Tsutomu Mogami",
+            "email": "CLAUDIO.MOGAMI@LOCAWEB.COM.BR",
+            "area": "ALL IN     ",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "airfryer.svg",
+            "name": "Air Fryer"
+          }
         },
         {
-          "image": "pao.svg",
-          "name": "Máquina de Pão"
+          "user": {
+            "id": 3182,
+            "funcionario": "Elcio Sobral",
+            "email": "ELCIO.SOBRAL@LOCAWEB.COM.BR",
+            "area": "JURÍDICO   ",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "pao.svg",
+            "name": "Máquina de Pão"
+          }
         },
         {
-          "image": "airfryer.svg",
-          "name": "Air Fryer"
+          "user": {
+            "id": 3098,
+            "funcionario": "ALEXANDRE LOURENCO",
+            "email": "ALEXANDRE.LOURENCO@LOCAWEB.COM.BR",
+            "area": "DIGITAL MARKETING",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "airfryer.svg",
+            "name": "Air Fryer"
+          }
         }
-      ]
+      ],
+      "awards": []
     },
     {
       "id": "presenciais",
@@ -9668,18 +9638,39 @@
       "name": "Presenciais",
       "title": "Presenciais",
       "describe": "Deste sorteio participam todos colaboradores da Presenciais.",
-      "blacklist": [],
-      "winners": [],
-      "awards": [
+      "blacklist": [
+        3599,
+        3424
+      ],
+      "winners": [
         {
-          "image": "gopro.svg",
-          "name": "Câmera Digital GoPro Hero7"
+          "user": {
+            "id": 3599,
+            "funcionario": "Marcos Costa Alves",
+            "email": "MARCOS.ALVES@LOCAWEB.COM.BR",
+            "area": "ORDER TO CASH",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "gopro.svg",
+            "name": "Câmera Digital GoPro Hero7"
+          }
         },
         {
-          "image": "churrasco.svg",
-          "name": "Kit para churrasco Tramontina"
+          "user": {
+            "id": 3424,
+            "funcionario": "Ury Eshkenazy",
+            "email": "URY.ESHKENAZY@LOCAWEB.COM.BR",
+            "area": "COMERCIAL  ",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "churrasco.svg",
+            "name": "Kit para churrasco Tramontina"
+          }
         }
-      ]
+      ],
+      "awards": []
     },
     {
       "id": "karaoke",
@@ -9687,18 +9678,39 @@
       "name": "Karaokê",
       "title": "Karaokê",
       "describe": "Deste sorteio participam todos que fizeram parte do Karaokê.",
-      "blacklist": [],
-      "winners": [],
-      "awards": [
+      "blacklist": [
+        1992,
+        3052
+      ],
+      "winners": [
         {
-          "image": "gopro.svg",
-          "name": "Câmera Digital GoPro Hero7"
+          "user": {
+            "id": 1992,
+            "funcionario": "Fiama Cecilia Neves Oliveira",
+            "email": "FIAMA.OLIVEIRA@LOCAWEB.COM.BR",
+            "area": "REMUNERAÇAO & BEM-ESTAR",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "gopro.svg",
+            "name": "Câmera Digital GoPro Hero7"
+          }
         },
         {
-          "image": "churrasco.svg",
-          "name": "Kit para churrasco Tramontina"
+          "user": {
+            "id": 3052,
+            "funcionario": "Thais Pimentel de Brito Milagres",
+            "email": "THAIS.MILAGRES@LOCAWEB.COM.BR",
+            "area": "FISCAL     ",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "churrasco.svg",
+            "name": "Kit para churrasco Tramontina"
+          }
         }
-      ]
+      ],
+      "awards": []
     }
   ],
   "delivery": [
