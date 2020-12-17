@@ -2,7 +2,7 @@
   <div class="cards">
     <router-link v-for="(sorteio, index) in dataCard" :key="index" tag="a" :to="`draw/${sorteio.id}`" :event="!sorteio.check ? 'click' : ''">
       <div class="card">
-        <div class="card-img" v-bind:class="{ active: index === selected }">
+        <div class="card-img">
           <img :src="parseImage(sorteio, index)" alt="Card image" />
         </div>
       </div>
@@ -16,7 +16,7 @@ export default {
   props: ['dataCard'],
   data () {
     return {
-      selected: 0
+      selected: null
     }
   },
   computed: {

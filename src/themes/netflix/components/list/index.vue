@@ -37,17 +37,17 @@ export default {
         })
     },
     checkAwards (awards) {
-      console.log('CHECK AWARDS', awards)
-      const total = awards.length
-      var winners = 0
-      for (let index = 0; index < total; index++) {
-        const award = awards[index]
-        console.log('AWARD WINNER', award)
-        if (award.winner !== '') {
-          winners++
-        }
-      }
-      return total === winners
+      // console.log('CHECK AWARDS', awards)
+      // const total = awards.length
+      // var winners = 0
+      // for (let index = 0; index < total; index++) {
+      //   const award = awards[index]
+      //   console.log('AWARD WINNER', award)
+      //   if (award.winner !== '') {
+      //     winners++
+      //   }
+      // }
+      return awards.length === 0
     }
   },
   created () {

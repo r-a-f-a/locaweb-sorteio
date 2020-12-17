@@ -1,8 +1,13 @@
 <template>
   <div v-if="configs.id">
     <transition-group name="page">
-      <roulette key="roulette" :configs='configs' :collaborators='collaborators' :user="user"  v-if="roulette"></roulette>
-      <awards  key="awards" :configs="configs" :user="user" v-if="!roulette"></awards>
+      <roulette 
+      key="roulette" 
+      :configs='configs' 
+      :collaborators='collaborators' 
+      :user="user"  
+      v-if="roulette" />
+      <!-- <awards  key="awards" :configs="configs" :user="user" v-if="!roulette"></awards> -->
     </transition-group>
   </div>
 </template>
@@ -69,6 +74,19 @@ export default {
         .then(res => {
           console.log('UPDATED BLACKLIST', res)
         })
+    },
+    setWinner (award) {
+      // this.$events.emit('awards-set-winner', this.products[index])
+      this.configs.blacklist.push(this.user.id)
+      this.configs.winners.push({
+        'user': this.user,
+         award
+      })
+      this.configs.awards.shift()
+      this.$api.put(`/picker/${this.type}`, this.configs)
+        .then(res => {
+          console.log('UPDATED', res)
+        })
     }
   },
   computed: {
@@ -103,6 +121,12 @@ export default {
       console.log('ADD BLACKLIST', this.user)
       if (this.user.id) {
         this.setBlacklist()
+      }
+    })
+    this.$events.off('set-winner')
+    this.$events.on('set-winner', (award) => {
+      if (award) {
+        this.setWinner(award)
       }
     })
   },

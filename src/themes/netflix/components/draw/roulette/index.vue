@@ -13,13 +13,15 @@
               <cardAvatar :user="user"></cardAvatar>
           </div>
           <div class="lw-col">
-            <!-- <div class="sort-message">
-              <regressive v-if="showRegressive"></regressive>
-            </div> -->
+            <div class="sort-message">
+              <!-- <regressive v-if="showRegressive"></regressive> -->
+              <awards :configs='configs' :user="user" :award="award" v-if="award"></awards>
+            </div>
           </div>
       </div>
+      
       </div>
-    <sort  v-if="collaborators.length"  :collaborators="collaborators" :configs="configs"></sort>
+    <sort  v-if="collaborators.length"  :collaborators="collaborators" :configs="configs" :award="award"></sort>
   </div>
 </template>
 
@@ -28,6 +30,7 @@ import sort from './sort'
 import employee from './employee'
 import cardAvatar from './card'
 import description from './description'
+import awards from './awards'
 // import regressive from './regressive'
 export default {
   metaInfo: {
@@ -41,7 +44,8 @@ export default {
     sort,
     employee,
     cardAvatar,
-    description
+    description,
+    awards
     // regressive
   },
   data () {
@@ -61,6 +65,11 @@ export default {
     this.$events.on('roulette-showRegressive', (val) => {
       this.showRegressive = val
     })
+  },
+  computed: {
+    award () {
+      return this.configs.awards[0] || false
+    }
   }
 }
 </script>

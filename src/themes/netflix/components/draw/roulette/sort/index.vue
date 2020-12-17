@@ -20,7 +20,7 @@ var shuffle = require('shuffle-array')
 import initials from 'initials'
 export default {
   name: 'sort',
-  props: ['collaborators', 'winner', 'configs'],
+  props: ['collaborators', 'winner', 'configs','award'],
   data () {
     return {
       index: 0,
@@ -140,7 +140,8 @@ export default {
         this.$events.emit('add-overlay')
         this.$events.emit('sort-finished')
         this.$events.emit('roulette-showRegressive', true)
-        this.$events.emit('add-blacklist')
+        // this.$events.emit('add-blacklist', this.award)
+        this.$events.emit('set-winner', this.award)
       }
     }
   },
