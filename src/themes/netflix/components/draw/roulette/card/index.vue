@@ -21,7 +21,7 @@ export default {
         const image = require(`../../../../assets/employees/${index}.jpg`) || null
         return image
       } catch (error) {
-        return `https://api.adorable.io/avatars/285/${index}.png`
+        return require(`../../../../assets/avatar/Avatar-Default-Tela-de-Sorteio.jpg`)
       }
     }
   },
