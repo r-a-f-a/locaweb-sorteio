@@ -139,6 +139,7 @@ li {
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
+  width: 50%;
 }
 .card{
   align-items: center;
@@ -152,10 +153,11 @@ li {
   text-decoration: line-through #f00943 !important;
 }
 .card-img{
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 5px;
-  background-color: #fff;
+  /* background-color: #fff; */
+  border: 1px solid #fff;
   display: inline-block;
   position: relative;
 }
@@ -173,7 +175,7 @@ li {
   transition: all 0.3s;
 }
 .card-img.active{
-  background-color: #f00943;
+  background-color: #fff;
 }
 .card-title{
   color: #fff;

@@ -40,26 +40,6 @@
 		]
 	},
 	{
-		"id": "madrugada",
-		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
-		"name": "Madrugada",
-		"title": "Madrugada",
-		"describe": "Deste sorteio participam todos colaboradores da madrugada.",
-		"blacklist": [],
-		"awards": [
-			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7",
-				"winner": ""
-			},
-			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina",
-				"winner": ""
-			}
-		]
-	},
-	{
 		"id": "pratas",
 		"image": "https://api.adorable.io/avatars/285/bob@adorable.io.png",
 		"name": "Pratas da Casa",
@@ -114,7 +94,7 @@
 		"image": "https://api.adorable.io/avatars/285/joe@adorable.io.png",
 		"name": "Conexão Saúde",
 		"title": "Conexão Saúde",
-		"describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
+		"describe": "Deste sorteio participam todos colaboradores que participaram do conexão saúde.",
 		"blacklist": [],
 		"awards": [
 			{
@@ -130,6 +110,166 @@
 			{
 				"image": "airfryer.svg",
 				"name": "Air Fryer",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "delivery",
+		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
+		"name": "Delivery Direto",
+		"title": "Delivery Direto",
+		"describe": "Deste sorteio participam todos colaboradores da Delivery Direto.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "gopro.svg",
+				"name": "Câmera Digital GoPro Hero7",
+				"winner": ""
+			},
+			{
+				"image": "churrasco.svg",
+				"name": "Kit para churrasco Tramontina",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "etus",
+		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
+		"name": "Etus",
+		"title": "Etus",
+		"describe": "Deste sorteio participam todos colaboradores da Etus.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "gopro.svg",
+				"name": "Câmera Digital GoPro Hero7",
+				"winner": ""
+			},
+			{
+				"image": "churrasco.svg",
+				"name": "Kit para churrasco Tramontina",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "karaoke",
+		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
+		"name": "Karaokê",
+		"title": "Karaokê",
+		"describe": "Deste sorteio participam todos que fizeram parte do Karaokê.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "gopro.svg",
+				"name": "Câmera Digital GoPro Hero7",
+				"winner": ""
+			},
+			{
+				"image": "churrasco.svg",
+				"name": "Kit para churrasco Tramontina",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "kinghost",
+		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
+		"name": "King Host",
+		"title": "King Host",
+		"describe": "Deste sorteio participam todos colaboradores da King Host.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "gopro.svg",
+				"name": "Câmera Digital GoPro Hero7",
+				"winner": ""
+			},
+			{
+				"image": "churrasco.svg",
+				"name": "Kit para churrasco Tramontina",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "locawebcommerce",
+		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
+		"name": "Presenciais",
+		"title": "Presenciais",
+		"describe": "Deste sorteio participam todos colaboradores Presenciais.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "gopro.svg",
+				"name": "Câmera Digital GoPro Hero7",
+				"winner": ""
+			},
+			{
+				"image": "churrasco.svg",
+				"name": "Kit para churrasco Tramontina",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "presenciais",
+		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
+		"name": "Presenciais",
+		"title": "Presenciais",
+		"describe": "Deste sorteio participam todos colaboradores da Presenciais.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "gopro.svg",
+				"name": "Câmera Digital GoPro Hero7",
+				"winner": ""
+			},
+			{
+				"image": "churrasco.svg",
+				"name": "Kit para churrasco Tramontina",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "socialminer",
+		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
+		"name": "Social Miner",
+		"title": "Social Miner",
+		"describe": "Deste sorteio participam todos colaboradores da Social Miner.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "gopro.svg",
+				"name": "Câmera Digital GoPro Hero7",
+				"winner": ""
+			},
+			{
+				"image": "churrasco.svg",
+				"name": "Kit para churrasco Tramontina",
+				"winner": ""
+			}
+		]
+	},
+	{
+		"id": "surpresa",
+		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
+		"name": "Surpresa",
+		"title": "Surpresa",
+		"describe": "Deste sorteio participam todos colaboradores da Surpresa.",
+		"blacklist": [],
+		"awards": [
+			{
+				"image": "gopro.svg",
+				"name": "Câmera Digital GoPro Hero7",
+				"winner": ""
+			},
+			{
+				"image": "churrasco.svg",
+				"name": "Kit para churrasco Tramontina",
 				"winner": ""
 			}
 		]
