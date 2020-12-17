@@ -3,8 +3,12 @@
     <nav>
       <ul class="roulet">
         <li class="roulet-item" :class="{ 'arrow' : index === 3 }" v-for="(item, index) in items" :key="index">
-          <!-- <span class="roulet-span">{{item.funcionario}}</span> -->
-          <img :class="{ 'active' : index === 3 }"  v-if="item" :src="getImage(item.id)" >
+          <img :class="{ 'active' : index === 3 }"  v-if="getImage(item.id)" :src="getImage(item.id)" >
+          <div class="roulet-span" :style="`background:${getColor()};`" v-else>
+            <span class="initial">{{getInitial(item.funcionario)}}</span>
+            <span class="name">{{item.funcionario}}</span>
+          </div>
+          
         </li>
       </ul>
     </nav>
@@ -13,6 +17,7 @@
 
 <script>
 var shuffle = require('shuffle-array')
+import initials from 'initials'
 export default {
   name: 'sort',
   props: ['collaborators', 'winner', 'configs'],
@@ -29,6 +34,12 @@ export default {
     }
   },
   methods: {
+    getInitial(name){
+      return initials(name)
+    },
+    getColor () {
+      return `#${Math.floor(Math.random()*16777215).toString(16)}`;
+    },
     async blacklist (collaborators) {
       console.log('COLLABS', collaborators)
       const blacklist = this.configs.blacklist
@@ -44,7 +55,7 @@ export default {
         const image = require(`../../../../assets/employees/${index}.jpg`) || null
         return image
       } catch (error) {
-        return `https://api.adorable.io/avatars/285/${index}.png`
+        return false
       }
     },
     makeSort () {
@@ -190,8 +201,6 @@ export default {
 
 .sort-item {
   display: inline-flex;
-  width: 250px;
-  height: 250px;
   margin: 0 5px;
   border: 1px solid green;
 }
@@ -219,14 +228,35 @@ export default {
     from {left: -5px;}
     to {left: var(--left);}
 }
-.roulet-item span {
-  border: 1px solid black;
+.roulet-item div {
   position: absolute;
-  top: 100px;
-  z-index: 999;
-  left: 110px;
   color: #000;
-  background-color:#fff;
-  z-index: 1036 !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover !important;
+  // background: #fff;
+  text-align: center;
+  font-size: 20px;
+  background-image: url('../../../../assets/icons/neon-selector.png');
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-size: 50px;
 }
+.roulet-item div .initial{
+    font-size: 80px;
+    clear: both;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    left: 0;
+}
+.roulet-item div .name{
+     width: 100%;
+    float: left;
+    bottom: 20px;
+    position: absolute;
+    left: 0;
+}
+
 </style>
