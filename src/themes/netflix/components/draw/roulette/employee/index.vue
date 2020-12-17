@@ -19,7 +19,7 @@
         Deste sorteio participam todos aqueles que foram nomeados pratas da casa neste ano
         </p>
       </div>
-      <button class="btn btn-home btn-red btn-rounded"> SORTEAR</button>
+      <button @click="initSort()" class="btn btn-home btn-red btn-rounded"> SORTEAR</button>
     </div>
   </div>
 </template>
@@ -32,6 +32,14 @@ export default {
     pasedName: function (value) {
       const fullName = value.split(' ')
       return fullName[0] + ' ' + fullName[fullName.length - 1]
+    }
+  },
+  methods: {
+    initSort() {
+      let payload= false
+      this.$events.emit('roulette-showRegressive', payload)
+      this.$events.emit('sort-start')
+      this.$events.emit('button-pressed-enter')
     }
   }
 }
