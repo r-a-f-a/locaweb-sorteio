@@ -95,6 +95,7 @@ export default {
       this.$api.put(`/picker/${this.type}`, this.configs)
         .then(res => {
           console.log('UPDATED', res)
+          this.$events.emit('music-off', true)
         })
     }
   },

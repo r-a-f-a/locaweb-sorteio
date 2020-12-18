@@ -31,7 +31,8 @@ export default {
       image: {
         size: '260px'
       },
-      state: false
+      state: false,
+      player: {}
     }
   },
   methods: {
@@ -96,6 +97,7 @@ export default {
       this.sliced[this.choosedIndex] = antepenult
     },
     start () {
+      this.player.play();
       clearInterval(this.interval)
       this.index = 0
       this.interval = setInterval(() => {
@@ -115,9 +117,17 @@ export default {
   },
   created () {
     this.makeSort()
+    this.player = new Audio(require('./piao_do_bau.mp3'))
+
     this.$events.emit('show-reSort', false)
+    this.$events.off('music-off')
+    this.$events.on('music-off', () => {
+      this.player.pause()
+    })
+
     this.$events.off('button-pressed-enter')
     this.$events.on('button-pressed-enter', () => {
+      
       this.makeSort()
       this.start()
     })
