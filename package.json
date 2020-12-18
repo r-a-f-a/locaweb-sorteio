@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"serve": "vue-cli-service serve --port=80",
+		"serve": "vue-cli-service serve --port=9000",
 		"build": "vue-cli-service build",
 		"lint": "vue-cli-service lint",
 		"test:e2e": "vue-cli-service test:e2e",
@@ -11,7 +11,7 @@
 		"api": "npx json-server db.json &",
 		"start": "yarn api && yarn serve",
 		"sync": "node sync/index.js",
-		"production-api": "npx json-server --host=177.153.231.20 db.json &",
+		"production-api": "npx json-server db.json &",
 	  "production": "yarn production-api && yarn serve"
 
 	},
