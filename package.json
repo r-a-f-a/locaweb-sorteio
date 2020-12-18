@@ -11,7 +11,9 @@
 		"api": "npx json-server db.json &",
 		"start": "yarn api && yarn serve",
 		"sync": "node sync/index.js",
-		"netlify": "vue-cli-service build && yarn sync && yarn api"
+		"production-api": "npx json-server --host=177.153.231.20 db.json &",
+	  "production": "yarn production-api && yarn serve"
+
 	},
 	"dependencies": {
 		"axios": "^0.19.0",
