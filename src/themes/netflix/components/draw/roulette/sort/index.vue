@@ -3,12 +3,13 @@
     <nav>
       <ul class="roulet">
         <li class="roulet-item" :class="{ 'arrow' : index === 3 }" v-for="(item, index) in items" :key="index">
-          <img :class="{ 'active' : index === 3 }"  v-if="getImage(item.id)" :src="getImage(item.id)" >
-          <div class="roulet-span" :style="`background:${getColor()};`" v-else>
-            <span class="initial">{{getInitial(item.funcionario)}}</span>
-            <span class="name">{{item.funcionario}}</span>
-          </div>
-          
+          <template v-if="item">
+            <img :class="{ 'active' : index === 3 }"  v-if="getImage(item)" :src="getImage(item)" >
+            <div class="roulet-span" :style="`background:${getColor()};`" v-else>
+              <span class="initial">{{getInitial(item.funcionario)}}</span>
+              <span class="name">{{item.funcionario}}</span>
+            </div>
+          </template>
         </li>
       </ul>
     </nav>
@@ -41,18 +42,21 @@ export default {
       return `#${Math.floor(Math.random()*16777215).toString(16)}`;
     },
     async blacklist (collaborators) {
-      console.log('COLLABS', collaborators)
+      // console.log('COLLABS', collaborators)
       const blacklist = this.configs.blacklist
       var filteredCollab = await collaborators.filter((collab) => {
-        return blacklist.indexOf(collab.id) <= -1
+        if(collab.id){
+          return blacklist.indexOf(collab.id) <= -1
+        }
       })
-      console.log('BLACKLIST', filteredCollab)
+      // console.log('BLACKLIST', filteredCollab)
       this.list = filteredCollab
       return filteredCollab
     },
-    getImage (index) {
+    getImage (collab) {
+      if(!collab) return false
       try {
-        const image = require(`../../../../assets/employees/${index}.jpg`) || null
+        const image = require(`../../../../assets/employees/${collab.id}.jpg`)
         return image
       } catch (error) {
         return false
