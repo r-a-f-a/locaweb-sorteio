@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     getInitial(name){
-      return initials(name)
+      return initials(name).substring(0,2)
     },
     getColor () {
       return `#${Math.floor(Math.random()*16777215).toString(16)}`;
@@ -111,6 +111,7 @@ export default {
   },
   created () {
     this.makeSort()
+    this.$events.emit('show-reSort', false)
     this.$events.off('button-pressed-enter')
     this.$events.on('button-pressed-enter', () => {
       this.makeSort()

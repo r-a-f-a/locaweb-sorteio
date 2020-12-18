@@ -11,13 +11,13 @@
             {{ user.email}}
             </p>
         </div>
-        <button @click="reSort()" class="btn btn-home btn-white btn-rounded"> SORTEAR NOVAMENTE</button>
+        <button @click="reSort()" v-if="showReSort" class="btn btn-home btn-white btn-rounded"> Voltar </button>
     </div>
     <div class="user-details" v-else>
       <div class="detail">
-        <h2 class="lw-red">SORTEIO PRATAS DA CASA</h2>
+        <h2 class="lw-red">{{configs.title}}</h2>
         <p class="text-center">
-        Deste sorteio participam todos aqueles que foram nomeados pratas da casa neste ano
+        {{configs.describe}}
         </p>
       </div>
       <button v-if="configs.awards.length > 0" @click="initSort()" class="btn btn-home btn-red btn-rounded"> SORTEAR</button>
@@ -29,6 +29,17 @@
 export default {
   name: 'employee',
   props: ['user','award','configs'],
+  data(){
+    return {
+      showReSort: false
+    }
+  },
+  created(){
+    this.$events.off('show-reSort')
+    this.$events.on('show-reSort', (value) => {
+      this.showReSort = value
+    })
+  },
   filters: {
     pasedName: function (value) {
       const fullName = value.split(' ')

@@ -15,7 +15,7 @@
 
 <script>
 import roulette from './roulette'
-import awards from './awards'
+// import awards from './awards'
 require('vue2-animate/dist/vue2-animate.min.css')
 export default {
   metaInfo: {
@@ -34,8 +34,7 @@ export default {
     }
   },
   components: {
-    roulette,
-    awards
+    roulette
   },
   filters: {
     pasedName: function (value) {
@@ -84,9 +83,11 @@ export default {
          award
       })
       // configs.awards.shift()
+       
       this.$api.put(`/picker/${this.type}`, this.configs)
         .then(res => {
           console.log('UPDATED', res)
+          this.$events.emit('show-reSort', true)
         })
     },
     removeAward () {
