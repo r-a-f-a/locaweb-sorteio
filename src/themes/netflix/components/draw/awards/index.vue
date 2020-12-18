@@ -1,8 +1,8 @@
 <template>
 <div class='awards'>
     <div class="container">
-        <div class="row">
-            <img class="logo-corner" src="../../../assets/logos/logo-default.png" alt="">
+        <div class="row logo">
+            <router-link to="/list"><img class="logo-corner" src="../../../assets/logos/logo-default.png" alt=""></router-link>
         </div>
         <div class="grid">
             <div class="lw-col">
@@ -64,5 +64,9 @@ export default {
 }
 .lw-col {
   width: auto!important;
+}
+.logo{
+  position: relative;
+  z-index: 9999 !important;
 }
 </style>

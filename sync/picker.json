@@ -9,28 +9,28 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "fone.svg",
-				"name": "Fone JBL"
+				"image": "camera_instax.jpg",
+				"name": "CÂMERA INSTANTÂNEA INSTAX MINI"
 			},
 			{
-				"image": "smartv.svg",
-				"name": "Smart TV LED 32\""
+				"image": "chopeira.jpg",
+				"name": "CHOPEIRA BEERTENDER HEINEKEN"
 			},
 			{
-				"image": "notebook.svg",
-				"name": "Notebook"
+				"image": "miband.jpg",
+				"name": "SMARTWATCH XIAOMI MI BAND 4"
 			},
 			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina"
+				"image": "playstation.png",
+				"name": "PLAYSTATION 4 SLIM + 01 CONTROLE"
 			},
 			{
-				"image": "jbl.svg",
-				"name": "Caixa de som JBL"
+				"image": "echodot.jpg",
+				"name": "ECHO DOT (4ª GERAÇÃO) SMART SPEAKER COM ALEXA"
 			},
 			{
-				"image": "chopeira.svg",
-				"name": "Chopeira Beertender Heineken"
+				"image": "tv32.png",
+				"name": "SMART TV LED 32\""
 			}
 		]
 	},
@@ -44,12 +44,8 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7"
-			},
-			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina"
+				"image": "caixa_jbl.png",
+				"name": "CAIXA DE SOM JBL"
 			}
 		]
 	},
@@ -63,12 +59,8 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7"
-			},
-			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina"
+				"image": "panela_pressao.jpg",
+				"name": "PANELA DE PRESSÃO ELÉTRICA MONDIAL PRATIC COOK"
 			}
 		]
 	},
@@ -82,31 +74,35 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7"
+				"image": "redminote8.jpg",
+				"name": "SMARTPHONE XIAOMI REDMI NOTE 8"
 			},
 			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina"
+				"image": "chopeira.jpg",
+				"name": "CHOPEIRA BEERTENDER HEINEKEN"
 			}
 		]
 	},
 	{
 		"id": "locawebcommerce",
 		"image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
-		"name": "Presenciais",
-		"title": "Presenciais",
-		"describe": "Deste sorteio participam todos colaboradores Presenciais.",
+		"name": "Locaweb Commerce",
+		"title": "Locaweb Commerce",
+		"describe": "Deste sorteio participam todos colaboradores Locaweb Commerce.",
 		"blacklist": [],
 		"winners":[],
 		"awards": [
 			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7"
+				"image": "chopeira.jpg",
+				"name": "CHOPEIRA BEERTENDER HEINEKEN"
 			},
 			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina"
+				"image": "tv32.png",
+				"name": "SMART TV LED 32\""
+			},
+			{
+				"image": "nespresso.jpg",
+				"name": "MÁQUINA DE CAFÉ NESPRESSO ESSENZA MINI"
 			}
 		]
 	},
@@ -120,12 +116,8 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7"
-			},
-			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina"
+				"image": "kindle.jpg",
+				"name": "KINDLE PAPERWHITE 8 GB"
 			}
 		]
 	},
@@ -139,16 +131,24 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "smartv.svg",
-				"name": "Smart TV LED 32\""
+				"image": "ecodot.png",
+				"name": "ECHO DOT (4ª GERAÇÃO) SMART SPEAKER COM ALEXA"
 			},
 			{
-				"image": "instax.svg",
-				"name": "Câmera Instantânea Instax Mini"
+				"image": "adega.jpg",
+				"name": "ADEGA BRASTEMP 12 GARRAFAS COM PAINEL TOUCH "
 			},
 			{
-				"image": "ps4.svg",
-				"name": "Playstation 4 Slim + 01 controle"
+				"image": "churrasqueira.jpg",
+				"name": "CHURRASQUEIRA STEAKHOUSE GRILL POLISHOP"
+			},
+			{
+				"image": "playstation.png",
+				"name": "PLAYSTATION 4 SLIM + 01 CONTROLE"
+			},
+			{
+				"image": "aspirador.jpg",
+				"name": "ASPIRADOR DE PÓ ROBÔ WAP ROBOT W300"
 			}
 		]
 	},

@@ -48,5 +48,11 @@ export default {
 .detail {
   top: 0!important;
   margin-top: -55px!important;
+  width: 100%;
+  text-align: center;
+  z-index: 777 !important;
+}
+.detail p {
+  position: relative;
 }
 </style>

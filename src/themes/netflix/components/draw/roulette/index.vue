@@ -1,8 +1,8 @@
 <template>
   <div class="roullete">
       <div class='container'>
-      <div class="row">
-          <img class="logo-corner" src="../../../assets/logos/logo-default.png" alt="">
+      <div class="row logo">
+          <router-link to="/list"><img class="logo-corner" src="../../../assets/logos/logo-default.png" alt=""></router-link>
       </div>
         <div class="grid">
           <div class="lw-col">
@@ -79,6 +79,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.logo{
+  position: relative;
+  z-index: 9999 !important;
+}
 .grid {
   margin-top: 75px!important;
 }

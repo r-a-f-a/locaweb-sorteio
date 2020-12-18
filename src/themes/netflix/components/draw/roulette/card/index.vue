@@ -84,7 +84,7 @@ export default {
     width: 100%;
     height: 100%;
     top: 10px;
-    font-size: 100px;
+    font-size: 200px;
     text-align: center;
     padding-top: 25%;
     color: #000;

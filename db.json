@@ -11579,63 +11579,13 @@
       "name": "Etus",
       "title": "Etus",
       "describe": "Deste sorteio participam todos colaboradores da Etus.",
-      "blacklist": [
-        "etus-27",
-        "etus-17",
-        "etus-14",
-        "etus-30"
-      ],
-      "winners": [
-        {
-          "user": {
-            "id": "etus-27",
-            "funcionario": "Thiago Correa",
-            "email": "thiago.correa@etus.group",
-            "diretoria": "Etus Social"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "etus-17",
-            "funcionario": "Marcio Garcia",
-            "email": "marcio@etus.com.br",
-            "diretoria": "Etus Social"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "etus-14",
-            "funcionario": "Julio Cesar Matos de Oliveira",
-            "email": "julio.oliveira@etus.group",
-            "diretoria": "Etus Social"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "etus-30",
-            "funcionario": "Viktor Andrei Patrocinio",
-            "email": "viktor.patrocinio@etus.group",
-            "diretoria": "Etus Social"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        }
-      ],
+      "blacklist": [],
+      "winners": [],
       "awards": [
+        {
+          "image": "gopro.svg",
+          "name": "Câmera Digital GoPro Hero7"
+        },
         {
           "image": "churrasco.svg",
           "name": "Kit para churrasco Tramontina"
@@ -11664,9 +11614,9 @@
     {
       "id": "locawebcommerce",
       "image": "https://api.adorable.io/avatars/285/fl@adorable.io.png",
-      "name": "Presenciais",
-      "title": "Presenciais",
-      "describe": "Deste sorteio participam todos colaboradores Presenciais.",
+      "name": "Locaweb Commerce",
+      "title": "Locaweb Commerce",
+      "describe": "Deste sorteio participam todos colaboradores Locaweb Commerce.",
       "blacklist": [],
       "winners": [],
       "awards": [
@@ -11687,26 +11637,15 @@
       "title": "Social Miner",
       "describe": "Deste sorteio participam todos colaboradores da Social Miner.",
       "blacklist": [
-        "xoxo16",
-        "xoxo21",
-        "xoxo09",
-        "xoxo11",
-        "xoxo08",
-        "xoxo18",
-        "xoxo32",
-        "xoxo30",
-        "xoxo10",
-        "xoxo28",
-        "xoxo07",
-        "xoxo35",
-        "xoxo17"
+        "xoxo15",
+        "xoxo27"
       ],
       "winners": [
         {
           "user": {
-            "id": "xoxo16",
-            "funcionario": "Felipe Pervelli Gonçalves",
-            "email": "felipe.pervelli@socialminer.com",
+            "id": "xoxo15",
+            "funcionario": "FELIPE LIMA DOS SANTOS",
+            "email": "felipe.santos@socialminer.com",
             "diretoria": "Social Miner"
           },
           "award": {
@@ -11716,159 +11655,18 @@
         },
         {
           "user": {
-            "id": "xoxo21",
-            "funcionario": "Henrique Candido Faria ",
-            "email": "henrique.faria@socialminer.com",
+            "id": "xoxo27",
+            "funcionario": "Mayara da Silva Matteucci",
+            "email": "mayara.matteucci@socialminer.com",
             "diretoria": "Social Miner"
           },
           "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo09",
-            "funcionario": "CAIO DRIGHETTI BULGARELLI",
-            "email": "caio@socialminer.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo11",
-            "funcionario": "Camila de Jesus Rodrigues Soares",
-            "email": "camilajr.rodrigues@gmail.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo08",
-            "funcionario": "Bruno José Machado de Camargo",
-            "email": "bruno.machado@socialminer.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo18",
-            "funcionario": "Flavia Caroline Silveira Dias",
-            "email": "flavia.dias@socialminer.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo32",
-            "funcionario": "Silas Santos Alves",
-            "email": "silas@socialminer.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo30",
-            "funcionario": "RAYSSA MARIA DE ARAÚJO NEVES",
-            "email": "rayssa@socialminer.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo10",
-            "funcionario": "CAROLINA SILVEIRA",
-            "email": "carolina.silveira@socialminer.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo28",
-            "funcionario": "Paulo Daniel Carneiro",
-            "email": "paulo.carneiro@socialminer.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo07",
-            "funcionario": "Bruna de Oliveira Martins",
-            "email": "bruna.martins@socialminer.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo35",
-            "funcionario": "Thiago da Silva",
-            "email": "thiago.dasilva@socialminer.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
-          }
-        },
-        {
-          "user": {
-            "id": "xoxo17",
-            "funcionario": "Felippe de Souza Cagliari",
-            "email": "felippe.cagliari@socialminer.com",
-            "diretoria": "Social Miner"
-          },
-          "award": {
-            "image": "gopro.svg",
-            "name": "Câmera Digital GoPro Hero7"
+            "image": "churrasco.svg",
+            "name": "Kit para churrasco Tramontina"
           }
         }
       ],
-      "awards": [
-        {
-          "image": "gopro.svg",
-          "name": "Câmera Digital GoPro Hero7"
-        },
-        {
-          "image": "churrasco.svg",
-          "name": "Kit para churrasco Tramontina"
-        }
-      ]
+      "awards": []
     },
     {
       "id": "valeu",
@@ -11876,22 +11674,53 @@
       "name": "Valeu",
       "title": "Cartão Valeu",
       "describe": "Deste sorteio participam todos colaboradores que ganharam o valeu.",
-      "blacklist": [],
-      "winners": [],
-      "awards": [
+      "blacklist": [
+        3086,
+        3399,
+        3140
+      ],
+      "winners": [
         {
-          "image": "smartv.svg",
-          "name": "Smart TV LED 32\""
+          "user": {
+            "id": 3086,
+            "funcionario": "ANDERSON MENDES DA SILVA",
+            "email": "ANDERSON.SILVA@LOCAWEB.COM.BR",
+            "area": "PLANEJAMENTO COMERCIAL",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "smartv.svg",
+            "name": "Smart TV LED 32\""
+          }
         },
         {
-          "image": "instax.svg",
-          "name": "Câmera Instantânea Instax Mini"
+          "user": {
+            "id": 3399,
+            "funcionario": "Simony Fernanda Santos de Oliveira Morais",
+            "email": "SIMONY.FERNANDA@LOCAWEB.COM.BR",
+            "area": "GENTE & GESTAO",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "instax.svg",
+            "name": "Câmera Instantânea Instax Mini"
+          }
         },
         {
-          "image": "ps4.svg",
-          "name": "Playstation 4 Slim + 01 controle"
+          "user": {
+            "id": 3140,
+            "funcionario": "CARLOS DE BRITTO GONCALVES",
+            "email": "CARLOS.GONCALVES@LOCAWEB.COM.BR",
+            "area": "EVENTOS    ",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "ps4.svg",
+            "name": "Playstation 4 Slim + 01 controle"
+          }
         }
-      ]
+      ],
+      "awards": []
     },
     {
       "id": "surpresa",
@@ -11899,18 +11728,37 @@
       "name": "Surpresa",
       "title": "Surpresa",
       "describe": "Deste sorteio participam todos colaboradores da Surpresa.",
-      "blacklist": [],
-      "winners": [],
-      "awards": [
+      "blacklist": [
+        "surpresa-293",
+        "surpresa-230"
+      ],
+      "winners": [
         {
-          "image": "gopro.svg",
-          "name": "Câmera Digital GoPro Hero7"
+          "user": {
+            "id": "surpresa-293",
+            "funcionario": "Willian Radke Schaun",
+            "email": "william.schaun@melhorenvio.com",
+            "diretoria": "MELHOR ENVIO"
+          },
+          "award": {
+            "image": "gopro.svg",
+            "name": "Câmera Digital GoPro Hero7"
+          }
         },
         {
-          "image": "churrasco.svg",
-          "name": "Kit para churrasco Tramontina"
+          "user": {
+            "id": "surpresa-230",
+            "funcionario": "Lucas Andrade Fagundes",
+            "email": "lucas.fagundes@melhorenvio.com",
+            "diretoria": "MELHOR ENVIO"
+          },
+          "award": {
+            "image": "churrasco.svg",
+            "name": "Kit para churrasco Tramontina"
+          }
         }
-      ]
+      ],
+      "awards": []
     },
     {
       "id": "pratas",
@@ -11918,22 +11766,50 @@
       "name": "Pratas da Casa",
       "title": "Pratas da Casa",
       "describe": "Deste sorteio participam todos colaboradores pratas da casa.",
-      "blacklist": [],
-      "winners": [],
-      "awards": [
+      "blacklist": [
+        "pratas-62",
+        "pratas-68",
+        "pratas-158"
+      ],
+      "winners": [
         {
-          "image": "motorola.svg",
-          "name": "Smartphone Motorola"
+          "user": {
+            "id": "pratas-62",
+            "funcionario": "MAYARA RODRIGUES DOS SANTOS",
+            "email": "MAYARA.SANTOS@LOCAWEB.COM.BR",
+            "diretoria": "LOCAWEB"
+          },
+          "award": {
+            "image": "motorola.svg",
+            "name": "Smartphone Motorola"
+          }
         },
         {
-          "image": "instax.svg",
-          "name": "Câmera Instantânea Instax Mini"
+          "user": {
+            "id": "pratas-68",
+            "funcionario": "CRISTIANO DE SOUSA LIMA SILVA",
+            "email": "CRISTIANO.SILVA@LOCAWEB.COM.BR",
+            "diretoria": "LOCAWEB"
+          },
+          "award": {
+            "image": "instax.svg",
+            "name": "Câmera Instantânea Instax Mini"
+          }
         },
         {
-          "image": "chopeira.svg",
-          "name": "Chopeira Beertender Heineken"
+          "user": {
+            "id": "pratas-158",
+            "funcionario": "EDSON RICARDO LOURENCO",
+            "email": "ELOURENCO@TRAY.NET.BR",
+            "diretoria": "TRAY"
+          },
+          "award": {
+            "image": "chopeira.svg",
+            "name": "Chopeira Beertender Heineken"
+          }
         }
-      ]
+      ],
+      "awards": []
     },
     {
       "id": "conexao",
@@ -11941,22 +11817,53 @@
       "name": "Conexão Saúde",
       "title": "Conexão Saúde",
       "describe": "Deste sorteio participam todos colaboradores que participaram do conexão saúde.",
-      "blacklist": [],
-      "winners": [],
-      "awards": [
+      "blacklist": [
+        400111,
+        3395,
+        400041
+      ],
+      "winners": [
         {
-          "image": "airfryer.svg",
-          "name": "Air Fryer"
+          "user": {
+            "id": 400111,
+            "funcionario": "ALEF VALDEVINO BARBOZA",
+            "email": "ALEF.BARBOZA@LOCAWEB.COM.BR",
+            "area": "ALL IN ESTRATÉGIA",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "airfryer.svg",
+            "name": "Air Fryer"
+          }
         },
         {
-          "image": "pao.svg",
-          "name": "Máquina de Pão"
+          "user": {
+            "id": 3395,
+            "funcionario": "Sara de Oliveira Santana",
+            "email": "SARA.OLIVEIRA@LOCAWEB.COM.BR",
+            "area": "COMUNICAÇAO",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "pao.svg",
+            "name": "Máquina de Pão"
+          }
         },
         {
-          "image": "airfryer.svg",
-          "name": "Air Fryer"
+          "user": {
+            "id": 400041,
+            "funcionario": "Michel Macedo Marques de Lima",
+            "email": "MICHEL.LIMA@LOCAWEB.COM.BR",
+            "area": "TIME VITRINE",
+            "diretoria": "LOCAWEB SERVICOS DE INTERNET SA"
+          },
+          "award": {
+            "image": "airfryer.svg",
+            "name": "Air Fryer"
+          }
         }
-      ]
+      ],
+      "awards": []
     },
     {
       "id": "presenciais",
