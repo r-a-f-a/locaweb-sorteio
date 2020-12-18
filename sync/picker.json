@@ -131,7 +131,7 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "ecodot.png",
+				"image": "echodot.png",
 				"name": "ECHO DOT (4ª GERAÇÃO) SMART SPEAKER COM ALEXA"
 			},
 			{
@@ -162,12 +162,8 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7"
-			},
-			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina"
+				"image": "airfryer.jpg",
+				"name": "AIR FRYER"
 			}
 		]
 	},
@@ -181,16 +177,20 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "motorola.svg",
-				"name": "Smartphone Motorola"
+				"image": "fone_edifier.jpg",
+				"name": "FONE DE OUVIDO EDIFIER W800BTBK"
 			},
 			{
-				"image": "instax.svg",
-				"name": "Câmera Instantânea Instax Mini"
+				"image": "aspirador.jpg",
+				"name": "ASPIRADOR DE PÓ ROBÔ WAP ROBOT W300"
 			},
 			{
-				"image": "chopeira.svg",
-				"name": "Chopeira Beertender Heineken"
+				"image": "kit_churrasco.jpg",
+				"name": "KIT PARA CHURRASCO TRAMONTINA"
+			},
+			{
+				"image": "notebook.jpg",
+				"name": "NOTEBOOK"
 			}
 		]
 	},
@@ -204,16 +204,20 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "airfryer.svg",
-				"name": "Air Fryer"
+				"image": "camera_instax.jpg",
+				"name": "CÂMERA INSTANTÂNEA INSTAX MINI"
 			},
 			{
-				"image": "pao.svg",
-				"name": "Máquina de Pão"
+				"image": "assento.jpg",
+				"name": "ASSENTO MASSAGEADOR SHIATSU ELITE PRO HOMEDICS"
 			},
 			{
-				"image": "airfryer.svg",
-				"name": "Air Fryer"
+				"image": "kindle.jpg",
+				"name": "KINDLE PAPERWHITE 8 GB"
+			},
+			{
+				"image": "miband.jpg",
+				"name": "SMARTWATCH XIAOMI MI BAND 4"
 			}
 		]
 	},
@@ -227,12 +231,16 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7"
+				"image": "kit_churrasco.jpg",
+				"name": "KIT PARA CHURRASCO TRAMONTINA"
 			},
 			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina"
+				"image": "airfryer.jpg",
+				"name": "AIR FRYER"
+			},
+			{
+				"image": "redminote8.jpg",
+				"name": "SMARTPHONE XIAOMI REDMI NOTE 8"
 			}
 		]
 	},
@@ -246,12 +254,8 @@
 		"winners":[],
 		"awards": [
 			{
-				"image": "gopro.svg",
-				"name": "Câmera Digital GoPro Hero7"
-			},
-			{
-				"image": "churrasco.svg",
-				"name": "Kit para churrasco Tramontina"
+				"image": "vitrola.jpg",
+				"name": "VITROLA RETRÔ RAVEO SONETTO CHROME BROWN"
 			}
 		]
 	}
